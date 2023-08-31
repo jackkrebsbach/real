@@ -1,0 +1,76 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsfonts}
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{amsmath}
+\usepackage{transparent}
+\usepackage{graphicx}
+\usepackage{float} % For the [H] specifier
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+\pdfsuppresswarningpagegroup=1
+\title{HW \#1}
+\author{Jack Krebsbach }
+
+\date{Sep 4}
+
+\begin{document}
+
+\maketitle
+
+1. Let $n$ be a positive integer that is not a perfect square. Prove that $\sqrt{n}$ is irrational.
+
+2. Use the Principle of Mathematical Induction to prove:
+
+$$
+1^{2}+3^{2}+\cdots+(2 n-1)^{2}=\frac{4 n^{3}-n}{3} \quad \forall n \in \mathbb{N}
+$$
+
+3. Let $n>1$ be a positive integer and let $a_{1}, a_{2}, \ldots, a_{n}$ be real numbers. Prove that
+
+$$
+\left|\sum_{k=1}^{n} a_{k}\right| \leq \sum_{k=1}^{n}\left|a_{k}\right| .
+$$
+
+
+4. Exercise 1.2.8
+
+5. Exercise 1.2.12
+
+6. Grade the following proof: Prove that $\sqrt{3}$ is irrational. Does a similar argument work to show $\sqrt{6}$ is irrational?
+
+Proof:To prove that $\sqrt{3}$ is irrational, we can use a proof by contradiction. The idea is to assume that $\sqrt{3}$ is rational, and then derive a contradiction.
+
+Assumption: $\sqrt{3}$ is rational.
+
+If $\sqrt{3}$ is rational, it can be expressed as a fraction $\frac{a}{b}$ in its simplest form, where $a$ and $b$ are integers with no common factors other than 1 (i.e., they are coprime), and $b$ is not equal to 0 .
+
+So, we have: $\sqrt{3}=\frac{a}{b}$
+
+Squaring both sides of the equation: $3=\frac{a^{2}}{b^{2}}$
+
+Rearranging the equation: $a^{2}=3 \cdot b^{2}$
+
+From this equation, we can see that $a^{2}$ is a multiple of 3 , which implies that $a$ must also be a multiple of 3. Let's represent $a$ as $3 k$ where $k$ is an integer:
+
+$$
+\begin{gathered}
+(3 k)^{2}=3 \cdot b^{2} \\
+9 k^{2}=3 \cdot b^{2} \\
+3 k^{2}=b^{2}
+\end{gathered}
+$$
+
+Now, $b^{2}$ is also a multiple of 3 , which means $b$ must be a multiple of 3 . However, this contradicts our initial assumption that $a$ and $b$ have no common factors other than 1 (i.e., they are coprime). This contradiction arises from assuming that $\sqrt{3}$ is rational.
+
+Hence, our initial assumption that $\sqrt{3}$ is rational must be false, which means that $\sqrt{3}$ is irrational. Now, to address whether a similar argument works for $\sqrt{6}$ :
+
+No, a similar argument does not work for $\sqrt{6}$. The proof for the irrationality of $\sqrt{3}$ relies on the fact that it leads to a contradiction with respect to the common factors of $a$ and $b$. However, for $\sqrt{6}$, this argument does not apply directly because the factors of 6 are not the same as the factors of 3. In fact, $\sqrt{6}$ is not irrational; it is a rational number. It can be expressed as the fraction $\frac{2 \sqrt{3}}{3}$, which is a ratio of two integers.
+
+
+\end{document}
+

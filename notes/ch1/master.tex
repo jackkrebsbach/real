@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsfonts}
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{amsmath}
+\usepackage{transparent}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{float} % For the [H] specifier
+\usepackage{amsthm}
+
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+\pdfsuppresswarningpagegroup=1
+\title{The Real Numbers}
+\author{Jack Krebsbach }
+
+\date{Sep 4}
+
+\begin{document}
+\maketitle
+
+\section{The Real Numbers}
+
+
+\subsection{The irrationality of $\sqrt{2}$}
+
+\subsection{Preliminaries}
+
+\texttt{Notation}
+\begin{multicols}{2}
+\begin{itemize}
+  \item $\forall \rightarrow$ For all/each/every
+  \item $\exists \rightarrow$ There exists
+  \item $\mathbb{R} \setminus \mathbb{Q} \rightarrow$ Irrationals
+  \item $\mathbb{R} \rightarrow$ Real numbers
+  \item $\mathbb{Z} \rightarrow$ Integers
+  \item $\mathbb{Q} \rightarrow$ Rational numbers
+  \item $\mathbb{N} \rightarrow$ Natural numbers
+  \item $BWOC \rightarrow$ By way of contradiction
+  \item $\rightarrow\!\leftarrow \rightarrow$ Contradiction
+  \item $! \rightarrow$ Unique/factorial
+  \item $\qed \rightarrow$ End of proof (Quod Erat Demonstrandum)
+  \item $\epsilon \rightarrow$ Epsilon, usually a small positive quantity
+  \item $\ni \rightarrow$ Such that
+\end{itemize}
+\end{multicols}
+
+\end{document}
