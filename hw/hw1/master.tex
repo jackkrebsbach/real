@@ -1,53 +1,97 @@
-\documentclass{article}
-\usepackage{graphicx} % Required for inserting images
-\usepackage{amsfonts}
-\usepackage{import}
-\usepackage{xifthen}
-\usepackage{pdfpages}
-\usepackage{amsmath}
-\usepackage{transparent}
-\usepackage{graphicx}
-\usepackage{float} % For the [H] specifier
-\newcommand{\incfig}[1]{%
-    \def\svgwidth{\columnwidth}
-    \import{./figures/}{#1.pdf_tex}
-}
-\pdfsuppresswarningpagegroup=1
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
 \title{HW \#1}
 \author{Jack Krebsbach }
 
-\date{Sep 4}
+\date{Sep 6th}
 
 \begin{document}
 
 \maketitle
 
-1. Let $n$ be a positive integer that is not a perfect square. Prove that $\sqrt{n}$ is irrational.
+\qs{}{Let $n$ be a positive integer that is not a perfect square. Prove that $\sqrt{n}$ is irrational.}
+\sol Assume, for contradiction, that $\sqrt{n}$ is a rational. Then $\sqrt{n}$ can be written in the form $\frac{a}{b}$ where $a,b \in \mathbb{Z}$ and $a,b$ are cooprime, or have no common factors. 
 
-2. Use the Principle of Mathematical Induction to prove:
+We have 
+
+
+\begin{equation}
+  \frac{a}{b} = \sqrt{n} \implies
+  \left(\frac{a}{b}\right)^{2} = n \implies a^2 = n b^2
+\end{equation}
+
+
+Clearly $n$ divides $a^{2}$. 
+By the Fundemental Theorem of arithmetic we can write $a$ and $n$ as a product of primes.
+
+Thus, 
+\begin{equation}
+  \frac{a^2}{n} = \frac{\left(\prod^{k}_{i = 1} P_{i}^{n_i}\right)^2}{\prod_{j = 1}^{k} P_{j}^{m_j}} =\frac{
+\left(\prod^{k}_{i = 1} P_{i}^{n_i}\right)
+\left(\prod^{k}_{i = 1} P_{i}^{n_i}\right)
+  }{\prod_{j = 1}^{k} P_{j}^{m_j}}  = b^2
+\end{equation}.
+
+
+Because $n$ divides $a^2$ we can re-write $b^2$ as the product
+
+
+\begin{equation}
+  n \left(\prod^{t}_{l = 1} P_{l}^{m_l}\right) = b^2
+\end{equation}.
+
+
+Clearly, $b^2 \geq n$, and it follows that $a \geq n$. Therefore we can rearrange $(2)$ yielding
+
+\begin{equation}
+  a^2 = (n)(a)\left(\prod^{z}_{i = 1} P_{i}^{m_i}\right)  \implies a = n\left(\prod^{z}_{i = 1} P_{i}^{m_i}\right) 
+\end{equation}. 
+
+Thus, $n$ divides $a$ in addition to $a^2$. Because of this we know that we can rewrite $a$ in terms of $n$, or $a = t(n)$ where $t \in \mathbb{Z}$. Then
+
+\begin{equation}
+  (tn)^2 = nb^2 \implies t^2n^2 = nb^2 \implies nt^2 = b^2 
+\end{equation}
+
+which means $n$ is a common factor of $b^2$, and by the preceding logic $b$ in addition $a$. Thus $a$ and $b$ can not be be cooprime  $\rightarrow\!\leftarrow$. This contradicts our initial assumption and we have no choice but to conclude that $\sqrt{n} \in \mathbb{R} \setminus \mathbb{Q} \qed$
+
+\bigskip
+\qs{}{
+   Use the Principle of Mathematical Induction to prove:
+$$
+1^{2}+3^{2}+\cdots+(2 n-1)^{2}=\frac{4 n^{3}-n}{3} \quad \forall n \in \mathbb{N} $$  
+}
+
+\qs{}{
+ Let $n>1$ be a positive integer and let $a_{1}, a_{2}, \ldots, a_{n}$ be real numbers. Prove that
 
 $$
-1^{2}+3^{2}+\cdots+(2 n-1)^{2}=\frac{4 n^{3}-n}{3} \quad \forall n \in \mathbb{N}
+\left|\sum_{k=1}^{n} a_{k}\right| \leq \sum_{k=1}^{n}\left|a_{k}\right|$$
+}
+
+
 $$
-
-3. Let $n>1$ be a positive integer and let $a_{1}, a_{2}, \ldots, a_{n}$ be real numbers. Prove that
-
+\left|\sum_{k=1}^{n} a_{k}\right| \leq \sum_{k=1}^{n}\left|a_{k}\right|
 $$
-\left|\sum_{k=1}^{n} a_{k}\right| \leq \sum_{k=1}^{n}\left|a_{k}\right| .
-$$
+\qs{}{
+Exercise 1.2.8
+}
 
+\qs{}
+{Exercise 1.2.12}
 
-4. Exercise 1.2.8
-
-5. Exercise 1.2.12
-
-6. Grade the following proof: Prove that $\sqrt{3}$ is irrational. Does a similar argument work to show $\sqrt{6}$ is irrational?
+\qs{}
+{Grade the following proof: Prove that $\sqrt{3}$ is irrational. Does a similar argument work to show $\sqrt{6}$ is irrational?}
 
 Proof:To prove that $\sqrt{3}$ is irrational, we can use a proof by contradiction. The idea is to assume that $\sqrt{3}$ is rational, and then derive a contradiction.
 
 Assumption: $\sqrt{3}$ is rational.
 
-If $\sqrt{3}$ is rational, it can be expressed as a fraction $\frac{a}{b}$ in its simplest form, where $a$ and $b$ are integers with no common factors other than 1 (i.e., they are coprime), and $b$ is not equal to 0 .
+If $\sqrt{3}$ is rational, it can be expressed as a fraction $\frac{a}{b}$ in its simplest form, where $a$ and $b$ are integers with no common factors other than 1 (i.e., they are coprime), and $b$ is not equal to 0.
 
 So, we have: $\sqrt{3}=\frac{a}{b}$
 
