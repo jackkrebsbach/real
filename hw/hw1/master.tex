@@ -41,15 +41,15 @@ Because $n$ divides $a^2$ we can re-write $b^2$ as the product
 
 
 \begin{equation}
-  n \left(\prod^{t}_{l = 1} P_{l}^{m_l}\right) = b^2
-\end{equation}.
+  n \left(\prod^{t}_{l = 1} P_{l}^{m_l}\right) = b^2.
+\end{equation}
 
 
-Clearly, $b^2 \geq n$, and it follows that $a \geq n$. Therefore we can rearrange $(2)$ yielding
+This means $b^2 \geq n$. From the equation 2 we have $a(a) = nb^2$ and it follows that $a \geq n$. Therefore we can rearrange $(2)$, which yields
 
-\begin{equation}
-  a^2 = (n)(a)\left(\prod^{z}_{i = 1} P_{i}^{m_i}\right)  \implies a = n\left(\prod^{z}_{i = 1} P_{i}^{m_i}\right) 
-\end{equation}. 
+$$
+  a^2 = (n)(a)\left(\prod^{z}_{i = 1} P_{i}^{m_i}\right)  \implies a = n\left(\prod^{z}_{i = 1} P_{i}^{m_i}\right).$$
+
 
 Thus, $n$ divides $a$ in addition to $a^2$. Because of this we know that we can rewrite $a$ in terms of $n$, or $a = t(n)$ where $t \in \mathbb{Z}$. Then
 
@@ -57,7 +57,7 @@ Thus, $n$ divides $a$ in addition to $a^2$. Because of this we know that we can 
   (tn)^2 = nb^2 \implies t^2n^2 = nb^2 \implies nt^2 = b^2 
 \end{equation}
 
-which means $n$ is a common factor of $b^2$, and by the preceding logic $b$ in addition $a$. Thus $a$ and $b$ can not be be cooprime  $\rightarrow\!\leftarrow$. This contradicts our initial assumption and we have no choice but to conclude that $\sqrt{n} \in \mathbb{R} \setminus \mathbb{Q} \qed$
+which means $n$ divides $b^2$, and by the preceding logic also divides $b$. We have the $n$ divides $a$ and $b$. Thus, $a$ and $b$ can not be be cooprime  $\rightarrow\!\leftarrow$. With this contradiction we have no choice but to conclude that $\sqrt{n} \in \mathbb{R} \setminus \mathbb{Q} \qed$
 
 \bigskip
 \qs{}{
@@ -70,9 +70,9 @@ $$
 Let $n=1 \in \mathbb{N}$. Then $1^2 =  \frac{4 (1)^{3}-1}{3} = 1$, showing that the equality holds for $n=1$. We asssume that the induction hypothesis,
 
 $$ 1^{2}+3^{2}+\cdots+(2 n-1)^{2}=\frac{4 n^{3}-n}{3} $$,
-is correct and we procceed with induction on $n$. We want to show $P(k+1) = \frac{4 (n+1)^{3}-(n+1)}{3}$.
+is correct and we procceed with induction on $n$. We want to show $P(n+1) = \frac{4 (n+1)^{3}-(n+1)}{3}$.
 
-We have that
+Consider
 $$ 
 1^{2}+3^{2}+\cdots+(2 n-1)^{2} +(2 (n+1)-1)^{2}=\frac{4 n^{3}-n}{3} + (2 (n+1)-1)^{2} 
 $$  
@@ -101,7 +101,7 @@ $$
 =\frac{4 (n+1)^3 -(n+1)}{3}.
 $$  
 
-Thus, $P(k+1) = \frac{4 (n+1)^{3}-(n+1)}{3}$, showing that $1^{2}+3^{2}+\cdots+(2 n-1)^{2}=\frac{4 n^{3}-n}{3} \quad \forall n \in \mathbb{N} \qed$  
+Thus, $P(n+1) = \frac{4 (n+1)^{3}-(n+1)}{3}$, proving $1^{2}+3^{2}+\cdots+(2 n-1)^{2}=\frac{4 n^{3}-n}{3} \quad \forall n \in \mathbb{N} \qed$  
 
 \bigskip
 \qs{}{
@@ -120,15 +120,15 @@ We assume, in the proccess of proof by induction, that
 
 $$
 \left|\sum_{k=1}^{n} a_{k}\right| \leq \sum_{k=1}^{n}\left|a_{k}\right|$$ is true.
-Expanding this equality yields
+Expansion yields
 $$                                                                       
-\left|a_1 + a_2 + \cdot + a_n\right| \leq \left|a_{1}\right| + \left|a_{2}\right|
+\left|a_1 + a_2 + \cdots + a_n\right| \leq \left|a_{1}\right| + \left|a_{2}\right|
 + \cdots +  \left|a_{n}\right|.$$
 
 Adding $\left|a_{n+1}\right|$ to both sides gives us
 $$
 \left|a_1 + a_2 + \cdots + a_n\right| + \left|a_{n+1}\right|  \leq \left|a_{1}\right| + \left|a_{2}\right|
-+ \cdots +  \left|a_{n}\right|  + \left|a_{n+1}\right|$$
++ \cdots +  \left|a_{n}\right|  + \left|a_{n+1}\right|,$$
 
 and by the Triangle Inequality Theorem we have
 
@@ -141,7 +141,11 @@ $$
 Therefore,
 
 $$
-\left|\sum_{k=1}^{n+1} a_{k}\right| \leq \sum_{k=1}^{n+1}\left|a_{k}\right|$$
+\left|\sum_{k=1}^{n+1} a_{k}\right| \leq \sum_{k=1}^{n+1}\left|a_{k}\right| $$  and thus 
+
+$$
+\left|\sum_{k=1}^{n} a_{k}\right| \leq \sum_{k=1}^{n}\left|a_{k}\right| \qed$$
+
 \qs{}{
 Exercise 1.2.8
 }
