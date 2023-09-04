@@ -25,15 +25,15 @@ We have
 \end{equation}
 
 
-Clearly $n$ divides $a^{2}$. 
-By the Fundemental Theorem of arithmetic we can write $a$ and $n$ as a product of primes.
+This means that $n$ divides $a^{2}$. 
+By the Fundemental Theorem of Arithmetic we can write $a$ and $n$ as a unique product of primes.
 
 Thus, 
 \begin{equation}
-  \frac{a^2}{n} = \frac{\left(\prod^{k}_{i = 1} P_{i}^{n_i}\right)^2}{\prod_{j = 1}^{k} P_{j}^{m_j}} =\frac{
+  \frac{a^2}{n} = \frac{\left(\prod^{k}_{i = 1} P_{i}^{n_i}\right)^2}{\prod_{j = 1}^{l} P_{j}^{m_j}} =\frac{
 \left(\prod^{k}_{i = 1} P_{i}^{n_i}\right)
 \left(\prod^{k}_{i = 1} P_{i}^{n_i}\right)
-  }{\prod_{j = 1}^{k} P_{j}^{m_j}}  = b^2
+  }{\prod_{j = 1}^{l} P_{j}^{m_j}}  = b^2
 \end{equation}.
 
 
@@ -45,10 +45,10 @@ Because $n$ divides $a^2$ we can re-write $b^2$ as the product
 \end{equation}
 
 
-This means $b^2 \geq n$. From the equation 2 we have $a(a) = nb^2$ and it follows that $a \geq n$. Therefore we can rearrange $(2)$, which yields
+Clearly $b^2 \geq n$. This result taken with equation 2, $a(a) = nb^2$, means that $a \geq n$. Therefore we can rearrange $(2)$
 
 $$
-  a^2 = (n)(a)\left(\prod^{z}_{i = 1} P_{i}^{m_i}\right)  \implies a = n\left(\prod^{z}_{i = 1} P_{i}^{m_i}\right).$$
+  a^2 = n(a)\left(\prod^{z}_{i = 1} P_{i}^{m_i}\right)  \implies a = n\left(\prod^{z}_{i = 1} P_{i}^{m_i}\right).$$
 
 
 Thus, $n$ divides $a$ in addition to $a^2$. Because of this we know that we can rewrite $a$ in terms of $n$, or $a = t(n)$ where $t \in \mathbb{Z}$. Then
@@ -57,7 +57,7 @@ Thus, $n$ divides $a$ in addition to $a^2$. Because of this we know that we can 
   (tn)^2 = nb^2 \implies t^2n^2 = nb^2 \implies nt^2 = b^2 
 \end{equation}
 
-which means $n$ divides $b^2$, and by the preceding logic also divides $b$. We have the $n$ divides $a$ and $b$. Thus, $a$ and $b$ can not be be cooprime  $\rightarrow\!\leftarrow$. With this contradiction we have no choice but to conclude that $\sqrt{n} \in \mathbb{R} \setminus \mathbb{Q} \qed$
+which means $n$ divides $b^2$. By the preceding logic $n$ also divides $b$. We have the $n$ divides $a$ and $b$, hence, $a$ and $b$ can not be be cooprime  $\rightarrow\!\leftarrow$. With this contradiction we have no choice but to conclude that $\sqrt{n} \in \mathbb{R} \setminus \mathbb{Q} \qed$
 
 \bigskip
 \qs{}{
@@ -67,17 +67,14 @@ $$
 }
 \sol
 
-Let $n=1 \in \mathbb{N}$. Then $1^2 =  \frac{4 (1)^{3}-1}{3} = 1$, showing that the equality holds for $n=1$. We asssume that the induction hypothesis,
+Let $n=1 \in \mathbb{N}$. Then $1^2 =  \frac{4 (1)^{3}-1}{3} = 1$, showing that the equality holds for $n=1$. We asssume that 
 
-$$ 1^{2}+3^{2}+\cdots+(2 n-1)^{2}=\frac{4 n^{3}-n}{3} $$,
-is correct and we procceed with induction on $n$. We want to show $P(n+1) = \frac{4 (n+1)^{3}-(n+1)}{3}$.
+$$ 1^{2}+3^{2}+\cdots+(2 n-1)^{2}=\frac{4 n^{3}-n}{3}, $$
+is true and we procceed with induction on $n$. We want to show $P(n+1) = \frac{4 (n+1)^{3}-(n+1)}{3}$.
 
 Consider
 $$ 
 1^{2}+3^{2}+\cdots+(2 n-1)^{2} +(2 (n+1)-1)^{2}=\frac{4 n^{3}-n}{3} + (2 (n+1)-1)^{2} 
-$$  
-$$ 
-=\frac{4 n^{3}-n}{3} + (2n+1)^{2} 
 $$  
 $$ 
 =\frac{4 n^{3}-n}{3} + (4n^2+4n +1) 
@@ -111,12 +108,12 @@ $$
 \left|\sum_{k=1}^{n} a_{k}\right| \leq \sum_{k=1}^{n}\left|a_{k}\right|$$
 }
 
-Let $n=1 \in \mathbb{R}$. Then 
+Let $n=2 \in \mathbb{Z}^{+}$. Then 
 $$
-\left|\sum_{k=1}^{1} a_{k}\right| \leq \sum_{k=1}^{1}\left|a_{k}\right| \implies
-\left|a_1\right| \leq \left| a_1\right|. $$ Thus the equality holds in this base case where $n=1$. We then want to show that $\left|\sum_{k=1}^{n+1} a_{k}\right| \leq \sum_{k=1}^{n+1}\left|a_{k}\right|$
+\left|\sum_{k=1}^{2} a_{k}\right| \leq \sum_{k=1}^{2}\left|a_{k}\right| \implies
+\left|a_1 + a_2\right| \leq \left| a_1\right| + \left| a_2\right|,$$ which we know is true by the Triangle Inequality Theorem. We then want to show that $\left|\sum_{k=1}^{n+1} a_{k}\right| \leq \sum_{k=1}^{n+1}\left|a_{k}\right|$
 .
-We assume, in the proccess of proof by induction, that
+We assume for proof by induction that
 
 $$
 \left|\sum_{k=1}^{n} a_{k}\right| \leq \sum_{k=1}^{n}\left|a_{k}\right|$$ is true.
@@ -125,7 +122,7 @@ $$
 \left|a_1 + a_2 + \cdots + a_n\right| \leq \left|a_{1}\right| + \left|a_{2}\right|
 + \cdots +  \left|a_{n}\right|.$$
 
-Adding $\left|a_{n+1}\right|$ to both sides gives us
+Adding $\left|a_{n+1}\right|$ to both sides results in
 $$
 \left|a_1 + a_2 + \cdots + a_n\right| + \left|a_{n+1}\right|  \leq \left|a_{1}\right| + \left|a_{2}\right|
 + \cdots +  \left|a_{n}\right|  + \left|a_{n+1}\right|,$$
@@ -141,11 +138,12 @@ $$
 Therefore,
 
 $$
-\left|\sum_{k=1}^{n+1} a_{k}\right| \leq \sum_{k=1}^{n+1}\left|a_{k}\right| $$  and thus 
+\left|\sum_{k=1}^{n+1} a_{k}\right| \leq \sum_{k=1}^{n+1}\left|a_{k}\right| $$  and we conclude that
 
 $$
 \left|\sum_{k=1}^{n} a_{k}\right| \leq \sum_{k=1}^{n}\left|a_{k}\right| \qed$$
 
+\bigskip
 \qs{}{
 Exercise 1.2.8
 }
