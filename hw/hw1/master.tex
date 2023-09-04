@@ -65,6 +65,46 @@ which means $n$ is a common factor of $b^2$, and by the preceding logic $b$ in a
 $$
 1^{2}+3^{2}+\cdots+(2 n-1)^{2}=\frac{4 n^{3}-n}{3} \quad \forall n \in \mathbb{N} $$  
 }
+\sol
+
+Let $n=1 \in \mathbb{N}$. Then $1^2 =  \frac{4 (1)^{3}-1}{3} = 1$. Our base case holds. We asssume that the induction hypothesis,
+
+$$ 1^{2}+3^{2}+\cdots+(2 n-1)^{2}=\frac{4 n^{3}-n}{3} $$,
+is correct and we procceed with induction on $n$. We want to show $P(k+1) = \frac{4 (n+1)^{3}-(n+1)}{3}$.
+
+We have that
+$$ 
+1^{2}+3^{2}+\cdots+(2 n-1)^{2} +(2 (n+1)-1)^{2}=\frac{4 n^{3}-n}{3} + (2 (n+1)-1)^{2} 
+$$  
+$$ 
+=\frac{4 n^{3}-n}{3} + (2n+1)^{2} 
+$$  
+$$ 
+=\frac{4 n^{3}-n}{3} + (4n^2+4n +1) 
+$$  
+
+$$ 
+=\frac{4 n^{3}-n+12n^2+12n +3}{3}
+$$  
+
+
+$$ 
+=\frac{4 n^{3} + 8n^2 + 4n + 4n^2 + 8n + 4 -n -1}{3}
+$$  
+$$ 
+=\frac{4 [n^{3} + 2n^2 + n + n^2 + 2n + 1] -(n +1)}{3}
+$$  
+
+$$ 
+=\frac{4 [(n^{2} + 2n + 1)(n+1)] -(n+1)}{3}
+$$  
+
+
+$$ 
+=\frac{4 (n+1)^3 -(n+1)}{3}.
+$$  
+
+Thus, $P(k+1) = \frac{4 (n+1)^{3}-(n+1)}{3}$, showing that $1^{2}+3^{2}+\cdots+(2 n-1)^{2}=\frac{4 n^{3}-n}{3} \quad \forall n \in \mathbb{N} \qed$  
 
 \qs{}{
  Let $n>1$ be a positive integer and let $a_{1}, a_{2}, \ldots, a_{n}$ be real numbers. Prove that
