@@ -67,7 +67,7 @@ $$
 }
 \sol
 
-Let $n=1 \in \mathbb{N}$. Then $1^2 =  \frac{4 (1)^{3}-1}{3} = 1$. Our base case holds. We asssume that the induction hypothesis,
+Let $n=1 \in \mathbb{N}$. Then $1^2 =  \frac{4 (1)^{3}-1}{3} = 1$, showing that the equality holds for $n=1$. We asssume that the induction hypothesis,
 
 $$ 1^{2}+3^{2}+\cdots+(2 n-1)^{2}=\frac{4 n^{3}-n}{3} $$,
 is correct and we procceed with induction on $n$. We want to show $P(k+1) = \frac{4 (n+1)^{3}-(n+1)}{3}$.
@@ -87,18 +87,15 @@ $$
 =\frac{4 n^{3}-n+12n^2+12n +3}{3}
 $$  
 
-
 $$ 
 =\frac{4 n^{3} + 8n^2 + 4n + 4n^2 + 8n + 4 -n -1}{3}
 $$  
 $$ 
 =\frac{4 [n^{3} + 2n^2 + n + n^2 + 2n + 1] -(n +1)}{3}
 $$  
-
 $$ 
 =\frac{4 [(n^{2} + 2n + 1)(n+1)] -(n+1)}{3}
 $$  
-
 
 $$ 
 =\frac{4 (n+1)^3 -(n+1)}{3}.
@@ -106,6 +103,7 @@ $$
 
 Thus, $P(k+1) = \frac{4 (n+1)^{3}-(n+1)}{3}$, showing that $1^{2}+3^{2}+\cdots+(2 n-1)^{2}=\frac{4 n^{3}-n}{3} \quad \forall n \in \mathbb{N} \qed$  
 
+\bigskip
 \qs{}{
  Let $n>1$ be a positive integer and let $a_{1}, a_{2}, \ldots, a_{n}$ be real numbers. Prove that
 
@@ -113,13 +111,42 @@ $$
 \left|\sum_{k=1}^{n} a_{k}\right| \leq \sum_{k=1}^{n}\left|a_{k}\right|$$
 }
 
+Let $n=1 \in \mathbb{R}$. Then 
+$$
+\left|\sum_{k=1}^{1} a_{k}\right| \leq \sum_{k=1}^{1}\left|a_{k}\right| \implies
+\left|a_1\right| \leq \left| a_1\right|. $$ Thus the equality holds in this base case where $n=1$. We then want to show that $\left|\sum_{k=1}^{n+1} a_{k}\right| \leq \sum_{k=1}^{n+1}\left|a_{k}\right|$
+.
+We assume, in the proccess of proof by induction, that
 
 $$
-\left|\sum_{k=1}^{n} a_{k}\right| \leq \sum_{k=1}^{n}\left|a_{k}\right|
+\left|\sum_{k=1}^{n} a_{k}\right| \leq \sum_{k=1}^{n}\left|a_{k}\right|$$ is true.
+Expanding this equality yields
+$$                                                                       
+\left|a_1 + a_2 + \cdot + a_n\right| \leq \left|a_{1}\right| + \left|a_{2}\right|
++ \cdots +  \left|a_{n}\right|.$$
+
+Adding $\left|a_{n+1}\right|$ to both sides gives us
 $$
+\left|a_1 + a_2 + \cdots + a_n\right| + \left|a_{n+1}\right|  \leq \left|a_{1}\right| + \left|a_{2}\right|
++ \cdots +  \left|a_{n}\right|  + \left|a_{n+1}\right|$$
+
+and by the Triangle Inequality Theorem we have
+
+$$
+\left|a_1 + a_2 + \cdots + a_n + a_{n+1}\right|  \leq
+\left|a_1 + a_2 + \cdots + a_n\right| + \left|a_{n+1}\right|  \leq \left|a_{1}\right| + \left|a_{2}\right|
++ \cdots +  \left|a_{n}\right|  + \left|a_{n+1}\right|.$$
+
+
+Therefore,
+
+$$
+\left|\sum_{k=1}^{n+1} a_{k}\right| \leq \sum_{k=1}^{n+1}\left|a_{k}\right|$$
 \qs{}{
 Exercise 1.2.8
 }
+
+
 
 \qs{}
 {Exercise 1.2.12}
