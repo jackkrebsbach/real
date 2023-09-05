@@ -1527,14 +1527,14 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/vf/public/newpx/zplmi.vf
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/newpx/NewPXMI_gnu.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/newpx/NewPXMI.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/newtx/stxscr.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/vf/public/newpx/zplsy.vf
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/newpx/pxsys.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/newtx/txex-bar.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/vf/public/newpx/zplsym.vf
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/newtx/ntxsym.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/vf/public/newtx/ntxsym.vf
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/txfonts/txsyb.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/txfonts/txsya.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/vf/public/newpx/zplsy.vf
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/newpx/pxsys.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/newtx/txex-bar.tfm
 INPUT master.aux
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/NewPXMI.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/NewPXMI_gnu.pfb
