@@ -34,7 +34,7 @@ Thus,
  a^2 = n b^2 \implies
  \left(\prod^{k}_{i = 1} P_{i}^{n_i}\right)^2  = \prod_{j = 1}^{l} P_{j}^{m_j}\left(\prod^{t}_{k = 1} P_{k}^{l_k}\right)^2 
 \end{equation}
-After simplification of (2) we have
+After simplification we have
 \begin{equation}
      \prod^{k}_{i = 1} P_{i}^{2n_i}  = \prod_{j = 1}^{l} P_{j}^{m_j}\prod^{t}_{k = 1} P_{k}^{2l_k}
 \end{equation}
@@ -58,6 +58,10 @@ $$ 1^{2}+3^{2}+\cdots+(2 n-1)^{2}=\frac{4 n^{3}-n}{3}, $$
 is true and we procceed with induction on $n$. We want to show $P(n+1) = \frac{4 (n+1)^{3}-(n+1)}{3}$.
 
 Consider
+$$
+1^{2}+3^{2}+\cdots+(2 n-1)^{2} =\frac{4 n^{3}-n}{3}.$$
+
+Then, adding $(2 (n+1)-1)^{2}$ to both sides of the equation,
 $$ 
 1^{2}+3^{2}+\cdots+(2 n-1)^{2} +(2 (n+1)-1)^{2}=\frac{4 n^{3}-n}{3} + (2 (n+1)-1)^{2} 
 $$  
@@ -160,39 +164,33 @@ We assume the induction hypothesis
 y_{n+1}  = \frac{(2y_n -6 )}{3}
 \end{equation}
 
-is true.  We want to show that if $y_n >-6$ then it follows $y_{n+1} > -6$. First we subtract 3 from both sides of (4).
+is true.  We want to show that if $y_n >-6$ then it follows $y_{n+1} > -6$. First we subtract 3 from both sides.
 
-$$y_n \le -6 \implies  y_n -3  > -6 -3 \implies  2(y_n -3)  > -18$$
+$$y_n > -6 \implies  y_n -3  > -6 -3 \implies  2(y_n -3)  > -18$$
 
-Which means that 
-
-$$y_{n+1} > -6.$$
-
-Thus $y_n > -6$ $\forall n \in \mathbb{N} \qed$
+and we have
+$$
+\frac{2y_n -6 }{3} > -6.
+$$
+This means that $y_{n+1} > -6$, and therefore $y_n > -6$ $\forall n \in \mathbb{N} \qed$
 \smallskip
 
 (b) \sol We want to show that the sequence $(y_1, y_2, \dots)$ is decreasing, i.e $ y_{n} > y_{n+1}$ $\forall n \in \mathbb{N}$.
 
-We know $y_1 = 6$ and $y_2 = 2$. Clearly $y_1 > y_2$. Continuing on we assume then that our induction hypothesis,
+We know $y_1 = 6$ and $y_2 = 2$. Clearly $y_1 > y_2$. Continuing on we assume that our induction hypothesis,
 
-$$ y_n > y_{n+1}, $$ 
-is correct. We want to show $y_{n+1} > y_{n+2}$. We have
+$$ y_{n+1}  = \frac{(2y_n -6 )}{3}, $$ 
 
-$$y_n > y_{n+1} \implies  y_n -3  >  y_{n+1}-3 \implies  2y_n -6  >  2y_{n+1}-6.$$
+is true. We want to show if we have $ y_n > y_{n+1}$ then we are guaranteed to have $y_{n+1} > y_{n+2}$. First we consider
 
-Next,
-
-$$2y_n -6  >  2y_{n+1}-6 \implies \frac{2y_n -6 }{3} >  \frac{2y_{n+1}-6}{3}, $$
-
-which means that
+$$y_n > y_{n+1} \implies  y_n -3  >  y_{n+1}-3 \implies  2y_n -6  >  2y_{n+1}-6 \implies \frac{2y_n -6 }{3} >  \frac{2y_{n+1}-6}{3}.$$
 
 
-$$ \frac{2y_n -6 }{3} >  \frac{2y_{n+1}-6}{3}.$$
-
-Finally, we can substitue 
+Then, we can substitue using induction hypothesis,
 
 
-$$ y_{n+1} > y_{n+1+1} \implies y_{n+1} > y_{n+2}$$ which is is exactly what we needed to show. $\qed$
+$$ \frac{2y_n -6 }{3} >  \frac{2y_{n+1}-6}{3} \implies y_{n+1} > y_{n+1+1} \implies y_{n+1} > y_{n+2},$$ 
+which is is exactly what we needed to show. Thus, $ y_{n} > y_{n+1}$ $\forall n \in \mathbb{N} \qed$
 
 \bigskip
 
@@ -200,6 +198,8 @@ $$ y_{n+1} > y_{n+1+1} \implies y_{n+1} > y_{n+2}$$ which is is exactly what we 
 {Grade the following proof: Prove that $\sqrt{3}$ is irrational. Does a similar argument work to show $\sqrt{6}$ is irrational?}
 
 Proof:To prove that $\sqrt{3}$ is irrational, we can use a proof by contradiction. The idea is to assume that $\sqrt{3}$ is rational, and then derive a contradiction.
+
+\textbf{Good job setting the stage for the rest of the proof.}
 
 Assumption: $\sqrt{3}$ is rational.
 
@@ -213,6 +213,9 @@ Rearranging the equation: $a^{2}=3 \cdot b^{2}$
 
 From this equation, we can see that $a^{2}$ is a multiple of 3 , which implies that $a$ must also be a multiple of 3. Let's represent $a$ as $3 k$ where $k$ is an integer:
 
+\textbf{
+How do we know for certain  that if $a^2$ is a multiple of  $3$ then $a$ must be a multiple of $3$? It is not immediately obvious why this is the case, so you should make some justification why this must be true.
+}
 $$
 \begin{gathered}
 (3 k)^{2}=3 \cdot b^{2} \\
@@ -223,10 +226,20 @@ $$
 
 Now, $b^{2}$ is also a multiple of 3 , which means $b$ must be a multiple of 3 . However, this contradicts our initial assumption that $a$ and $b$ have no common factors other than 1 (i.e., they are coprime). This contradiction arises from assuming that $\sqrt{3}$ is rational.
 
+\textbf{
+I like the way you walk through exactly how the contradiction arises and then hint at what this leads us to conclude.
+}
+
 Hence, our initial assumption that $\sqrt{3}$ is rational must be false, which means that $\sqrt{3}$ is irrational. Now, to address whether a similar argument works for $\sqrt{6}$ :
 
 No, a similar argument does not work for $\sqrt{6}$. The proof for the irrationality of $\sqrt{3}$ relies on the fact that it leads to a contradiction with respect to the common factors of $a$ and $b$. However, for $\sqrt{6}$, this argument does not apply directly because the factors of 6 are not the same as the factors of 3. In fact, $\sqrt{6}$ is not irrational; it is a rational number. It can be expressed as the fraction $\frac{2 \sqrt{3}}{3}$, which is a ratio of two integers.
 
+\textbf{
+  Your argument starts of alright, but you need to specify what about the difference in factors between $6$ and $3$ means that you preceding argument needs to be changed to prove that $\sqrt{6}$ is irrational. The second part of your statement, $\frac{2\sqrt{3}}{3}$, is false. This is not a ratio of two integers, in fact you just proved before that $\sqrt{3}$ itself is irrational!  
+}\par
+\textbf{ 
+Overall, you articulate most of your reasoning well, but make sure that you are thorough in the lines of your argument. Each step should clearly follow the preceding one - and make sure what you are saying is indeed true!
+}\par\textbf{(2.5/5)}
 
 \end{document}
 
