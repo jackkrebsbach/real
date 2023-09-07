@@ -1,21 +1,10 @@
-\documentclass{article}
-\usepackage{graphicx} % Required for inserting images
-\usepackage{amsfonts}
-\usepackage{import}
-\usepackage{xifthen}
-\usepackage{pdfpages}
-\usepackage{amsmath}
-\usepackage{transparent}
-\usepackage{graphicx}
-\usepackage{multicol}
-\usepackage{float} % For the [H] specifier
-\usepackage{amsthm}
 
-\newcommand{\incfig}[1]{%
-    \def\svgwidth{\columnwidth}
-    \import{./figures/}{#1.pdf_tex}
-}
-\pdfsuppresswarningpagegroup=1
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
 \title{The Real Numbers}
 \author{Jack Krebsbach }
 
@@ -26,8 +15,7 @@
 
 \section{The Real Numbers}
 
-
-\subsection{The irrationality of $\sqrt{2}$}
+\subsection{The irrationality of the square root of 2 }
 
 \subsection{Preliminaries}
 
@@ -50,4 +38,45 @@
 \end{itemize}
 \end{multicols}
 
+ Two real numbers $a$ and $b$ are equal if and only if for every real number $\epsilon > 0$ it follows that $|a-b| < \epsilon.$ 
+
+\begin{proof}
+
+  \par
+  $\rightarrow$
+  If $a=b$ then we have $|a-b| =0$. No matter which  $\epsilon >  0 \in \mathbb{R}$ is chosen we have that  $|a-b|=0 < \epsilon.$ Thus, $a=b$  \par
+$\leftarrow$
+Suppose, by way of contradiction, that $a\neq b$ and $\forall \epsilon > 0$, we have $|a-b| < \epsilon$ . Let $\epsilon_{0} = \frac{|a-b|}{2}$, then it is clear that $|a-b| < \frac{|a-b|}{2} = \epsilon_{0}$ is false. Thus, with this contradiction we overturn our assumption and conclude a must equal b.
+\end{proof}
+
+\subsection{The Axiom of Completeness}
+
+\dfn{Bounded Above}{
+A set $A \subseteq \mathbf{R}$ is bounded above if there exists a number $b \in \mathbf{R}$ such that $a \leq b$ for all $a \in A$. The number $b$ is called an upper bound for $A$.
+Similarly, the set $A$ is bounded below if there exists a lower bound $l \in \mathbf{R}$ satisfying $l \leq a$ for every $a \in A$.
+}
+\bigskip
+
+\dfn{Supremum of a Set}{
+A real number $s$ is the \textit{Supremum} or the least upper bound for a set $A \subseteq \mathbf{R}$ if: \par
+(i) $s$ is an upper bound for $A$;\par
+(ii) if $b$ is any upper bound for $A$, then $s \leq b$.
+}
+
+\textbf{Lemma 1.3.8}. Assume $s \in \mathbf{R}$ is an upper bound for a set $A \subseteq \mathbf{R}$. Then, $s=\sup A$ if and only if, for every choice of $\epsilon>0$, there exists an element $a \in A$ satisfying $s-\epsilon<a$.
+
+\begin{proof}
+\par
+$\lthen$
+Let  $s = \sup A$ and arbitralily choose any $\eps >0$. Suppose, by way of contradiction, there does not exist $a \in A$ with $a > s- \epsilon$. So for all $a \in A$ we have that $ a \leq s - \eps < s$. This means that $s-\epsilon$ is an upperbound of $A$. Thus, there must exist an element $a \in A$ such that $s- \epsilon <a.$
+
+
+\par
+$\leftarrow$
+Let $ \eps > 0$ and suppose there exists $a \in A$ with $s-\epsilon < a$ and we know that $s$ is an upperbound of $A$. To show that $s$ is the least upperbound, by way of contradiction, suppose that $b<s$ and $b$ is another upperbound of $A$.
+\par 
+Consider $\epsilon_{0} = s - b > 0.$ By hypothesis there exists $a$ with $s - \epsilon_{0} < a \implies s - (s - b) < a \implies  b < a.$ As we know that $b$ is an upperbound of $A$ this is impossible. Therefore it must be that $b \geq s$. Hence, $s \leq b$ and $s = \sup A.$
+\end{proof}
+
 \end{document}
+
