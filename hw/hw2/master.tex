@@ -1,0 +1,75 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
+\title{Real Analysis HW \#2}
+\author{Jack Krebsbach }
+
+\date{Sep 13th}
+
+\begin{document}
+
+\maketitle
+
+\qs{}{
+Exercise 1.3.7. Prove that if $a$ is an upper bound for $A$, and if $a$ is also an element of $A$, then it must be that $a=\sup A$.
+}
+\qs{}{
+Exercise 1.4.1. Recall that I stands for the set of irrational numbers.
+(a) Show that if $a, b \in \mathbf{Q}$, then $a b$ and $a+b$ are elements of $\mathbf{Q}$ as well.
+(b) Show that if $a \in \mathbf{Q}$ and $t \in \mathbf{I}$, then $a+t \in \mathbf{I}$ and $a t \in \mathbf{I}$ as long as $a \neq 0$.
+(c) Part (a) can be summarized by saying that $\mathbf{Q}$ is closed under addition and multiplication. Is I closed under addition and multiplication? Given two irrational numbers $s$ and $t$, what can we say about $s+t$ and $s t$ ?
+}
+
+\qs{}{
+Exercise 1.4.3. Prove that $\bigcap_{n=1}^{\infty}(0,1 / n)=\emptyset$. Notice that this demonstrates that the intervals in the Nested Interval Property must be closed for the conclusion of the theorem to hold.
+}
+
+\qs{}{
+Exercise 1.4.5. Using Exercise 1.4.1, supply a proof for Corollary 1.4 .4 by considering the real numbers $a-\sqrt{2}$ and $b-\sqrt{2}$.
+}
+
+\qs{}{
+Exercise 1.4.8. Give an example of each or state that the request is impossible. When a request is impossible, provide a compelling argument for why this is the case.
+(a) Two sets $A$ and $B$ with $A \cap B=\emptyset, \sup A=\sup B, \sup A \notin A$ and $\sup B \notin B$.
+(b) A sequence of nested open intervals $J_1 \supseteq J_2 \supseteq J_3 \supseteq \cdots$ with $\bigcap_{n=1}^{\infty} J_n$ nonempty but containing only a finite number of elements.
+(c) A sequence of nested unbounded closed intervals $L_1 \supseteq L_2 \supseteq L_3 \supseteq \ldots$ with $\bigcap_{n=1}^{\infty} L_n=\emptyset$. (An unbounded closed interval has the form $[a, \infty)=$ $\{x \in R: x \geq a\}$.)
+(d) A sequence of closed bounded (not necessarily nested) intervals $I_1, I_2$, $I_3, \ldots$ with the property that $\bigcap_{n=1}^N I_n \neq \emptyset$ for all $N \in \mathbf{N}$, but $\bigcap_{n=1}^{\infty} I_n=\emptyset$.
+}
+
+\qs{}{
+6. ChatGPT Challenge: Is the following correct? Make comments as if you are grading it:
+Proof: $a<b$ if and only if $a<b+\epsilon$ for every $\epsilon>0$
+$(\Rightarrow)$ Direction
+Assume that $a<b$. We want to show that $a<b+\epsilon$ for every $\epsilon>0$.
+Let $\epsilon>0$ be arbitrary. Adding $\epsilon$ to both sides of the inequality $a<b$ gives: $a+\epsilon<b+\epsilon$
+Since $\epsilon>0$, we have $a<a+\epsilon$. Combining these inequalities, we get: $a<a+\epsilon<b+\epsilon$
+Thus, $a<b+\epsilon$ for every $\epsilon>0$, as desired.
+$(\Leftarrow)$ Direction
+Assume that $a<b+\epsilon$ for every $\epsilon>0$. We want to show that $a<b$.
+Suppose, for the sake of contradiction, that $a \geq b$. Then, the difference $a-b$ is non-negative or zero $(a-b \geq 0)$.
+Choose $\epsilon=\frac{a-b}{2}$. Since $a \geq b$, we have $\epsilon>0$. By assumption, $a<b+\epsilon$, which gives:
+$$
+a<b+\frac{a-b}{2}
+$$
+Simplifying the right side, we get:
+$$
+a<\frac{a+b}{2}
+$$
+Now, adding $b$ to both sides:
+$$
+a+b<\frac{a+b}{2}+b
+$$
+Simplifying further:
+$$
+\begin{gathered}
+a+b<\frac{a+b+2 b}{2} \\
+a+b<\frac{a+3 b}{2}
+\end{gathered}
+$$
+Since $a+b$ is less than $\frac{a+3 b}{2}$, this contradicts our assumption that $a<b+\epsilon$ for every $\epsilon>0$. Therefore, our assumption that $a \geq b$ must be false, which means $a<b$.
+}
+\end{document}
+
