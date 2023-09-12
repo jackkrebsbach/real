@@ -26,12 +26,18 @@ Suppose that $b = \sup A$. Let $a$ be an upper bound for $A$ and $a \in A$. We k
 }
 
 (a) Show that if $a, b \in \mathbb{Q}$, then $a b$ and $a+b$ are elements of $\mathbb{Q}$ as well.
-\sol If  $a, b \in \mathbb{Q}$ then we can write $a$ and $b$ as a ratio of integers, $a = \frac{z}{k}$ and $b= \frac{l}{t}$ with $t,l,z,k \in \mathbb{Z}.$ Consider $$
+\sol If  $a, b \in \mathbb{Q}$ then we can write $a$ and $b$ as a ratio of integers, $a = \frac{z}{k}$ and $b= \frac{l}{t}$ with $t,l,z,k \in \mathbb{Z}.$ Consider the sum $$
 a+b = \frac{z}{k} + \frac{l}{t}= \frac{zt + lk}{kt}. 
 $$
 Thus, we can write $a+b$ as a ratio of two integers ($zt+lk,kt \in \ZZ$ ) : $a+b \in \mathbb{Q}$.
 \par \bigskip
 
+Consider the product
+$$ab = \frac{z}{k} \frac{l}{t} = \frac{lt}{zk} \in \QQ.$$ Both the denominator and the numerator are in the integers. So we can express $ab$ as a ratio of two integers and $ab \in \QQ.$
+\par 
+$\QQ$ is thus closed under addition and multiplication.
+\par 
+\bigskip
 (b) Show that if $a \in \mathbb{Q}$ and $t \in \mathbb{I}$, then $a+t \in \mathbb{I}$ and $a t \in \mathbb{I}$ as long as $a \neq 0$.
 
 \sol If $a \in \QQ$ then we can define $a$ as a ratio of two integers $m,n \in \ZZ$ such that $a = \frac{m}{n}$ where $a \neq 0$. If $t \in \RR \setminus \NN$. Then we can not an expression of $t$ as a ratio of two integers. Then it is impossible to have $a+t$ and $at$ as a ratio of two integers.  
@@ -40,9 +46,10 @@ Thus, we can write $a+b$ as a ratio of two integers ($zt+lk,kt \in \ZZ$ ) : $a+b
 (c) Part (a) can be summarized by saying that $\mathbf{Q}$ is closed under addition and multiplication. Is I closed under addition and multiplication? Given two irrational numbers $s$ and $t$, what can we say about $s+t$ and $s t$ ?
 \smallskip
 \par
-\sol For any two irrational numbers $s,t \in \RR \setminus \QQ$ which respectively can not be expressed as the ratio of two integers, it is impossible to find $l,m \in \ZZ$ where $s+t = \frac{l}{m}$. So the irrationals are closed under multiplication.
+\sol 
+Consider the sum of two irrational numbers $a = 1 + \pi$ and $b = 1 - \pi.$ We have that $a + b = 2 \in \NN$, showing that the irrationals are not closed under addition.
 \par
-However, we have that for for some  $i \in \RR \setminus \QQ$ we can construct a rational number by simply squaring $i.$ For example, $\sqrt{2} \in \RR \setminus \QQ$ and $\sqrt{2}^2= 2 \in \QQ$. So the irrationals are not closed under multiplication.
+We have that for for some  $i \in \RR \setminus \QQ$ we can construct a rational number by simply squaring $i.$ For example, $\sqrt{2} \in \RR \setminus \QQ$ and $\sqrt{2}^2= 2 \in \NN$. So the irrationals are not closed under multiplication.
 
 \par \bigskip
 
@@ -67,7 +74,7 @@ $$
 a < \frac{l}{k}+ \sqrt{2} < b 
 .$$ 
 
-Thus, we have found a real number, $x$, such that $a < x < b.$ For all real numbers $a, b \in \RR$ where $a < b$ there exists $t \in \RR \setminus \QQ$ such that $a<t<b.$
+Thus, we have found a real number, $x + \sqrt{2}$, such that $a < x + \sqrt{2}< b.$ For all real numbers $a, b \in \RR$ where $a < b$ there exists $t \in \RR \setminus \QQ$ such that $a<t<b.$
 
 \qs{}{
 \textbf{Exercise 1.4.8.} Give an example of each or state that the request is impossible. When a request is impossible, provide a compelling argument for why this is the case.
@@ -77,7 +84,7 @@ Thus, we have found a real number, $x$, such that $a < x < b.$ For all real numb
 
 \par \bigskip 
 $ A = { x : x = \sqrt{2} - 1/n, n \in N }.$ \par $B = (\sqrt{2} -1,\sqrt{2}) \setminus A$ 
-\par We have $ \sup A = \sup B = \sqrt{2}$ and $A \cap B = \emptyset.$
+\par We have found sets satisfying the conditions $A$ and $B$ with $A \cap B=\emptyset, \sup A=\sup B = \sqrt{2}, \sqrt{2} \notin A$ and $\sqrt{2} \notin B$
 
 
 \par \bigskip
@@ -86,8 +93,9 @@ $ A = { x : x = \sqrt{2} - 1/n, n \in N }.$ \par $B = (\sqrt{2} -1,\sqrt{2}) \se
 $J_n = (-\frac{1}{n}, \frac{1}{n})$.
 \par \bigskip
 (c) A sequence of nested unbounded closed intervals $L_1 \supseteq L_2 \supseteq L_3 \supseteq \ldots$ with $\bigcap_{n=1}^{\infty} L_n=\emptyset$. (An unbounded closed interval has the form $[a, \infty)=$ $\{x \in R: x \geq a\}$.)
+\bigskip
 
-$J_n = [n, \infty)$. Assume that there exists some $x \in \RR$ that exists in every $J_n$. By Archimedes Property we know for any $x \in \RR$ there exists $n^\star \in \RR$ where $ n < n^\star$, so we have $\bigcap_{n=1}^{\infty} J_n = \emptyset.$ 
+$J_n = [n, \infty)$. Assume that there exists some $x \in \RR$ that exists in every $J_n$. By Archimedes Property we know for any $x \in \RR$ there exists $n^\star \in \NN$ where $ n < n^\star$, so we know $x \not\in \bigcap_{n=1}^{n^\star} J_n$. Thus we have $\bigcap_{n=1}^{\infty} J_n = \emptyset.$ 
 
 \par \bigskip
 (d) A sequence of closed bounded (not necessarily nested) intervals $I_1, I_2$, $I_3, \ldots$ with the property that $\bigcap_{n=1}^N I_n \neq \emptyset$ for all $N \in \NN$, but $\bigcap_{n=1}^{\infty} I_n=\emptyset$.
@@ -103,10 +111,14 @@ Let $\epsilon>0$ be arbitrary. Adding $\epsilon$ to both sides of the inequality
 Since $\epsilon>0$, we have $a<a+\epsilon$. Combining these inequalities, we get: $a<a+\epsilon<b+\epsilon$
 Thus, $a<b+\epsilon$ for every $\epsilon>0$, as desired.
 
+\textbf{Good job explaining what you are going to show and proving it with clear logical steps.}
 \bigskip
 \par
 $(\Leftarrow)$ Direction
 Assume that $a<b+\epsilon$ for every $\epsilon>0$. We want to show that $a<b$.
+
+\textbf{Good job showing the end goal of this direction.}
+
 Suppose, for the sake of contradiction, that $a \geq b$. Then, the difference $a-b$ is non-negative or zero $(a-b \geq 0)$.
 Choose $\epsilon=\frac{a-b}{2}$. Since $a \geq b$, we have $\epsilon>0$. By assumption, $a<b+\epsilon$, which gives:
 $$
@@ -127,6 +139,15 @@ a+b<\frac{a+b+2 b}{2} \\
 a+b<\frac{a+3 b}{2}
 \end{gathered}
 $$
+
+\textbf{Everything up to here tracks algebraically, but it appears that your logic breaks down. You want to start with your assumption you made for the sake of contradiction and use the information to get to a logical fallacy (hint: if $ a < b + \epsilon$, what happens when $\epsilon = a - b$?.
+}
+
 Since $a+b$ is less than $\frac{a+3 b}{2}$, this contradicts our assumption that $a<b+\epsilon$ for every $\epsilon>0$. Therefore, our assumption that $a \geq b$ must be false, which means $a<b$.
+\par
+\textbf{Your proof seems to have some gaps: why is it the case that since $a+b$ is less than $\frac{a+3 b}{2}$, this contradicts our assumption that $a<b+\epsilon$ for every $\epsilon>0$?
+It is also confusing that you refer to the assumption you made for contradiction ($a \geq b $) and a given information we know ($ a < b + \epsilon$, $\epsilon > 0$) interchangeably.}
+\par\textbf{
+Overall you made some nice arguments and the first part of your proof holds. If you are using proof by contradiction make sure you clearly show the logical fallacy that overturns the contradiction. The backwards direction of the if and only if proof needs work. (2.5/5)}
 \end{document}
 
