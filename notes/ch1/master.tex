@@ -79,16 +79,149 @@ Let $ \eps > 0$ and suppose  there exists $a \in A$ with $s-\epsilon < a$ and we
 \par 
 Consider $\epsilon_{0} = s - b > 0.$ By hypothesis there exists $a$ with $s - \epsilon_{0} < a \implies s - (s - b) < a \implies  b < a.$ As we know that $b$ is an upper bound of $A$ this is impossible. Therefore it must be that $b \geq s$. Hence, $s \leq b$ and $s = \sup A.$
 
+\end{myproof}
+\bigskip
+
+\subsection{Consequences of Completeness}
+\thm{
+The Archimedes Property 
+}{
+  (a) For all $x \in \RR$ there exists $n \in \NN$ such that $n > x$.
+
+  (b) For all $y \in \RR$ with $y \neq 0$, there exists $n \in \NN$ such that $\frac{1}{n} < y.$
+}
+
+\begin{myproof}
+  
+  (a) Suppose, by way of contradiction, that the natural numbers are bounded. Let $\alpha \in \RR$ be an upper bound, so $n \leq \alpha$ for all $n \in \NN$. Let $\beta = \sup \NN$ [exists by completeness]. Now $\beta - 1$ is not an upper bound. By our theorem, there exists $n_0 \in \NN$ such that $\beta - 1 < n_0.$ \par
+  So $\beta < n_0 +1 \in \NN$. This is a contradiction because we assumed that $\beta$ was the supremum of the natural numbers. Thus, $\NN$ is unbounded. For any $\alpha \in \RR$, we can find a natural number that is larger than $\alpha.$
+
+  (b) To show why be is the case you can consider $x = \frac{1}{y}$ where $y \neq =0.$
+\end{myproof}
+
+\subsection{Examples}
+
+\begin{enumerate}
+    
+\item
+Show that $\bigcap^{\infty}_{n=1} (0, \frac{1}{n}) = \emptyset.$
+
+\begin{myproof}
+    Suppose otherwise, that the intersection is no the empty set, and let $x \in \bigcap^{\infty}_{n=1}.$ Then it follows $x \in (0, \frac{1}{n})$ for all $n \in \NN$. By the corollary of the Archimedes Property, there exists  $n_\star \in \NN$ with $\frac{1}{n_\star} < x.$ Then there does not exist $x$ such that $x \in \bigcap^{\infty}_{n=1} (0,\frac{1}{n})$. Therefore, $\bigcap^{\infty}_{n=1} (0, \frac{1}{n}) = \emptyset.$
+\end{myproof}
+
+\item Show there does not exist a smallest positive number
+  \begin{myproof}
+      To show that there does not exist a smallest positive number, suppose otherwise. Let $x \in \RR^+.$ By Archimedes property there exists $n_0 \in \NN$ such that $\frac{1}{n_0} < x.$ So $x$ cannot be the smallest.
+  \end{myproof}
+\end{enumerate}
+\pagebreak
+
+\thm{The Nested Cells Property}{
+For each $n \in \NN$, assume we are given a closed interval $I_n=\left[a_n, b_n\right]=\left\{x \in \RR: a_n \leq x \leq b_n\right\}$. Assume also that each $I_n$ contains $I_{n+1}$. Then, the resulting nested sequence of closed intervals
+$$
+I_1 \supseteq I_2 \supseteq I_3 \supseteq I_4 \supseteq \cdots
+$$
+has a non-empty intersection; that is, $\bigcap_{n=1}^{\infty} I_n \neq \emptyset$.
+}
+
+\begin{myproof}
+  Let $$A=\{a_1, a_2,a_3, \dots\}$$  and $$B=\{b_1,b_2,b_3,
+  \dots\}.$$ $A$ is bounded above by one element of $B$ and $B$ is bounded below by any $a \in A$. 
+  Let $x = \sup A$ which implies that $a_n \leq x$ for all $n \in \NN$. Since $b$ is an upper bound of $A$ and $x = \sup A$, we have that $ x \leq b_n$ for all $n$ and that $a_n \leq x \leq b_n$ for all $n$.Thus, $x \in [a_n, b_n]$ for all $n$ and $ x \in \bigcap_{n=1}^\infty I_n.$ 
+\end{myproof}
+
+
+\subsection{Intersection Examples}
+\begin{itemize}
+  \item $\bigcap (0, \frac{1}{n}) = \emptyset$
+
+  \item $\bigcap [0, \frac{1}{n}] = \{0\}$
+  \item $\bigcap (0, \frac{1}{n}] = \emptyset$
+  \item $\bigcap (-\frac{1}{n}, \frac{1}{n}) = \{0\}$
+\end{itemize}
+
+\thm{Density of $\QQ$ in $\RR$}{
+  Let $a,b \in \RR$. Then there exist $n \in \QQ$ with $a < r < b$.
+}
+
+\begin{myproof}
+  Since $a,b \in \RR$, without loss of generality let $a <b.$ Now, we have that $b-a >0.$ By the corollary to the Archimedes principle there exist $n_\star \in \NN$ with  $\frac{1}{n_\star} < b-a.$ \par
+  Consider $n_\star a \in \RR.$ Pick $m \in \NN$ so that $$ m - 1 \leq n_{\star} a < m.$$
+
+In other words, we choose the smallest of natural numbers greater than $n_\star a.$ By chance, it may be that one less than that number is $n_\star a.$ so we end up with the equality $m-1 \leq n_\star a.$ \par
+
+We have that $$ n_\star a < m \implies a < \frac{m}{n_\star}$$ and, $$ m \leq n_\star a + 1,$$ because we know that $$
+m - 1 \leq n_{\star} a.$$
+
+Next, $$\frac{1}{n_\star}< (b-a) \implies 1 < n_\star (b -a) \implies 1 < n_\star b - n_\star a \implies n_\star a < n_\star b - 1 \implies a < \frac{n_\star b - 1}{n_\star} \implies a < b - \frac{1}{n_\star}.$$
+We take $$ m \leq n_\star a + 1 <  n_\star[b - \frac{1}{n_\star}] + 1 = n_\star b - 1 + 1 = n_\star b$$
+
+
+So, $m < n_\star b$ which means $ \frac{m}{n_\star} < b.$
 
 \end{myproof}
 
 
+\subsection{Cardinality}
+
+\dfn{1-1 and onto}{
+  \begin{itemize}
+    \item $f: a \rightarrow b $ is 1-1 if $a_1 \neq a_2$ implies that $f(a_1) \neq f(a_2).$
+    \item $f: a \rightarrow b$ is onto if for every $b \in B$ there exists $a \in A $ such that $f(a) =b.$
+      
+  \end{itemize}
+}
+
+\dfn{Cardinality}{
+  A set $A$ has the same cardinality as $B$ if there exists a 1-1 and onto function, $f: A \rightarrow B$. We have $|A| = |B|$ or $A ~ B.$
+}
+
+\subsubsection{Examples}
+\begin{enumerate}
+  \item Show that $\NN \sim \ZZ.$
+    \begin{myproof}
+        
+\[ 
+ f(n) = 
+  \begin{cases} 
+  odd & \frac{n-1}{2} \\
+  even & -\frac{n}{2}
+   \end{cases}
+\]
+    \end{myproof}
+
+  \item Show that $[0,1] \sim [\pi,5]$.
+    \begin{myproof}
+        $$y = (5- \pi)x + \pi$$
+    \end{myproof}
+
+    Is $(0,1] \sim (\pi,5)?$ Yes but we need to be careful how we show.
+\end{enumerate}
 
 
+\dfn{Infinite}{
+  \begin{itemize}
+  \item A set is \textit{finite} if $|A| = |\NN_n| n \in \NN$
+  \item A set is \textit{infinite} if it is not \textit{finite}.
+  \end{itemize}
+}
+\dfn{Countable}{
+  \begin{itemize}
+  \item An infinite set is \textit{countable} if $|A| = |\NN|$.
+  \item An infinite set is \textit{uncountable} if it is not \textit{countable}.
+  \end{itemize}
+}
 
 
+\subsubsection{Examples}
 
-
+\begin{enumerate}
+  \item $\QQ$?
+  \item $\RR \setminus \QQ$?
+  \item $\RR$?
+  \item Is the union of countable sets countable?
+\end{enumerate}
 
 \end{document}
 

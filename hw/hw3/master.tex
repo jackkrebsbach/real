@@ -1,0 +1,66 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
+\title{Real Analysis HW \#3}
+\author{Jack Krebsbach }
+
+\date{Sep 20th}
+
+\begin{document}
+
+\maketitle
+
+\qs{}{
+1. Let $S$ be a nonempty set of real numbers that is bounded above and let $\beta=\sup S$. Suppose that $\beta \notin S$. Prove that for each $\epsilon>0$, the set $\{x \in S: x>\beta-\epsilon\}$ is infinite.
+}
+
+\qs{}{
+2. Prove that the union of a countable set and an uncountable set is uncountable.
+}
+
+\qs{}{
+3. Exercise 1.5.4:
+}
+
+(a) Show $|(a, b)|=|\mathbb{R}|$.
+
+\par \bigskip
+(b) Show that an unbounded interval like $(a, \infty)=\{x: x>a\}$ has the same cardinality at $\mathbb{R}$ as well.
+
+\par \bigskip
+(c) Show that $[0,1)$ has the same cardinality as $(0,1)$.
+
+\qs{}{
+4. Exercise 1.5.6:
+
+}
+\sol
+
+
+ (a) Give an example of a countable collection of disjoint open intervals.
+\par \bigskip
+
+\par \bigskip
+
+ (b) Give an example of an uncountable collection of disjoint open intervals, or argue thatno such collection exists.
+
+
+\qs{}{
+5. ChatGPT Challenge: Find an example of a sequence of closed bounded intervals $I_1, I_2, \ldots$ with the property that $\bigcap_{k=1}^n I_k \neq \emptyset$ for all $n \in \mathbb{N}$, but $\bigcap_{n=1}^{\infty} I_n=\emptyset$
+}
+
+Proof: Let $I_n=\left[\frac{1}{n}, 1-\frac{1}{n}\right]$ for $n \in \mathbb{N}$.
+For each natural number $n$, the interval $I_n$ is a closed bounded interval, and their intersection is non-empty:
+$$
+\bigcap_{k=1}^n I_k=\left[\frac{1}{n}, 1-\frac{1}{n}\right] \neq \emptyset
+$$
+However, when we consider the infinite intersection:
+$$
+\bigcap_{n=1}^{\infty} I_n=\emptyset
+$$
+The infinite intersection is empty because as $n$ approaches infinity, the left endpoint $\frac{1}{n}$ approaches zero, and the right endpoint $1-\frac{1}{n}$ approaches 1 . So, the infinite intersection becomes the empty set.
+\end{document}
+
