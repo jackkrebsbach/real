@@ -18,7 +18,7 @@
 }
 
 \begin{myproof}
-Suppose that $b = \sup A$. Let $a$ be an upper bound for $A$ and $a \in A$. We know $b$ is an upper bound so for every $a \in A$ we have $a \leq b.$ Since $b = \sup A$ and $a$ is an upper bound of $A$ we also know $b \leq a$. Thus, $a = b = \sup A.$
+Suppose that $b = \sup A$. Let $a$ be an upper bound for $A$ and $a \in A$. We know $b$ is an upper bound so for every $a \in A$ we have $a \leq b.$ Since $b = \sup A$ and $a$ is an upper bound of $A$ we also know $b \leq a$. Thus, it must be that $a = b = \sup A.$
 \end{myproof}
 
 \qs{}{
@@ -26,27 +26,36 @@ Suppose that $b = \sup A$. Let $a$ be an upper bound for $A$ and $a \in A$. We k
 }
 
 (a) Show that if $a, b \in \mathbb{Q}$, then $a b$ and $a+b$ are elements of $\mathbb{Q}$ as well.
-\sol If  $a, b \in \mathbb{Q}$ then we can write $a$ and $b$ as a ratio of integers, $a = \frac{z}{k}$ and $b= \frac{l}{t}$ with $t,l,z,k \in \mathbb{Z}.$ Consider the sum $$
+
+\sol 
+If  $a, b \in \mathbb{Q}$ then we can write $a$ and $b$ as a ratio of integers, $a = \frac{z}{k}$ and $b= \frac{l}{t}$ with $t,l,z,k \in \mathbb{Z}.$ Consider the sum $$
 a+b = \frac{z}{k} + \frac{l}{t}= \frac{zt + lk}{kt}. 
 $$
-Thus, we can write $a+b$ as a ratio of two integers ($zt+lk,kt \in \ZZ$ ) : $a+b \in \mathbb{Q}$.
+Thus, we can write $a+b$ as a ratio of two integers ($zt+lk,kt \in \ZZ$ ) : $a+b \in \mathbb{Q}$ (the integers are closed under addition and multiplication). 
 \par \bigskip
 
 Consider the product
-$$ab = \frac{z}{k} \frac{l}{t} = \frac{lt}{zk} \in \QQ.$$ Both the denominator and the numerator are in the integers. So we can express $ab$ as a ratio of two integers and $ab \in \QQ.$
+$$ab = \frac{z}{k} \frac{l}{t} = \frac{lt}{zk} \in \QQ.$$ Both the denominator and the numerator are in the integers - the integers are closed under multiplication - so we can express $ab$ as a ratio of two integers and know that $ab \in \QQ.$
 \par 
-$\QQ$ is thus closed under addition and multiplication.
+Thus we have that $\QQ$ is  closed under addition and multiplication.
 \par 
 \bigskip
 (b) Show that if $a \in \mathbb{Q}$ and $t \in \mathbb{I}$, then $a+t \in \mathbb{I}$ and $a t \in \mathbb{I}$ as long as $a \neq 0$.
 
-\sol If $a \in \QQ$ then we can define $a$ as a ratio of two integers $m,n \in \ZZ$ such that $a = \frac{m}{n}$ where $a \neq 0$. If $t \in \RR \setminus \NN$. Then we can not an expression of $t$ as a ratio of two integers. Then it is impossible to have $a+t$ and $at$ as a ratio of two integers.  
+\sol 
+
+Assume that the product $at$ is rational and let $ at = b \in \ZZ.$ This means that we can express $t$ as a ratio of two integers, $\frac{b}{a}$ with $a \neq 0$ . However, $t$ is irrational and we have a contradiction. Thus, we know $at =b  \in \mathbb{I}.$
+\par
+Consider the sum $a + t $, where $a \in \ZZ$ and $t\in \mathbb{I}$  is irrational. Assume, by way of contradiction, that $ a + t = c \in \ZZ.$ That means that $c  + (-a) = t \in \mathbb{I}.$ However, we have just shown that the integers are closed under addition in part (a)
+$\rightarrow\!\leftarrow$. Thus, we must have that $a+t = c \in \mathbb{I}.$
+
 
 \par \bigskip
-(c) Part (a) can be summarized by saying that $\mathbf{Q}$ is closed under addition and multiplication. Is I closed under addition and multiplication? Given two irrational numbers $s$ and $t$, what can we say about $s+t$ and $s t$ ?
+(c) Part (a) can be summarized by saying that $\QQ$ is closed under addition and multiplication. Is $\mathbb{I}$ closed under addition and multiplication? Given two irrational numbers $s$ and $t$, what can we say about $s+t$ and $s t$ ?
 \smallskip
 \par
 \sol 
+
 Consider the sum of two irrational numbers $a = 1 + \pi$ and $b = 1 - \pi.$ We have that $a + b = 2 \in \NN$, showing that the irrationals are not closed under addition.
 \par
 We have that for for some  $i \in \RR \setminus \QQ$ we can construct a rational number by simply squaring $i.$ For example, $\sqrt{2} \in \RR \setminus \QQ$ and $\sqrt{2}^2= 2 \in \NN$. So the irrationals are not closed under multiplication.
@@ -57,15 +66,15 @@ We have that for for some  $i \in \RR \setminus \QQ$ we can construct a rational
 \textbf{Exercise 1.4.3.} Prove that $\bigcap_{n=1}^{\infty}(0,1 / n)=\emptyset$. Notice that this demonstrates that the intervals in the Nested Interval Property must be closed for the conclusion of the theorem to hold.
 }
 
-Assume that there exists some $x \in \bigcap_{n=1}^{\infty}(0,1 / n).$ Then for every $n \in \NN$ we have that $ x \in (0, \frac{1}{n})$. However,by Archimedes Property for any real number  $y, y\not= 0$ there exists $n \in \NN$ such that $\frac{q}{n} < y$. So there must exist $n \in \NN$ such that $\frac{1}{n} < x$, implying that $x \not\in \bigcap_{n=1}^{\infty}(0,1 / n)$ and $\bigcap_{n=1}^{\infty}(0,1 / n) = \emptyset.$
+Assume that there exists some $x \in \bigcap_{n=1}^{\infty}(0,1 / n).$ Then for every $n \in \NN$ we have that $ x \in (0, \frac{1}{n})$.  However, by Archimedes Property for any real number  $y, y\not= 0$ there exists $n \in \NN$ such that $\frac{1}{n} < y$. So there must exist $n \in \NN$ such that $\frac{1}{n} < x$, implying that $x \not\in \bigcap_{n=1}^{\infty}(0,1 / n)$ and thus it must be that $\bigcap_{n=1}^{\infty}(0,1 / n) = \emptyset.$
 
 \qs{}{
 \textbf{Exercise 1.4.5.} Using Exercise 1.4.1, supply a proof for Corollary 1.4 .4 by considering the real numbers $a-\sqrt{2}$ and $b-\sqrt{2}$.
 }
 
-\sol Consider two numbers $a <b$, it follows that $a - \sqrt{2} < b - \sqrt{2}.$By the density of $\QQ$ in $\RR$, there exists some $x \in \QQ$, which can be expressed $x= \frac{l}{k}$, $a,b \in \ZZ$, such that $a - \sqrt{2} < \frac{l}{k}< b - \sqrt{2}$.
+\sol Consider two numbers $a <b$, it follows that $a - \sqrt{2} < b - \sqrt{2}.$ By the density of $\QQ$ in $\RR$, there exists some $x \in \QQ$, which can be expressed $x= \frac{l}{k}$ with $l,k \in \ZZ$ and $k \neq 0$, such that $a - \sqrt{2} < \frac{l}{k}< b - \sqrt{2}$.
 
-We can add $\sqrt{2}$ to the equality 
+We can add $\sqrt{2}$ to the inequality:
 $$
 a - \sqrt{2} < \frac{l}{k}< b - \sqrt{2}
 ,$$ yielding, 
@@ -74,7 +83,7 @@ $$
 a < \frac{l}{k}+ \sqrt{2} < b 
 .$$ 
 
-Thus, we have found a real number, $x + \sqrt{2}$, such that $a < x + \sqrt{2}< b.$ For all real numbers $a, b \in \RR$ where $a < b$ there exists $t \in \RR \setminus \QQ$ such that $a<t<b.$
+Thus, we have found a real number, $x + \sqrt{2}$, such that $a < x + \sqrt{2}< b.$ Hence, for all real numbers $a, b \in \RR$ where $a < b$ there exists $t \in \RR \setminus \QQ$ such that $a<t<b.$
 
 \qs{}{
 \textbf{Exercise 1.4.8.} Give an example of each or state that the request is impossible. When a request is impossible, provide a compelling argument for why this is the case.
@@ -90,15 +99,19 @@ $ A = { x : x = \sqrt{2} - 1/n, n \in N }.$ \par $B = (\sqrt{2} -1,\sqrt{2}) \se
 \par \bigskip
 (b) A sequence of nested open intervals $J_1 \supseteq J_2 \supseteq J_3 \supseteq \cdots$ with $\bigcap_{n=1}^{\infty} J_n$ nonempty but containing only a finite number of elements.
 \par \bigskip 
-$J_n = (-\frac{1}{n}, \frac{1}{n})$.
+$J_n = (-\frac{1}{n}, \frac{1}{n})$. We have that $\bigcap_{n=1}^{\infty} J_n = \{0\}.$
 \par \bigskip
 (c) A sequence of nested unbounded closed intervals $L_1 \supseteq L_2 \supseteq L_3 \supseteq \ldots$ with $\bigcap_{n=1}^{\infty} L_n=\emptyset$. (An unbounded closed interval has the form $[a, \infty)=$ $\{x \in R: x \geq a\}$.)
 \bigskip
 
-$J_n = [n, \infty)$. Assume that there exists some $x \in \RR$ that exists in every $J_n$. By Archimedes Property we know for any $x \in \RR$ there exists $n^\star \in \NN$ where $ n < n^\star$, so we know $x \not\in \bigcap_{n=1}^{n^\star} J_n$. Thus we have $\bigcap_{n=1}^{\infty} J_n = \emptyset.$ 
+$J_n = [n, \infty)$. Assume that there exists some $x \in \RR$ that exists in every $J_n$. By Archimedes Property we know for any $x \in \RR$ there exists $n^\star \in \NN$ where $ x < n^\star$, so we know $x \not\in \bigcap_{n=1}^{n^\star} J_n$. Thus, we have $\bigcap_{n=1}^{\infty} J_n = \emptyset.$ 
 
 \par \bigskip
 (d) A sequence of closed bounded (not necessarily nested) intervals $I_1, I_2$, $I_3, \ldots$ with the property that $\bigcap_{n=1}^N I_n \neq \emptyset$ for all $N \in \NN$, but $\bigcap_{n=1}^{\infty} I_n=\emptyset$.
+
+\par \bigskip
+We have the intersection: $\bigcap_{n=1}^\infty I_n = I_1 \cap I_2 \cap I_3 \cap \cdots$. Consider the fact that  $I_1 \cap I_2 \cap I_3 \cap \cdots = I_1 \cap (I_1 \cap  I_2) \cap (I_1 \cap I_2 \cap I_3) \cap \cdots$ and $I_1 \subset (I_1 \cap I_2) \subset (I_1 \cap I_2 \cap I_3) \cdots$ (The intervals are closed bounded).  Hence, we can rewrite $\bigcap_{n=1}^\infty I_n$ as intersections of nested  closed intervals: $\bigcap_{n=1}^\infty I_n = I_1 \cap (I_1 \cap  I_2) \cap (I_1 \cap I_2 \cap I_3) \cap \cdots$.By Theorem 1.41 (Nested Interval Property), $\bigcap_{n=1}^\infty I_n \neq \emptyset.$ Thus, the request is impossible.
+
 
 \qs{}{
 6. ChatGPT Challenge: Is the following correct? Make comments as if you are grading it:
@@ -117,7 +130,7 @@ Thus, $a<b+\epsilon$ for every $\epsilon>0$, as desired.
 $(\Leftarrow)$ Direction
 Assume that $a<b+\epsilon$ for every $\epsilon>0$. We want to show that $a<b$.
 
-\textbf{Good job showing the end goal of this direction.}
+\textbf{Good job stating the end goal of this direction at the start of the proof.}
 
 Suppose, for the sake of contradiction, that $a \geq b$. Then, the difference $a-b$ is non-negative or zero $(a-b \geq 0)$.
 Choose $\epsilon=\frac{a-b}{2}$. Since $a \geq b$, we have $\epsilon>0$. By assumption, $a<b+\epsilon$, which gives:
@@ -140,7 +153,7 @@ a+b<\frac{a+3 b}{2}
 \end{gathered}
 $$
 
-\textbf{Everything up to here tracks algebraically, but it appears that your logic breaks down. You want to start with your assumption you made for the sake of contradiction and use the information to get to a logical fallacy (hint: if $ a < b + \epsilon$, what happens when $\epsilon = a - b$?.
+\textbf{Most of what you have up to here tracks algebraically, but it appears that your logic breaks down. You have not chosen an $\epsilon >0 $ - what happens if $a =b$? Try the line of contradiction that $a > b$.
 }
 
 Since $a+b$ is less than $\frac{a+3 b}{2}$, this contradicts our assumption that $a<b+\epsilon$ for every $\epsilon>0$. Therefore, our assumption that $a \geq b$ must be false, which means $a<b$.
@@ -148,6 +161,6 @@ Since $a+b$ is less than $\frac{a+3 b}{2}$, this contradicts our assumption that
 \textbf{Your proof seems to have some gaps: why is it the case that since $a+b$ is less than $\frac{a+3 b}{2}$, this contradicts our assumption that $a<b+\epsilon$ for every $\epsilon>0$?
 It is also confusing that you refer to the assumption you made for contradiction ($a \geq b $) and a given information we know ($ a < b + \epsilon$, $\epsilon > 0$) interchangeably.}
 \par\textbf{
-Overall you made some nice arguments and the first part of your proof holds. If you are using proof by contradiction make sure you clearly show the logical fallacy that overturns the contradiction. The backwards direction of the if and only if proof needs work. (2.5/5)}
+Overall you made some nice arguments and the first part of your proof holds. If you are using proof by contradiction make sure you clearly show the logical fallacy that overturns the contradiction. The backwards direction of the if and only if proof needs work. Make sure what you are proving actually holds. Check Theorem 1.2.6, which states that two real numbers $a$ and $b$ are equal if and only if for every real number $\epsilon >0 $ it follows that $|a-b|< \epsilon$. In your proof you were unable to prove your conjecture.}
 \end{document}
 
