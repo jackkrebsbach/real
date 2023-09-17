@@ -20,7 +20,7 @@
 \sol
 \begin{myproof}
     
-Assume, by way of contradiction, that $(\beta - \epsilon, \beta)$ is finite. Then we have that $(\beta - \epsilon,\beta) \sim \NN_{N}$ where $N \in \NN.$ Consider the value $$\frac{\beta - \epsilon}{2N}.$$ This partitions the interval $\beta - \epsilon$ into a minimum of $2N-1$ bins. 
+Assume, by way of contradiction, that $(\beta - \epsilon, \beta)$ is finite. Then we have that $(\beta - \epsilon,\beta) \sim \NN_{N}$ where $N \in \NN.$ Consider the value $$\frac{\beta - \epsilon}{2N}.$$ This partitions the interval $(\beta - \epsilon, \beta)$ into $2N$ bins. 
 
 Next, we take the collection $\{ \beta - \epsilon + \frac{\beta - \epsilon}{2N^\star}  \colon  N^\star \in \NN_N\}.$ We can start listing off elements of this set until we terminate at $N^\star = N,$ which is $ \beta - \epsilon + \frac{\beta-\epsilon}{2N}$.\par However, $$N + 1 \not\in \NN_N$$ but 
 $$ \beta - \epsilon + \frac{\beta - \epsilon}{2(N+1)} \in (\beta - \epsilon, \epsilon).$$
@@ -93,7 +93,7 @@ $A=\{(a_n,a_n+1): n \in \NN\} = \{(1,2),(2,3),(3,4),\dots,(a_n,a_n+1)\}$
  (b) Give an example of an uncountable collection of disjoint open intervals, or argue that no such collection exists.
 
 
-No such collection exists. If we imagine the set of real numbers, $\RR$, which is uncountable, we can imagine zooming in on an arbitrarily small interval of $\RR$. We can saddle up an infinite number of intervals like this next to each other (each not necessarily the same width). Furthermore, we can create infinitely many collections that are disjoint of similar intervals.
+No such collection exists. If we imagine the set of real numbers, $\RR$, which is uncountable, we can imagine zooming in on an arbitrarily small interval of $\RR$. We can saddle up an infinite number of intervals like this next to each other (each not necessarily the same width). Furthermore, we can create infinitely many collections of similar intervals that are disjoint from each other.
 \par
 By creating these bounded intervals of $\RR$ (no matter how arbitrarily small or large) we have a shift in structure. We go from "having no next number" to "having a next interval". No matter how many of these collections of intervals this change in structure means that any given collection or union of collections is countable.
 \par
