@@ -14,24 +14,67 @@
 \maketitle
 
 \qs{}{
-1. Let $S$ be a nonempty set of real numbers that is bounded above and let $\beta=\sup S$. Suppose that $\beta \notin S$. Prove that for each $\epsilon>0$, the set $\{x \in S: x>\beta-\epsilon\}$ is infinite.
+1. Let $S$ be a non-empty set of real numbers that is bounded above and let $\beta=\sup S$. Suppose that $\beta \notin S$. Prove that for each $\epsilon>0$, the set $\{x \in S: x>\beta-\epsilon\}$ is infinite.
 }
 
+\sol
+\begin{myproof}
+    
+Assume, by way of contradiction, that $(\beta - \epsilon, \beta)$ is finite. Then we have that $(\beta - \epsilon,\beta) \sim \NN_{N}$ where $N \in \NN.$ Consider the value $$\frac{\beta - \epsilon}{2N}.$$ This partitions the interval $\beta - \epsilon$ into a minimum of $2N-1$ bins. 
+
+Next, we take the collection $\{ \beta - \epsilon + \frac{\beta - \epsilon}{2N^\star}  \colon  N^\star \in \NN_N\}.$ We can start listing off elements of this set until we terminate at $N^\star = N,$ which is $ \beta - \epsilon + \frac{\beta-\epsilon}{2N}$.\par However, $$N + 1 \not\in \NN_N$$ but 
+$$ \beta - \epsilon + \frac{\beta - \epsilon}{2(N+1)} \in (\beta - \epsilon, \epsilon).$$
+
+By pigeon hole principle $|(\beta-\epsilon, \beta)| \neq |\NN_N|.$ Thus, the set $\{x \in S: x>\beta-\epsilon\}$ is infinite.
+
+\end{myproof}
 \qs{}{
 2. Prove that the union of a countable set and an uncountable set is uncountable.
 }
+\begin{myproof}
+  Assume, by way of contradiction, that the union of a countable set $A$ and a uncountable set $B$ is countable. We want to show that $A \cup B \not\sim \NN.$ Since $A \cup B$ is countable there exists the 1-1, onto function $f\colon  A \cup B \rightarrow \NN.$
 
+Consider the elements of $A$ and $B$. We have that $A \sim \NN$ and $B \not\sim \NN$. If $|B| < |\NN|$ then $B$ would be countable, so $|B| > |\NN|.$ By pigeon hole principle there exist some $b \in B$ that $b \not \in A.$This is problem because that implies $f$ is not 1-1 $\rightarrow\!\leftarrow$, in other words there exist $b \in B, b\not\in A$ and $a \in A$ such that $f(a)=f(b) \in \NN$. Thus, $A \cup B$ is not countable.
+  
+\end{myproof}
 \qs{}{
 3. Exercise 1.5.4:
 }
 
-(a) Show $|(a, b)|=|\mathbb{R}|$.
+(a) Show $|(a, b)|=|\mathbb{R}|$. 
+
+
+\sol
+$$
+f(x) = \tan\left(\frac{\pi}{b-a}\left[x - \frac{a+b}{2}\right]\right)
+$$
+We have domain $f$ is $(a,b)$, the range is $(-\infty, \infty) = \RR$ . The function $f$ is both onto and 1-1. Thus, $(a,b) \sim \RR.$
 
 \par \bigskip
 (b) Show that an unbounded interval like $(a, \infty)=\{x: x>a\}$ has the same cardinality at $\mathbb{R}$ as well.
 
+\sol
+$$
+f(x)=log(x-a)
+$$
+
 \par \bigskip
-(c) Show that $[0,1)$ has the same cardinality as $(0,1)$.
+(c) Show that $[0,1)$ has the same cardinality as $(0,1)$. 
+
+
+
+\sol
+    
+To show that $[0,1) \sim (0,1),$ we first show that $[0,1) \sim (-\infty, \infty)$ by providing a 1-1 and onto function, $f: [0,1) \rightarrow \RR.$ (The domain of this function is actually larger than $[0,1)$ but we restrict for the purposes of this proof.)
+$$ f(x) = 
+  \begin{cases} 
+  x \in \RR & -(1- \frac{1}{1-x}) \\
+  x \in \RR \setminus \QQ & 1- \frac{1}{1-x}
+   \end{cases}
+$$
+Thus, $[0,1) \sim (-\infty, \infty)$. Next, consider that the function $g(x)= \frac{1}{\pi}\arctan(x) + 1/2$ is a 1-1, onto function whose domain is $\RR$ and the range is $(0,1).$ Therefore, $(-\infty, \infty) \sim (0,1).$
+\par
+Altogether, we have $[0,1) \sim (-\infty, \infty) \sim (0,1).$
 
 \qs{}{
 4. Exercise 1.5.6:
@@ -43,10 +86,18 @@
  (a) Give an example of a countable collection of disjoint open intervals.
 \par \bigskip
 
+$A=\{(a_n,a_n+1): n \in \NN\} = \{(1,2),(2,3),(3,4),\dots,(a_n,a_n+1)\}$
+
 \par \bigskip
 
- (b) Give an example of an uncountable collection of disjoint open intervals, or argue thatno such collection exists.
+ (b) Give an example of an uncountable collection of disjoint open intervals, or argue that no such collection exists.
 
+
+No such collection exists. If we imagine the set of real numbers, $\RR$, which is uncountable, we can imagine zooming in on an arbitrarily small interval of $\RR$. We can saddle up an infinite number of intervals like this next to each other (each not necessarily the same width). Furthermore, we can create infinitely many collections that are disjoint of similar intervals.
+\par
+By creating these bounded intervals of $\RR$ (no matter how arbitrarily small or large) we have a shift in structure. We go from "having no next number" to "having a next interval". No matter how many of these collections of intervals this change in structure means that any given collection or union of collections is countable.
+\par
+Lets make this explicit, consider the collection of disjoint open intervals $C =\{(a_n,b_n): n \in \NN, a_n,b_n \in \RR \}$ such that $b_n > a_n$ and $ b_n \leq a_{n+1}$. We can create an infinite number of collections of disjoint open intervals, $C_n$, where $n \in \NN$ such that $C_i \cap C_j = \emptyset, i \neq  j$.  Each of these collections is countable. By Theorem 1.5.8 we have that $\bigcup_{n =1}^{\infty} C_n $ is countable.
 
 \qs{}{
 5. ChatGPT Challenge: Find an example of a sequence of closed bounded intervals $I_1, I_2, \ldots$ with the property that $\bigcap_{k=1}^n I_k \neq \emptyset$ for all $n \in \mathbb{N}$, but $\bigcap_{n=1}^{\infty} I_n=\emptyset$
@@ -57,10 +108,23 @@ For each natural number $n$, the interval $I_n$ is a closed bounded interval, an
 $$
 \bigcap_{k=1}^n I_k=\left[\frac{1}{n}, 1-\frac{1}{n}\right] \neq \emptyset
 $$
+\textbf{
+  Your proposition seems reasonable at first but be careful with your intervals. When $k=1$, we have $I_k = \left[1,0 \right]$ which is the empty set. Thus, any intersection after that must be the empty set and your example does not hold.}
+  \par
+  \textbf{You may consider $\mathbf{I_n=\left[\frac{1}{n+1}, 1-\frac{1}{n+1} \right]}$, but you still have problems. The next interval is $\mathbf{\left[\frac{1}{2}, \frac{1}{2}\right]}$, and every interval after that is a superset of this - the infinite intersection can not be the empty set.
+}
+\par\bigskip
 However, when we consider the infinite intersection:
 $$
 \bigcap_{n=1}^{\infty} I_n=\emptyset
 $$
-The infinite intersection is empty because as $n$ approaches infinity, the left endpoint $\frac{1}{n}$ approaches zero, and the right endpoint $1-\frac{1}{n}$ approaches 1 . So, the infinite intersection becomes the empty set.
+The infinite intersection is empty because as $n$ approaches infinity, the left endpoint $\frac{1}{n}$ approaches zero, and the right endpoint $1-\frac{1}{n}$ approaches 1 . 
+
+\par
+\textbf{
+Even if we consider my suggested intervals, this is still false. We have that  $$\mathbf{ \frac{1}{2} \in  \bigcap_{n=1}^{\infty} I_n}.$$ Make sure to do some sanity checks while you are going through examples. Make it concrete. Your logic does not hold. 
+}
+
+So, the infinite intersection becomes the empty set.
 \end{document}
 
