@@ -86,17 +86,22 @@ $$
 \par \bigskip
 
 $A=\{(a_n,a_n+1): n \in \NN\} = \{(1,2),(2,3),(3,4),\dots,(a_n,a_n+1)\}$
-
+\smallskip 
+$$
+f \colon \NN \rightarrow A 
+$$ $$ f(n)= (n, n+1)$$
 \par \bigskip
 
  (b) Give an example of an uncountable collection of disjoint open intervals, or argue that no such collection exists.
 
 
-No such collection exists. If we imagine the set of real numbers, $\RR$, which is uncountable, we can imagine zooming in on an arbitrarily small interval of $\RR$. We can saddle up an infinite number of intervals like this next to each other (each not necessarily the same width). Furthermore, we can create infinitely many collections of similar intervals that are disjoint from each other.
-\par
-By creating these bounded intervals of $\RR$ (no matter how arbitrarily small or large) we have a shift in structure. We go from "having no next number" to "having a next interval". No matter how many of these collections of intervals this change in structure means that any given collection or union of collections is countable.
-\par
-Lets make this explicit, consider the collection of disjoint open intervals $C =\{(a_n,b_n): n \in \NN, a_n,b_n \in \RR \}$ such that $b_n > a_n$ and $ b_n \leq a_{n+1}$. We can create an infinite number of collections of disjoint open intervals, $C_n$, where $n \in \NN$ such that $C_i \cap C_j = \emptyset, i \neq  j$.  Each of these collections is countable. By Theorem 1.5.8 we have that $\bigcup_{n =1}^{\infty} C_n $ is countable.
+No such collection exists.
+
+\begin{myproof}
+    
+Let $X$ be a collection of disjoint intervals. For each $x \in X$ denote $x = (a_i, b_i)$ where $i \in \NN.$ Because each interval is open they must contain at least two real numbers. By the density of $\QQ$ in $\RR$ we know that there exists $q_i \in \QQ$ such that $a_i < q_i < b_i.$Thus we obtain a new set of rational numbers, $Y$. Note that while each $a_i, b_i$ may not be unique between intervals, each $r_i$ is. Combining Theorem 1.5.6 ($\QQ$ is countable) and Theorem 1.5.7 (A subset of a countable set is either countable or finite) $Y$ must be countable. Hence, any collection of disjoint open intervals is countable.
+
+\end{myproof}
 
 \qs{}{
 5. ChatGPT Challenge: Find an example of a sequence of closed bounded intervals $I_1, I_2, \ldots$ with the property that $\bigcap_{k=1}^n I_k \neq \emptyset$ for all $n \in \mathbb{N}$, but $\bigcap_{n=1}^{\infty} I_n=\emptyset$
