@@ -3,6 +3,9 @@
 \input{preamble}
 \input{macros}
 \input{letterfonts}
+\newcommand{\contra}{
+$\rightarrow\!\leftarrow$
+}
 
 \title{Real Analysis HW \#3}
 \author{Jack Krebsbach }
@@ -32,9 +35,8 @@ By pigeon hole principle $|(\beta-\epsilon, \beta)| \neq |\NN_N|.$ Thus, the set
 2. Prove that the union of a countable set and an uncountable set is uncountable.
 }
 \begin{myproof}
-  Assume, by way of contradiction, that the union of a countable set $A$ and a uncountable set $B$ is countable. We want to show that $A \cup B \not\sim \NN.$ Since $A \cup B$ is countable there exists the 1-1, onto function $f\colon  A \cup B \rightarrow \NN.$
+  Assume, by way of contradiction, that the union of a countable set $A$ and a uncountable set $B$ is countable. Then, $A \cup B$ is countable. By Theorem 1.5.7, then $B \subset A \cup B$ is countable or finite \contra. Thus, $A \cup B$ must be uncountable. 
 
-Consider the elements of $A$ and $B$. We have that $A \sim \NN$ and $B \not\sim \NN$. If $|B| < |\NN|$ then $B$ would be countable, so $|B| > |\NN|.$ By pigeon hole principle there exist some $b \in B$ that $b \not \in A.$This is problem because that implies $f$ is not 1-1 $\rightarrow\!\leftarrow$, in other words there exist $b \in B, b\not\in A$ and $a \in A$ such that $f(a)=f(b) \in \NN$. Thus, $A \cup B$ is not countable.
   
 \end{myproof}
 \qs{}{
@@ -73,19 +75,6 @@ $$ f(x) =
     x & else
    \end{cases}
 $$
-
-    
-To show that $[0,1) \sim (0,1),$ we first show that $[0,1) \sim (-\infty, \infty)$ by providing a 1-1 and onto function, $f: [0,1) \rightarrow \RR.$ (The domain of this function is actually larger than $[0,1)$ but we restrict for the purposes of this proof.)
-$$ f(x) = 
-  \begin{cases} 
-  x \in \RR & -(1- \frac{1}{1-x}) \\
-  x \in \RR \setminus \QQ & 1- \frac{1}{1-x}
-   \end{cases}
-$$
-Thus, $[0,1) \sim (-\infty, \infty)$. Next, consider that the function $g(x)= \frac{1}{\pi}\arctan(x) + 1/2$ is a 1-1, onto function whose domain is $\RR$ and the range is $(0,1).$ Therefore, $(-\infty, \infty) \sim (0,1).$
-\par
-Altogether, we have $[0,1) \sim (-\infty, \infty) \sim (0,1).$
-
 \qs{}{
 4. Exercise 1.5.6:
 
