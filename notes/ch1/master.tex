@@ -223,6 +223,73 @@ So, $m < n_\star b$ which means $ \frac{m}{n_\star} < b.$
   \item Is the union of countable sets countable?
 \end{enumerate}
 
+\pagebreak
+  \thm{}{
+    Let $|A|=n$ and $|B|=m.$ Then $A \cup B$ is finite.
+  }
+
+  \begin{myproof}
+    Let
+    $$A = \{a_1, a_2, \dots, a_n\}$$ and
+    $$B = \{b_1, b_2, \dots, b_m\}.$$
+
+    Define $n_1=\min \{k \colon k \in \NN, b_k \not \in A\}$ and $n_2 = \min \{k \colon b_k \not \in A, k > n_1\}$. Generally, $n_j = \min \{k : b_k \in A, k > n_{j-1} \}.$ Then $|A|=n$ and $|B \setminus A|=j.$
+
+    $$
+f(l) = 
+  \begin{cases} 
+  a_l &  l \leq n \\
+  b_l & n+1 \leq l \leq n+j
+   \end{cases}
+    $$
+  \end{myproof}
+
+
+  \thm{}{
+    The subset, $A$,  of a finite set $B$ is finite. That is $A \subset B$ is finite if $B$ is finite.
+  }
+  \begin{myproof}
+    Let $|B|=n$, $B=\{b_1, b_2,\dots,b_n\}.$
+
+    Then let $$n_1 = \min \{k \colon b_k \in A\},$$
+    $$n_2 = \min \{k \colon b_k \in A, k > n_1\},$$ and $$n_j = \min \{k \colon b_k \in A, k > n_{j-1}\}.$$ Define the bijections $f \colon \NN_{n_j} \rightarrow A.$ Which is a finite bijection.
+  \end{myproof}
+
+
+  \thm{}{
+    Let $A$ and $B$ be sets with $A \subset B.$
+    \begin{enumerate}
+      \item If $B$ is countable, then $A$ is countable or finite.
+      \item If $A$ is uncountable, then $B$ is uncountable.
+    \end{enumerate}
+  }
+
+  \begin{myproof}
+      \begin{enumerate}
+
+        \item Since $B$ is countable let $B = \{b_j \colon j \in\NN$. To "count" A let $n_1 = \min \{k \colon b_k \in A\}$ and $n_2 = \min \{k \colon b_k \in A, k > n_1\}$. Generally, $$n_j = \min \{k \colon b_k \in A, k > n_{j-1}\}.$$
+
+    If there does not exist $k \in b_k \in A$ then $|A| =m,$ which is finite. We have a function $f(m)= b_{n_m}$ which is onto A in a 1-1 manner. 
+  \item Contrapositive of 1!
+      \end{enumerate}
+  \end{myproof}
+
+  \thm{}{
+    The countable  union of countable sets is countable.
+  }
+  \begin{myproof}
+    Let $A_n$ where $n \in \NN$ be a collection of countable sets. So that  $A_n = \{A_1, A_2, \dots \}.$ We can list off elements in each set within the collection $A_n = \{a_{nm} \colon m \in \NN\}.$ We want to show that $\bigcup_{n=1}^{\infty}\{a_{nm} \colon m \in \NN\}$ is countable. Consider $f(a_{nm}) = 2^n3^m.$ This is 1-1 by prime factorization, known as the Fundamental Theorem of Arithmetic. The set $\{2^n3^m \colon n,m \in \NN \} \subset \NN$ and is countable.
+  \end{myproof}
+
+  \thm{}{
+    $\QQ$ is countable.
+  }
+
+  \begin{myproof}
+    Consider $A_n = \{ \frac{m}{n} \colon m \in \NN \}.$ Then $
+    \bigcup_{n=1}^{\infty} A_n$ is countable. The set $B_n = \{ -\frac{m}{n} \colon m \in \NN \}$ is also countable. The set $\{0\}$ is finite and thus countable. Altogether we have $$ \QQ = \bigcup_{n=1}^{\infty} A_n \cup \bigcup_{n=1}^{\infty} B_n \cup \{0\}$$ is countable by the previous theorem.
+  \end{myproof}
+
 \end{document}
 
 
