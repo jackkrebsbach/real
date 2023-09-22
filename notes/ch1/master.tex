@@ -290,6 +290,51 @@ f(l) =
     \bigcup_{n=1}^{\infty} A_n$ is countable. The set $B_n = \{ -\frac{m}{n} \colon m \in \NN \}$ is also countable. The set $\{0\}$ is finite and thus countable. Altogether we have $$ \QQ = \bigcup_{n=1}^{\infty} A_n \cup \bigcup_{n=1}^{\infty} B_n \cup \{0\}$$ is countable by the previous theorem.
   \end{myproof}
 
+  \subsection{Cantors Diagonilization}
+
+
+\thm{}{
+   $\RR$ is uncountable. The open interval $(0,1)=\{x \in \mathbf{R}: 0<x<1\}$ is uncountable.
+}
+  
+\begin{myproof}
+
+  Suppose that the interval $(0,1)$ is countable. Then there exists a bijection $f \colon \NN \rightarrow (0,1).$ We can express this like so.
+
+  \bigskip
+
+ \begin{centering}
+     
+\begin{tabular}{c c c c c c c c c c c}
+ $\mathbf{N}$ & & $(0,1)$ & & & & & & & & \\
+\hline 1 & $\longleftrightarrow$ & $f(1)$ & $=$ & $a_{11}$ & $a_{12}$ & $a_{13}$ & $a_{14}$ & $a_{15}$ & $a_{16}$ & $\cdots$ \\
+ 2 & $\longleftrightarrow$ & $f(2)$ & $=$ &.$a_{21}$ & $a_{22}$ & $a_{23}$ & $a_{24}$ & $a_{25}$ & $a_{26}$ & .. \\
+ 3 & $\longleftrightarrow$ & $f(3)$ & $=$ &.$a_{31}$ & $a_{32}$ & $a_{33}$ & $a_{34}$ & $a_{35}$ & $a_{36}$ & .. \\
+ 4 & $\longleftrightarrow$ & $f(4)$ & $=$ &.$a_{41}$ & $a_{42}$ & $a_{43}$ & $a_{44}$ & $a_{45}$ & $a_{46}$ & $\ldots$ \\
+ 5 & $\longleftrightarrow$ & $f(5)$ & $=$ &.$a_{51}$ & $a_{52}$ & $a_{53}$ & $a_{54}$ & $a_{55}$ & $a_{56}$ & . \\
+ 6 & $\longleftrightarrow$ & $f(6)$ & $=$ & $a_{61}$ & $a_{62}$ & $a_{63}$ & $a_{64}$ & $a_{65}$ & $a_{66}$ & $\cdots$ \\
+$\vdots$ & & & & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & : & \\
+
+\end{tabular}
+\end{centering}   
+
+Where $a_{nm} \in \{0,\dots,9\}.$ We can define $y=y_1y_2\dots$ where
+$$ y_{mm} = 
+  \begin{cases} 
+    2  &  a_{mm} \geq 5 \\
+    7 &   a_{mm} \leq 4
+   \end{cases}
+$$
+Thus, we have constructed $y$ that differs from every element in our list. This says that $(0,1) \subset \RR$ is uncountable. Thus, $\RR$ is uncountable.
+
+\end{myproof}
+
+Second proof
+
+\begin{myproof}
+  To show that $\RR$ is uncountable, suppose otherwise. Then $\RR$ can be written $\RR = \{x_1, x_2, x_3,\dots\}.$ We create a $1-1$ correspondance with the natural numnbers. Pick $x_1$ and choose an unbounded interval $I_1$ so that $x_1 \not\in I_1.$ Choose $I_2$ and $x_2$ so that $I_2 \subset I_1$ and $x_2 \not \in  I_2.$ In similar fashion create $I_3 \subset I_2$ and choose $x_3 \not\in I_3.$  We are creating a sequence of nested, close bounded intervals with $x_n \not \in I_n.$ \par
+  By the nested inerval property $\bigcap_{n=1}^{\infty} I_n \neq \emptyset.$ So there exists $\alpha \in \bigcap_{n=1}^{\infty} I_n.$ Since $\alpha$ is a real number there exists $n_0 \in \NN$ where $x_{n_0}=\alpha.$ But we know $x_{n_0} \not \in I_n$ by construction, and have found a contradiction. So $\RR$ is uncountable.
+\end{myproof}
 \end{document}
 
 
