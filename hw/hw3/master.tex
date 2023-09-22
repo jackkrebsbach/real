@@ -23,19 +23,19 @@ $\rightarrow\!\leftarrow$
 \sol
 \begin{myproof}
     
-Assume, by way of contradiction, that $(\beta - \epsilon, \beta)$ is finite. Then we have that $(\beta - \epsilon,\beta) \sim \NN_{N}$ where $N \in \NN.$ Consider the value $$\frac{\beta - \epsilon}{2N}.$$ This partitions the interval $(\beta - \epsilon, \beta)$ into $2N$ bins. 
+Assume, by way of contradiction, that $(\beta - \epsilon, \beta)$ is finite. Then we have that $(\beta - \epsilon,\beta) \sim \NN_{N}$ where $N \in \NN.$ Consider in preparation for a contradiction that  the value $$\frac{\beta - \epsilon}{2N}$$ partitions our set into $2N$ bins.
 
-Next, we take the collection $\{ \beta - \epsilon + \frac{\beta - \epsilon}{2N^\star}  \colon  N^\star \in \NN_N\}.$ We can start listing off elements of this set until we terminate at $N^\star = N,$ which is $ \beta - \epsilon + \frac{\beta-\epsilon}{2N}$.\par However, $$N + 1 \not\in \NN_N$$ but 
-$$ \beta - \epsilon + \frac{\beta - \epsilon}{2(N+1)} \in (\beta - \epsilon, \epsilon).$$
+We can start listing the elements in the collection $\{\beta - \epsilon + \frac{(\beta - \epsilon)N^\star}{2N} \colon  N^\star \in \NN_N\}$ where $ \beta - \epsilon + \frac{(\beta - \epsilon)N^\star}{2N}\in (\beta-\epsilon, \beta)$ until we terminate at $N^\star = N,$ which is $ \beta - \epsilon + \frac{\beta-\epsilon}{2}$.\par However, $$N + 1 \not\in \NN_N$$ but 
+$$ \beta - \epsilon + \frac{(N+1)(\beta - \epsilon)}{2N} \in (\beta - \epsilon, \epsilon).$$
 
-By pigeon hole principle $|(\beta-\epsilon, \beta)| \neq |\NN_N|.$ Thus, the set $\{x \in S: x>\beta-\epsilon\}$ is infinite.
+By pigeon hole principle $|(\beta-\epsilon, \beta)| \neq |\NN_{N}|.$ We have counted more than $N$ elements in the set $\{x \in S: x>\beta-\epsilon\}$, so it can not be finite. Thus, the set $\{x \in S: x>\beta-\epsilon\}$ is infinite.
 
 \end{myproof}
 \qs{}{
 2. Prove that the union of a countable set and an uncountable set is uncountable.
 }
 \begin{myproof}
-  Assume, by way of contradiction, that the union of a countable set $A$ and a uncountable set $B$ is countable. Then, $A \cup B$ is countable. By Theorem 1.5.7, then $B \subset A \cup B$ is countable or finite \contra. Thus, $A \cup B$ must be uncountable. 
+  Assume, by way of contradiction, that the union of a countable set $A$ and a uncountable set $B$ is countable. Then, $A \cup B$ is countable. By Theorem 1.5.7, then $B \subset A \cup B$ is countable or finite \contra. This is a problem because we know $B$ is uncountable. Thus, $A \cup B$ must be uncountable. 
 
   
 \end{myproof}
@@ -59,25 +59,25 @@ We have domain $f$ is $(a,b)$, the range is $(-\infty, \infty) = \RR$ . The func
 $$
 f(x)=log(x-a)
 $$
+This is a 1-1 onto function of the real numbers. The domain of $f$ is $(a, \infty)$ and the co-domain is $\RR.$
 
 \par \bigskip
 (c) Show that $[0,1)$ has the same cardinality as $(0,1)$. 
 
 
-
+\bigskip
 \sol
-
+Let the domain of $f$ be $[0,1).$
 
 $$ f(x) = 
   \begin{cases} 
     \frac{1}{2} & x= 0 \\
     \frac{x}{2} &  x \in \{ \frac{1}{2^n} \colon n \in \NN \} \\
-    x & else
+    x & x \neq 0, x \not\in \{ \frac{1}{2^n} \colon n \in \NN \}
    \end{cases}
 $$
 \qs{}{
 4. Exercise 1.5.6:
-
 }
 \sol
 
@@ -98,7 +98,9 @@ No such collection exists.
 
 \begin{myproof}
     
-Let $X$ be a collection of disjoint intervals. Because each interval is open every $x \in X$ must contain at least two real numbers.  For each $x$ denote $x = (a_i, b_i)$ where $i \in \NN.$ By the density of $\QQ$ in $\RR$ we know that there exists $q_i \in \QQ$ such that $a_i < q_i < b_i.$Thus we obtain a new set of rational numbers, $Y$. Note that while each $a_i, b_i$ may not be unique between intervals, each $r_i$ is. Combining Theorem 1.5.6 ($\QQ$ is countable) and Theorem 1.5.7 (A subset of a countable set is either countable or finite) $Y$ must be countable. Hence, any collection of disjoint open intervals is countable.
+Let $X$ be a collection of disjoint intervals. Each interval $x =(a,b)$ where $a,b \in \RR$ and $x\in X$ is open, and thus must contain at least two real numbers. By the density of $\QQ$ in $\RR$ we know that there exists $r \in \QQ$ such that $a < r < b.$ Thus, we obtain a new set of rational numbers, $Y \subset \QQ$.
+
+Note that while each $a, b$ may not be unique between intervals, each $r$ is, as it lies between the bounds of the \textit{disjoint} open intervals. Combining Theorem 1.5.6 ($\QQ$ is countable) and Theorem 1.5.7 (A subset of a countable set is either countable or finite) $Y$ must be countable. Hence, any collection of disjoint open intervals is countable.
 
 \end{myproof}
 
@@ -112,7 +114,7 @@ $$
 \bigcap_{k=1}^n I_k=\left[\frac{1}{n}, 1-\frac{1}{n}\right] \neq \emptyset
 $$
 \textbf{
-  Your proposition seems reasonable at first but be careful with your intervals. When $k=1$, we have $I_k = \left[1,0 \right]$ which is the empty set. Thus, any intersection after that must be the empty set and your example does not hold.}
+  Your proposition seems reasonable at first but be careful with your intervals.  When $n=1$, we have $I_n = \left[1,0 \right]$ which is the empty set. Thus, any intersection after that must be the empty set and your example does not hold.}
   \par
   \textbf{You may consider $\mathbf{I_n=\left[\frac{1}{n+1}, 1-\frac{1}{n+1} \right]}$, but you still have problems. The next interval is $\mathbf{\left[\frac{1}{2}, \frac{1}{2}\right]}$, and every interval after that is a superset of this - the infinite intersection can not be the empty set.
 }
