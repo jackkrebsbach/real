@@ -1,0 +1,78 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+\newcommand{\contra}{
+$\rightarrow\!\leftarrow$
+}
+
+\title{Real Analysis HW \#4}
+\author{Jack Krebsbach }
+
+\date{Sep 20th}
+
+\begin{document}
+
+\maketitle
+\qs{}{
+1. Let $A$ be a nonempty bounded set. The maximum value is a number $x \in A$ such that $a \leq x$ $\forall a \in A$. Prove that a nonempty bounded set has a maximum value if and only if it contains its supremum.
+}
+
+\qs{}{
+2. Let $A$ be a non-empty set and let $\mathcal{P}(\mathcal{A})$ represent the collection of all subsets of $A$; this set is known as the power set of $\mathrm{A}$.
+}
+
+(a) Suppose that $A$ has $n$ elements. Prove that $\mathcal{P}(\mathcal{A})$ has $2^n$ elements.
+\bigskip
+\par
+(b) Suppose that $A$ is countable. Prove that $\mathcal{P}(\mathcal{A})$ is uncountable.
+\bigskip
+\par
+(c) Suppose that $A$ is uncountable. Prove that there is no bijection between $A$ and $\mathcal{P}(\mathcal{A})$.
+\bigskip
+\par
+
+
+\qs{}{
+3. Let $E$ be the set of all $x \in[0,1]$ whose decimal expansion contains only the digits 4 and 7 . Is $E$ countable? Explain.
+}
+\qs{}{
+4. Consider the function $h$ defined by
+$$
+h(x)=\left\{\begin{array}{cc}
+0 & \text { if } x \notin \mathbb{Q} \\
+1 / q & \text { if } x=p / q
+\end{array}\right.
+$$
+Here it is assumed that the rational number $p / q$ is in reduced form and that $q>0$.
+}
+\sol 
+(a) Find $h(n)$ for each integer $n$
+\par
+\bigskip
+
+(b) Find three solutions to the equation $h(x)=1 / 3$.
+\par
+\bigskip
+(c) Find all of the solutions to the equation $h(x)=1 / 7$ that lie in the interval $(3,4)$.
+\par
+\bigskip
+(d) Prove that the set of all solutions to the equation $h(x)=1 / 5$ is countable infinite.
+\par
+\bigskip
+(e) Let $(a, b)$ be any interval and let $\epsilon>0$. Prove that $\{x \in(a, b): h(x) \geq \epsilon\}$ is a finite set.
+\par
+\bigskip
+
+
+\qs{}{
+5. ChatGPT Challenge: Find a sequence is bounded below, not bounded above, and contains an infinite number of negative terms.
+
+}
+
+Proof: Certainly, here's an example of a sequence that is bounded below, not bounded above, and contains an infinite number of negative terms:
+Consider the sequence defined as follows: $-1,-2,-3,-4,-5, \ldots$
+This sequence consists of negative integers and is strictly decreasing. It is bounded below by negative infinity (there is no lower bound as it goes to negative infinity), not bounded above (it becomes more negative without bound), and it contains an infinite number of negative terms.
+\end{document}
+
