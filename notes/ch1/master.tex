@@ -332,9 +332,20 @@ Thus, we have constructed $y$ that differs from every element in our list. This 
 Second proof
 
 \begin{myproof}
-  To show that $\RR$ is uncountable, suppose otherwise. Then $\RR$ can be written $\RR = \{x_1, x_2, x_3,\dots\}.$ We create a $1-1$ correspondance with the natural numnbers. Pick $x_1$ and choose an unbounded interval $I_1$ so that $x_1 \not\in I_1.$ Choose $I_2$ and $x_2$ so that $I_2 \subset I_1$ and $x_2 \not \in  I_2.$ In similar fashion create $I_3 \subset I_2$ and choose $x_3 \not\in I_3.$  We are creating a sequence of nested, close bounded intervals with $x_n \not \in I_n.$ \par
+  To show that $\RR$ is uncountable, suppose otherwise. Then $\RR$ can be written $\RR = \{x_1, x_2, x_3,\dots\}.$ We create a $1-1$ correspondance with the natural numnbers. Pick $x_1$ and choose a close bounded interval $I_1$ so that $x_1 \not\in I_1.$ Choose $I_2$ and $x_2$ so that $I_2 \subset I_1$ and $x_2 \not \in  I_2.$ In similar fashion create $I_3 \subset I_2$ and choose $x_3 \not\in I_3.$  We are creating a sequence of nested, close bounded intervals with $x_n \not \in I_n.$ \par
   By the nested inerval property $\bigcap_{n=1}^{\infty} I_n \neq \emptyset.$ So there exists $\alpha \in \bigcap_{n=1}^{\infty} I_n.$ Since $\alpha$ is a real number there exists $n_0 \in \NN$ where $x_{n_0}=\alpha.$ But we know $x_{n_0} \not \in I_n$ by construction, and have found a contradiction. So $\RR$ is uncountable.
 \end{myproof}
-\end{document}
+
+\subsection{The Power Set of the Set}
+
+\dfn{Power Set}{
+Let $A$ be a set. Then the power set of $A$, $\mathcal{P}(A)$ is the set of subsets  of $A.$
+}
+
+Examples: $A={1,2}$. Then $\mathcal{P}(A) =\{\{1\},\{2\},\{1,2\}, \emptyset\}$
+
+$$|\mathcal{P}(A)| = 2^{|A|}$$
+
+ \end{document}
 
 
