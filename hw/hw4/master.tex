@@ -16,29 +16,45 @@ $\rightarrow\!\leftarrow$
 
 \maketitle
 \qs{}{
-1. Let $A$ be a nonempty bounded set. The maximum value is a number $x \in A$ such that $a \leq x$ $\forall a \in A$. Prove that a nonempty bounded set has a maximum value if and only if it contains its supremum.
+Let $A$ be a nonempty bounded set. The maximum value is a number $x \in A$ such that $a \leq x$ $\forall a \in A$. Prove that a nonempty bounded set has a maximum value if and only if it contains its supremum.
 }
 
 \qs{}{
-2. Let $A$ be a non-empty set and let $\mathcal{P}(\mathcal{A})$ represent the collection of all subsets of $A$; this set is known as the power set of $\mathrm{A}$.
+Let $A$ be a non-empty set and let $\mathcal{P}(\mathcal{A})$ represent the collection of all subsets of $A$; this set is known as the power set of $\mathrm{A}$.
 }
 
 (a) Suppose that $A$ has $n$ elements. Prove that $\mathcal{P}(\mathcal{A})$ has $2^n$ elements.
 \bigskip
 \par
+\sol
+
+Let $n=1.$ Take the set $A$ with $1$ element to be denoted set $A_1=\{ a_1 \}$ and the power set $P_1 = \mathcal{P}(\mathcal{A}_1)= \{\{a_1\}, \emptyset \}.$ Then $|P_1| = |\mathcal{P}(\mathcal{A}_1)|= 2^n  = 2^1 = 2.$  We have shown that this works for $n.$ We would like to show, through proof by induction, that this works for $n+1.$ \par
+Consider $$\mathcal{P}(\mathcal{A}_{n+1}) = \mathcal{P}(\mathcal{A}_{n}) \cup  \{ \{p_{ni}\cup {a_{n+1}}\} \colon i  \in \NN_{2^n}\}.$$ Because the right side of the union is disjoint from the left side of the union we can add the cardinalities together.
+
+Hence, $$ |\mathcal{P}(\mathcal{A}_{n+1})| = |\mathcal{P}(\mathcal{A}_{n})| + |\{ \{p_{ni}\cup {a_{n+1}}\} \colon i  \in \NN_{2^n}\}|.$$
+Then,
+$$ |\mathcal{P}(\mathcal{A}_{n+1})| = 2^n +2^n= 22^n = 2^{n+1}.$$ Thus, $|\mathcal{P}(\mathcal{A}_{n+1})| = 2^{n+1}.$ We have shown that $\mathcal{P}(\mathcal{A})$ has $2^n$ elements.
+
+\bigskip
 (b) Suppose that $A$ is countable. Prove that $\mathcal{P}(\mathcal{A})$ is uncountable.
 \bigskip
 \par
+\sol
+
+Assume, by way of contradiction, that $\mathcal{P}(\mathcal{A})$ is countable. Then there exists a bijective function $f\colon \NN \rightarrow \mathcal{P}(\mathcal{A}).$
+
+\bigskip
+
 (c) Suppose that $A$ is uncountable. Prove that there is no bijection between $A$ and $\mathcal{P}(\mathcal{A})$.
 \bigskip
 \par
 
 
 \qs{}{
-3. Let $E$ be the set of all $x \in[0,1]$ whose decimal expansion contains only the digits 4 and 7 . Is $E$ countable? Explain.
+Let $E$ be the set of all $x \in[0,1]$ whose decimal expansion contains only the digits 4 and 7 . Is $E$ countable? Explain.
 }
 \qs{}{
-4. Consider the function $h$ defined by
+Consider the function $h$ defined by
 $$
 h(x)=\left\{\begin{array}{cc}
 0 & \text { if } x \notin \mathbb{Q} \\
@@ -67,7 +83,7 @@ Here it is assumed that the rational number $p / q$ is in reduced form and that 
 
 
 \qs{}{
-5. ChatGPT Challenge: Find a sequence is bounded below, not bounded above, and contains an infinite number of negative terms.
+ ChatGPT Challenge: Find a sequence is bounded below, not bounded above, and contains an infinite number of negative terms.
 
 }
 
