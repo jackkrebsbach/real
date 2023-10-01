@@ -19,6 +19,18 @@ $\rightarrow\!\leftarrow$
 Let $A$ be a nonempty bounded set. The maximum value is a number $x \in A$ such that $a \leq x$ $\forall a \in A$. Prove that a nonempty bounded set has a maximum value if and only if it contains its supremum.
 }
 
+\sol 
+
+\begin{myproof}
+    
+\smallskip  
+$\Rightarrow$ If a nonempty bounded set has a maximum value $x= Max(A)$ then for all $a \in A$ we have $ a \leq x.$ Then $x$ is an upperbound of the set $A.$ Let $b= \sup A.$ Then $b \leq x$  and $b \geq a$ for all $a \in A$. Thus, $a \leq b \leq x.$ Therefore the suprememum of $A$ a is contained within the set, $b \in A.$  
+
+$\Leftarrow$
+Let $b = \sup A$ with $b \in A.$ Then for all $a \in A$ we have that $a \leq b.$ Thus $b$ is the maximum of $A.$ 
+
+\end{myproof}
+
 \qs{}{
 Let $A$ be a non-empty set and let $\mathcal{P}(\mathcal{A})$ represent the collection of all subsets of $A$; this set is known as the power set of $\mathrm{A}$.
 }
@@ -41,18 +53,42 @@ $$ |\mathcal{P}(\mathcal{A}_{n+1})| = 2^n +2^n= 22^n = 2^{n+1}.$$ Thus, $|\mathc
 \par
 \sol
 
-Assume, by way of contradiction, that $\mathcal{P}(\mathcal{A})$ is countable. Then there exists a bijective function $f\colon \NN \rightarrow \mathcal{P}(\mathcal{A}).$
+Assume, by way of contradiction, that $\mathcal{P}(\mathcal{A})$ is countable. Then there exists an onto function $f\colon \NN \rightarrow \mathcal{P}(\mathcal{A}).$ Construct $B = \{n : n \not\in f(n)\}.$  Since $f$ is onto there must exist some $n_0 \in \NN$ such that $f(n_0) = B.$
 
+We consider two cases:
+\begin{enumerate}
+  \item $n_0 \in B.$ Then by construction of the set $B$, $n_0 \not\in f(n_o).$ However, $f(n_0)=B$ so $n_0 \not\in B $ \contra.
+  \item $n_0 \not\in B$. So $n_0 \in f(n_0).$ This implies $n_0 \in B$ \contra
+\end{enumerate}
+
+Thus, $f$ can not be onto. If it is not onto then $|\NN| \not= |\mathcal{P}(\mathcal{A})|$ and thus $\mathcal{P}(\mathcal{A})$ can not be countable.
 \bigskip
 
 (c) Suppose that $A$ is uncountable. Prove that there is no bijection between $A$ and $\mathcal{P}(\mathcal{A})$.
 \bigskip
-\par
+\begin{myproof}
+    
+Assume, by way of contradiction, that there exists a bijection between $A$ and $\mathcal{P}(\mathcal{A}),$ hence $f\colon A \rightarrow \mathcal{P}(\mathcal{A}).$ Construct $B = \{a : a \not\in f(n)\}.$  Since $f$ is onto there must exist some $a_0 \in \NN$ such that $f(a_0) = B.$
 
+We consider two cases:
+\begin{enumerate}
+  \item $a_0 \in B.$ Then by construction of the set $B$, $n_0 \not\in f(a_o).$ However, $f(a_0)=B$ so $a_0 \not\in B $ \contra.
+  \item $a_0 \not\in B$. So $a_0 \in f(a_0).$ This implies $a_0 \in B$ \contra
+\end{enumerate}
+
+Thus, there can not be a bijection  between  $A$ and $\mathcal{P}(\mathcal{A}).$ 
+
+\end{myproof}
 
 \qs{}{
 Let $E$ be the set of all $x \in[0,1]$ whose decimal expansion contains only the digits 4 and 7 . Is $E$ countable? Explain.
 }
+\sol 
+\begin{myproof}
+$E$ is countable. Let $f$ be the function from the natural numbers to the set of all permutations of $4$ and $7$ in decimal expansion with $n$ elements. That is $1 \rightarrow \{0.4, 0.7\},$  $2 \rightarrow \{0.47, 0.74\}.$ Each of these sets is countable as $n \rightarrow \infty.$ The union of of countable sets are countable (Theorem 1.5.8). Thus, $E$ is countable.
+    
+\end{myproof}
+
 \qs{}{
 Consider the function $h$ defined by
 $$

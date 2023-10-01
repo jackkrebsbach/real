@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1695412376 "master.tex" "master.pdf" "master" 1695412377
+["pdflatex"] 1696187698 "master.tex" "master.pdf" "master" 1696187699
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1640468671 2914 8283dfc24eaf1964346f843d7605c2b0 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc" 1422827479 2083 60e36f8eac802fcaf19eabe2633b406e ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -16,6 +16,7 @@
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/newpx/pxsys.tfm" 1622581553 1572 bcf7a724ad3204b5e0bc5efc50ffa655 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/newpx/zpl-Bold-tlf-t1.tfm" 1640468490 11388 be91cbda0b83da460f6a2d7083292202 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/newpx/zpl-BoldItalic-tlf-t1.tfm" 1640468490 9628 4b0d979965edd7502482889453a26c0c ""
+  "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/newpx/zpl-Italic-tlf-t1.tfm" 1640468490 11912 8425952b18d652f172a6bb05522445f3 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/newpx/zpl-Regular-tlf-ot1.tfm" 1638738662 3276 80e029393a7c05f145df7ecf5e34a812 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/newpx/zpl-Regular-tlf-t1.tfm" 1640468490 12212 23628103ecb97b5e11ff6b34661881c2 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/newpx/zplexa.tfm" 1589834291 760 1bbb6b93780440b947a1a84c0a1886d8 ""
@@ -279,8 +280,8 @@
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
   "letterfonts.tex" 1695409983 8701 d4d76a46c7e67e08d85e12dc657127e9 ""
   "macros.tex" 1695409983 3389 93000260d2aea292d29c76d4ace77a29 ""
-  "master.aux" 1695412377 808 5bd5371b11fafbbc2b2fb6199239888c "pdflatex"
-  "master.tex" 1695412374 3607 84e9cc7cb0d6c9001b44e701e7dfd5c4 ""
+  "master.aux" 1696187699 808 5bd5371b11fafbbc2b2fb6199239888c "pdflatex"
+  "master.tex" 1696187697 5721 42e8de45973c72cf350712012f26814a ""
   "preamble.tex" 1695409983 20069 818dce862c20b33ec563475225672a2c ""
   (generated)
   "master.aux"
