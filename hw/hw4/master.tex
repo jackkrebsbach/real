@@ -86,7 +86,31 @@ Let $E$ be the set of all $x \in[0,1]$ whose decimal expansion contains only the
 }
 \sol 
 \begin{myproof}
-$E$ is countable. Let $f$ be the function from the natural numbers to the set of all permutations of $4$ and $7$ in decimal expansion with $n$ elements. That is $1 \rightarrow \{0.4, 0.7\},$  $2 \rightarrow \{0.47, 0.74, 0.44, 0.77\}$ and so forth. Each of these sets is countable for every $n \in \NN.$ Thus the union of of countable sets as $n \rightarrow \infty$ is countable (Theorem 1.5.8). Therefore, $E$ is countable.
+  $E$ is not countable. Assume, by way of contradiction, that $E$ is countable.  Then there exists a bijection from the natural numbers to $E.$ Then we can list the correspondence where each $a_{nm} \in \{0,4,7\}.$
+
+ \begin{centering}
+     
+\begin{tabular}{c c c c c c c c c c c}
+ $\mathbf{N}$ & & $E$ & & & & & & & & \\
+\hline 1 & $\longleftrightarrow$ & $f(1)$ & $=$ & $.a_{11}$ & $a_{12}$ & $a_{13}$ & $a_{14}$ & $a_{15}$ & $a_{16}$ & $\cdots$ \\
+ 2 & $\longleftrightarrow$ & $f(2)$ & $=$ &.$a_{21}$ & $a_{22}$ & $a_{23}$ & $a_{24}$ & $a_{25}$ & $a_{26}$ & .. \\
+ 3 & $\longleftrightarrow$ & $f(3)$ & $=$ &.$a_{31}$ & $a_{32}$ & $a_{33}$ & $a_{34}$ & $a_{35}$ & $a_{36}$ & .. \\
+ 4 & $\longleftrightarrow$ & $f(4)$ & $=$ &.$a_{41}$ & $a_{42}$ & $a_{43}$ & $a_{44}$ & $a_{45}$ & $a_{46}$ & $\ldots$ \\
+ 5 & $\longleftrightarrow$ & $f(5)$ & $=$ &.$a_{51}$ & $a_{52}$ & $a_{53}$ & $a_{54}$ & $a_{55}$ & $a_{56}$ & \dots \\
+ 6 & $\longleftrightarrow$ & $f(6)$ & $=$ & $.a_{61}$ & $a_{62}$ & $a_{63}$ & $a_{64}$ & $a_{65}$ & $a_{66}$ & $\cdots$ \\
+$\vdots$ & & & & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & : & \\
+
+\end{tabular}
+\end{centering}   
+
+Construct $E_0 = .e_1e_2e_3...$ where 
+$$e_n =  \begin{cases} 
+  4 &  a_{nn} = 7, 0\\
+  7 & a_{nn} = 4
+   \end{cases}
+   $$
+
+Thus, $E_0$ can not in the range of the surjection. Therefore $E$ is uncountable.
     
 \end{myproof}
 
