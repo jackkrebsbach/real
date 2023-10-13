@@ -1,0 +1,70 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+\newcommand{\contra}{
+$\rightarrow\!\leftarrow$
+}
+
+\title{Real Analysis HW \#5}
+\author{Jack Krebsbach }
+
+\date{Oct 15th}
+
+\begin{document}
+
+\maketitle
+\qs{}{
+
+1. Let $x_n \geq 0$ for all $n \in \mathbb{N}$.
+(a) If $\left(x_n\right) \rightarrow 0$, show that $\sqrt{x_n} \rightarrow 0$.
+(b) If $\left(x_n\right) \rightarrow x$, show that $\sqrt{x_n} \rightarrow \sqrt{x}$.
+
+}
+\qs{}{
+
+2. Let $\left(a_n\right)$ and $\left(b_n\right)$ be sequences of real numbers.
+(a) Show that if $\left(a_n\right) \rightarrow 0$ and $\left(a_n-b_n\right) \rightarrow 0$, then $\left(b_n\right) \rightarrow 0$.
+(b) Show that if $\left(a_n\right) \rightarrow 0$ and $\left|b_n-b\right| \leq a_n$, then $\left(b_n\right) \rightarrow b$
+
+}
+
+\qs{}{
+
+3. Consider $y_1=1, y_{n+1}=\left(2 y_n+3\right) / 4$ for all $n \in \mathbb{N}$. Show by direct calculations that $y_1<y_2<2$. Then, show that if $y_{n-1}<y_n<2$ that $y_n<y_{n+1}<2$. Use this to show that $\left\{y_n\right\}$ converges and find its limit.
+
+}
+
+\qs{}{
+
+4. (Cesaro Means). Show that if $\left(x_n\right)$ is a convergent sequence, then the sequence given by the averages:
+$$
+y_n=\frac{x_1+x_2+\ldots x_n}{n}
+$$
+also converges to the same limit.
+
+}
+\qs{}{
+
+5. ChatGPT Challenge: To prove that if $\lim \left(a_n-b_n\right)=0$, then $\lim a_n=\lim b_n$, you can use the definition of a limit and the properties of limits. Here's a proof:
+
+}
+
+
+Proof:
+Let $\epsilon>0$ be arbitrary. Since $\lim \left(a_n-b_n\right)=0$, there exists an $N_1$ such that for all $n \geq N_1$, we have $\left|a_n-b_n\right|<\epsilon / 2$. Now, consider the inequality $\left|a_n-b_n\right|<\epsilon / 2$. We can add $\left|b_n\right|$ to both sides of this inequality: $\left|a_n-b_n\right|+\left|b_n\right|<\epsilon / 2+\left|b_n\right|$
+
+By the triangle inequality, we know that $\left|a_n-b_n+b_n\right| \leq\left|a_n-b_n\right|+\left|b_n\right|$, so: $\left|a_n\right|<\epsilon / 2+\left|b_n\right|$ Now, we have the following inequalities: $\left|a_n-b_n\right|<\epsilon / 2$ (from our choice of $N_1$ )
+$\left|a_n\right|<\epsilon / 2+\left|b_n\right|$
+Now, choose $N_2$ such that for all $n \geq N_2$, we have $\left|b_n\right|<\epsilon / 2$. Let $N=\max \left(N_1, N_2\right)$. For $n \geq N$, we have: $\left|a_n-b_n\right|<\epsilon / 2$ (from the choice of $N_1$ )
+$\left|b_n\right|<\epsilon / 2$ (from the choice of $N_2$ )
+Now, let's use these inequalities to bound $\left|a_n\right|$ :
+$\left|a_n\right|=\left|a_n-b_n+b_n\right| \leq\left|a_n-b_n\right|+\left|b_n\right|<\epsilon / 2+\epsilon / 2=\epsilon$
+This shows that for all $n \geq N$, we have $\left|a_n\right|<\epsilon$, which means that $\lim a_n=0$.
+Since $\epsilon$ was arbitrary, we have shown that for any $\epsilon>0$, there exists an $N$ such that for all $n \geq N,\left|a_n\right|<\epsilon$, which is the definition of $\lim a_n=0$.
+Therefore, we have proved that if $\lim \left(a_n-b_n\right)=0$, then $\lim a_n=\lim b_n$.
+
+
+\end{document}
+
