@@ -56,11 +56,34 @@ Since $\left(\frac{\sqrt{x_n}}{\sqrt{x}} + 1\right) > 1$ it must be that  $\left
 2. Let $\left(a_n\right)$ and $\left(b_n\right)$ be sequences of real numbers.
 }
 (a) Show that if $\left(a_n\right) \rightarrow 0$ and $\left(a_n-b_n\right) \rightarrow 0$, then $\left(b_n\right) \rightarrow 0$.
+\begin{myproof}
+    
+  If $\left(a_n\right) \rightarrow 0$ then for all $\epsilon >0$ there exists $N_1$ such that for all $n> N_1$, $|a_n - 0| < \frac{\epsilon}{2}.$ Similarly, for all $\epsilon >0$ there exists $N_2$ such that for all $n > N_2$, $| (a_n - b_n) - 0 |< \frac{\epsilon}{2}.$ Consider the sum of these two quantities with $n > \max\{N_1,N_2\}.$
+$$| a_n  - 0 |+ | (a_n - b_n) - 0 |<  \frac{\epsilon}{2} + \frac{\epsilon}{2}.$$
+
+By the Triage Inequality Theorem, 
+
+$$| a_n - 0  + a_n - b_n - 0 | \leq | (a_n - b_n) - 0 |+ | (a_n - b_n) - 0 |< \epsilon.$$
+
+Thus $|0 - b_n| = |b_n - 0 |< \epsilon.$ Hence $(b_n) \rightarrow 0.$
+
+\end{myproof}
 
 
 \bigskip
 (b) Show that if $\left(a_n\right) \rightarrow 0$ and $\left|b_n-b\right| \leq a_n$, then $\left(b_n\right) \rightarrow b$
 
+\begin{myproof}
+    
+  If $(a_n) \rightarrow 0 $ then for all $\epsilon > 0 $ there exists
+$N \in \NN$ such that for all $n > N$, $|a_n - 0| < \frac{\epsilon}{2}.$ We know that $$|b_n - b| \leq |a_n|  \implies |b_n - b| - |a_n|\leq 0 < \frac{\epsilon}{2}.$$
+
+After the summing the two quantities,
+ $$|b_n - b| - |a_n| + |a_n -0| < \frac{\epsilon}{2} + \frac{\epsilon}{2}$$
+ and finally,
+ $$|b_n - b|  < \epsilon.$$ Thus, $(b_n) \rightarrow b.$
+
+\end{myproof}
 
 \qs{}{
 
@@ -70,7 +93,7 @@ Since $\left(\frac{\sqrt{x_n}}{\sqrt{x}} + 1\right) > 1$ it must be that  $\left
 
 \qs{}{
 
-4. (Ce sari Means). Show that if $\left(x_n\right)$ is a convergent sequence, then the sequence given by the averages:
+4. (Cesari Means). Show that if $\left(x_n\right)$ is a convergent sequence, then the sequence given by the averages:
 $$
 y_n=\frac{x_1+x_2+\ldots x_n}{n}
 $$
@@ -80,7 +103,7 @@ also converges to the same limit.
 \bigskip
 \begin{myproof}
     
-  Let $(x_n)$ converge to $x$. If $(x_n)$ is convergent then for every $\epsilon >0$ there exists $N \in \NN$ such that for all $n > N$, $| x_{n} - x| < \epsilon.$ Let $n > n^\star.$
+  Let $(x_n)$ converge to $x$. If $(x_n)$ is convergent then for every $\epsilon >0$ there exists $N \in \NN$ such that for all $n > N$, $| x_{n} - x| < \epsilon.$
 
   Then $$ \left| \frac{x_1 + x_1 +\cdots + x_{n} }{n}  - x\right|= $$$$ \left| \frac{x_1 + x_1 + \cdots + x_{N}+ \cdots + x_{n} }{n}  - x\right|= $$
 $$ \left| \frac{x_1 + x_1 + \cdots + x_{N}}{n} + \frac{ x_{N+1}+ \cdots + x_{n} }{n} - x\right| \leq \underbrace{\left| \frac{x_1 + x_1 + \cdots + x_{N}}{n} \right|}_{K}+ \underbrace{ \left|\frac{ x_{N + 1}+ \cdots + x_{n} }{n} - x\right|}_{Z}$$
