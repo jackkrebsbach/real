@@ -103,14 +103,14 @@ After the summing the two quantities,
 
  We see that $y_n < y_{n+1}$ so the sequence is monotone and bounded by $2.$  Therefore it is convergent. The limit of the sequence as $
  \lim_{n \rightarrow \infty} y_n = 3/2.$ If $y_n = 3/2$ then $y_{n+1} = \frac{2 \frac{3}{2} +3}{4} = \frac{6}{4}= \frac{3}{2}$. Thus, $(y_n) \rightarrow 3/2.$ 
- \par Let $\epsilon \in \RR.$ Then if $y_n = 3/2 + \epsilon$, $y_{n+1} = 3/2 + (1/2)\epsilon$, and $y_{n+2} = 3/2 + (1/4)\epsilon$ and $y_{n+3} = 3/2 + (1/8)\epsilon$. It follows $y_{n+N} = 3/2 + \frac{1}{2^N} \epsilon.$ As $n \rightarrow \infty$ then $(y_n) \rightarrow 3/2.$
+ \par Let $\epsilon \in \RR.$ Then if $y_n = 3/2 + \epsilon$, $y_{n+1} = 3/2 + (1/2)\epsilon$, and $y_{n+2} = 3/2 + (1/4)\epsilon$ and $y_{n+3} = 3/2 + (1/8)\epsilon$. It follows $y_{n+N} = 3/2 + \frac{1}{2^N} \epsilon.$ As $N \rightarrow \infty$ then $(y_n) \rightarrow 3/2.$
 
 \end{myproof}
-
+\pagebreak
 
 \qs{}{
 
-4. (Cesari Means). Show that if $\left(x_n\right)$ is a convergent sequence, then the sequence given by the averages:
+4. (Cesaro Means). Show that if $\left(x_n\right)$ is a convergent sequence, then the sequence given by the averages:
 $$
 y_n=\frac{x_1+x_2+\ldots x_n}{n}
 $$
@@ -125,10 +125,11 @@ also converges to the same limit.
   Then $$ \left| \frac{x_1 + x_1 +\cdots + x_{n} }{n}  - x\right|= $$$$ \left| \frac{x_1 + x_1 + \cdots + x_{N}+ \cdots + x_{n} }{n}  - x\right|= $$
 $$ \left| \frac{x_1 + x_1 + \cdots + x_{N}}{n} + \frac{ x_{N+1}+ \cdots + x_{n} }{n} - x\right| \leq \underbrace{\left| \frac{x_1 + x_1 + \cdots + x_{N}}{n} \right|}_{K}+ \underbrace{ \left|\frac{ x_{N + 1}+ \cdots + x_{n} }{n} - x\right|}_{Z}$$
 
-The last step is a result of the Triage Inequality Theorem. Since for ever $n > N, | x_{n} - x| < \epsilon$, the average must be less than $\epsilon$ as well. So $Z < \epsilon.$ As $n$ tends to infinity $K \rightarrow 0.$  Thus, $ K + Z <\epsilon$ and
+The last step is a result of the Triage Inequality Theorem. As $n$ tends to infinity $K \rightarrow 0.$ For every $\epsilon >0$ there exists $n > N$ such that $| x_{n} - x| < \epsilon.$ For sufficiently large $n$, $$\frac{ x_{N + 1}+ \cdots + x_{n} }{n}$$  will tend towards the average, $$\frac{ x_{N + 1}+ \cdots + x_{n} }{n-N},$$ where all of the terms have $n>N$ and $| x_{n} - x| < \epsilon.$ Hence the average will also be less than $\epsilon$ and thus $Z < \epsilon.$
+
+Therefore, $K + Z <\epsilon$ and
 $$ \left| \frac{x_1 + x_1 +\cdots + x_{n} }{n}  - x\right|< \epsilon.$$
 This shows that $(y_n) \rightarrow x$ and $(x_n) \rightarrow x.$
-
 \bigskip
 \end{myproof}
 
