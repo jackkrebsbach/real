@@ -132,11 +132,10 @@ also converges to the same limit.
   Then $$ \left| \frac{x_1 + x_1 +\cdots + x_{n} }{n}  - x\right|= $$$$ \left| \frac{x_1 + x_1 + \cdots + x_{N}+ \cdots + x_{n} }{n}  - x\right|= $$
 $$ \left| \frac{x_1 + x_1 + \cdots + x_{N}}{n} + \frac{ x_{N+1}+ \cdots + x_{n} }{n} - x\right| \leq \underbrace{\left| \frac{x_1 + x_1 + \cdots + x_{N}}{n} \right|}_{K}+ \underbrace{ \left|\frac{ x_{N + 1}+ \cdots + x_{n} }{n} - x\right|}_{Z}$$
 
-The last step is a result of the Triangle Inequality Theorem. We know that for all the terms where $n>N$, $| x_{n} - x| < \epsilon.$ Then the average of of all $x_n$ where $n>N$, $ \bar{x}_n =\frac{ x_{N + 1}+ \cdots + x_{n} }{n-N},$ will also be have the property $|\bar{x}_n - x| < \epsilon$.  As $n$ tends to infinity the expression $\frac{ x_{N + 1} + \cdots + x_{n} }{n}$  will tend towards $ \bar{x}_n =\frac{ x_{N + 1}+ \cdots + x_{n} }{n-N}.$ Therefore, $Z < \epsilon.$ We also know as $n \rightarrow \infty $, $K \rightarrow 0.$
+The last step is a result of the Triangle Inequality Theorem. We know that for all the terms where $n>N$, $| x_{n} - x| < \epsilon.$ Then the average of of all $x_n$ where $n>N$, $ \bar{x}_n =\frac{ x_{N + 1}+ \cdots + x_{n} }{n-N},$ will also be have the property $|\bar{x}_n - x| < \epsilon$.  As $n$ tends to infinity the expression $\frac{ x_{N + 1} + \cdots + x_{n} }{n}$  will tend towards $ \bar{x}_n =\frac{ x_{N + 1}+ \cdots + x_{n} }{n-N}.$ Therefore, we can choose a large enough $n$ such that $Z < \epsilon.$ We also know as $n \rightarrow \infty $, $K \rightarrow 0.$
 
 Hence, when $n$ is sufficiently large, $K + Z <\epsilon$
-$  \implies\left| \frac{x_1 + x_1 +\cdots + x_{n} }{n}  - x\right|< \epsilon.$
-Thus, we can conclude that $(y_n) \rightarrow x$ in addition to $(x_n) \rightarrow x.$
+$  \implies\left| \frac{x_1 + x_1 +\cdots + x_{n} }{n}  - x\right|< \epsilon$ and therefore $(y_n) \rightarrow x$ in addition to $(x_n) \rightarrow x.$
 \bigskip
 \end{myproof}
 
