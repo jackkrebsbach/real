@@ -100,9 +100,9 @@ $$ \implies |b_n - b|  < \epsilon $$ $$\implies (b_n) \rightarrow b.$$
  $$ \implies \frac{2y_{n-1} + 3}{4}<\frac{2y_{n} +3}{4} <\frac{2(2) +3}{4}. $$
  $$ \implies y_{n} <y_{n+1} <\frac{7}{4} < 2$$
 
-We see that $y_n < y_{n+1}$ so the sequence is monotone and bounded by $2.$  Therefore, it is convergent.
+We see that $y_n < y_{n+1}$ so the sequence is monotone. We also see that it is bounded by $2.$  Therefore, by M.C.T, $y_n$ is convergent.
 \par
-Let $\lim_{n \rightarrow \infty} y_{n} = L$. Consider $$\lim_{n \rightarrow \infty} y_{n+1} = \lim_{n \rightarrow \infty}\left(2 y_n+3\right) / 4$$ 
+Let $\lim_{n \rightarrow \infty} y_{n} = L$. Then $$\lim_{n \rightarrow \infty} y_{n+1} = \lim_{n \rightarrow \infty}\left(2 y_n+3\right) / 4$$ 
 $$\implies L = \left(2 L+3\right) / 4$$ 
 
 $$\implies 4L = 2 L+3$$ 
@@ -132,10 +132,11 @@ also converges to the same limit.
   Then $$ \left| \frac{x_1 + x_1 +\cdots + x_{n} }{n}  - x\right|= $$$$ \left| \frac{x_1 + x_1 + \cdots + x_{N}+ \cdots + x_{n} }{n}  - x\right|= $$
 $$ \left| \frac{x_1 + x_1 + \cdots + x_{N}}{n} + \frac{ x_{N+1}+ \cdots + x_{n} }{n} - x\right| \leq \underbrace{\left| \frac{x_1 + x_1 + \cdots + x_{N}}{n} \right|}_{K}+ \underbrace{ \left|\frac{ x_{N + 1}+ \cdots + x_{n} }{n} - x\right|}_{Z}$$
 
-The last step is a result of the Triangle Inequality Theorem. We know that for all the terms where $n>N$, $| x_{n} - x| < \epsilon.$ Then the average of of all $x_n$ where $n>N$, $ \bar{x}_n =\frac{ x_{N + 1}+ \cdots + x_{n} }{n-N},$ will also be have the property $|\bar{x}_n - x| < \epsilon$.  As $n$ tends to infinity the expression $\frac{ x_{N + 1} + \cdots + x_{n} }{n}$  will tend towards $ \bar{x}_n =\frac{ x_{N + 1}+ \cdots + x_{n} }{n-N}.$ Therefore, we can choose a large enough $n$ such that $Z < \epsilon.$ We also know as $n \rightarrow \infty $, $K \rightarrow 0.$
+The last step is a result of the Triangle Inequality Theorem. We know that for all the terms where $n>N$, $| x_{n} - x| < \epsilon.$ Then the average of of all $x_n$ where $n>N$, $ \bar{x}_n =\frac{ x_{N + 1}+ \cdots + x_{n} }{n-N},$ will also be have the property $|\bar{x}_n - x| < \epsilon$.  As $n$ tends to infinity the expression $\frac{ x_{N + 1} + \cdots + x_{n} }{n}$  will tend towards $ \bar{x}_n =\frac{ x_{N + 1}+ \cdots + x_{n} }{n-N}.$ Then $n \rightarrow \infty \implies Z < \epsilon,$ and since the numerator of $K$ is fixed, $K \rightarrow 0.$
 
-Hence, when $n$ is sufficiently large, $K + Z <\epsilon$
-$  \implies\left| \frac{x_1 + x_1 +\cdots + x_{n} }{n}  - x\right|< \epsilon$ and therefore $(y_n) \rightarrow x$ in addition to $(x_n) \rightarrow x.$
+Hence, as $n \rightarrow \infty$ , $K + Z <\epsilon$
+$  \implies\left| \frac{x_1 + x_1 +\cdots + x_{n} }{n}  - x\right|< \epsilon.$
+Thus, we can conclude that $(y_n) \rightarrow x$ in addition to $(x_n) \rightarrow x.$
 \bigskip
 \end{myproof}
 
