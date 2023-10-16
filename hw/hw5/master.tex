@@ -58,12 +58,14 @@ Since $\left(\frac{\sqrt{x_n}}{\sqrt{x}} + 1\right) > 1$ it must be that  $\left
 (a) Show that if $\left(a_n\right) \rightarrow 0$ and $\left(a_n-b_n\right) \rightarrow 0$, then $\left(b_n\right) \rightarrow 0$.
 \begin{myproof}
     
-  If $\left(a_n\right) \rightarrow 0$ then for all $\epsilon >0$ there exists $N_1$ such that for all $n> N_1$, $|a_n - 0| < \frac{\epsilon}{2}.$ Similarly, for all $\epsilon >0$ there exists $N_2$ such that for all $n > N_2$, $| (a_n - b_n) - 0 |< \frac{\epsilon}{2}.$ Consider the sum of these two quantities with $n > \max\{N_1,N_2\}.$
-$$| a_n  - 0 |+ | (a_n - b_n) - 0 |<  \frac{\epsilon}{2} + \frac{\epsilon}{2}.$$
+  If $\left(a_n\right) \rightarrow 0$ then for all $\epsilon >0$ there exists $N_1$ such that for all $n> N_1$, $|a_n - 0| < \frac{\epsilon}{2}.$ Similarly, for all $\epsilon >0$ there exists $N_2$ such that for all $n > N_2$, $| (a_n - b_n) - 0 |< \frac{\epsilon}{2}.$ Consider the sum of these two quantities with $n > \max\{N_1,N_2\}.$ Then 
+$$| a_n  - 0 |+ | (a_n - b_n) - 0 |<  \frac{\epsilon}{2} + \frac{\epsilon}{2}$$ and
 
-By the Triage Inequality Theorem, 
+$$| 0 - a_n |+ | (a_n - b_n) - 0 |<  \epsilon$$
 
-$$| a_n - 0  + a_n - b_n - 0 | \leq | (a_n - b_n) - 0 |+ | (a_n - b_n) - 0 |< \epsilon.$$
+By the Triangle Inequality Theorem, 
+
+$$|0 - a_n  + a_n - b_n - 0 | \leq | 0 - a_n |+ | (a_n - b_n) - 0 |< \epsilon.$$
 
 Thus $|0 - b_n| = |b_n - 0 |< \epsilon.$ Hence $(b_n) \rightarrow 0.$
 
@@ -99,7 +101,9 @@ After the summing the two quantities,
  $$ \implies \frac{2y_{n-1} + 3}{4}<\frac{2y_{n} +3}{4} <\frac{2(2) +3}{4}. $$
  $$ \implies y_{n} <y_{n+1} <\frac{7}{4} < 2$$
 
- We see that $y_n < y_{n+1}$ so the sequence is monotone. 
+ We see that $y_n < y_{n+1}$ so the sequence is monotone and bounded by $2.$  Therefore it is convergent. The limit of the sequence as $
+ \lim_{n \rightarrow \infty} y_n = 3/2.$ If $y_n = 3/2$ then $y_{n+1} = \frac{2 \frac{3}{2} +3}{4} = \frac{6}{4}= \frac{3}{2}$. Thus, $(y_n) \rightarrow 3/2.$ 
+ \par Let $\epsilon \in \RR.$ Then if $y_n = 3/2 + \epsilon$, $y_{n+1} = 3/2 + (1/2)\epsilon$, and $y_{n+2} = 3/2 + (1/4)\epsilon$ and $y_{n+3} = 3/2 + (1/8)\epsilon$. It follows $y_{n+N} = 3/2 + \frac{1}{2^N} \epsilon.$ As $n \rightarrow \infty$ then $(y_n) \rightarrow 3/2.$
 
 \end{myproof}
 

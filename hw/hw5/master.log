@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.12)  15 OCT 2023 17:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.12)  15 OCT 2023 20:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1275,18 +1275,18 @@ LaTeX Font Info:    Font shape `T1/zplTLF/b/it' will be
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.82 ... \frac{\epsilon}{2} + \frac{\epsilon}{2}$$
+l.81 ...- b| - |a_n|\leq 0 < \frac{\epsilon}{2}.$$
                                                    [1] [2] [3] (./master.aux) ) 
 Here is how much of TeX's memory you used:
  37741 strings out of 478268
  754088 string characters out of 5846347
- 1126356 words of memory out of 5000000
+ 1127356 words of memory out of 5000000
  55233 multiletter control sequences out of 15000+600000
  518742 words of font info for 117 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  96i,10n,102p,455b,1373s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/NewPXMI.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/NewPXMI_gnu.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/pxmiaX.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newtx/txexas.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/zplbi.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/zplr.pfb>
-Output written on master.pdf (4 pages, 149133 bytes).
+Output written on master.pdf (4 pages, 150781 bytes).
 PDF statistics:
  132 PDF objects out of 1000 (max. 8388607)
  78 compressed objects within 1 object stream
