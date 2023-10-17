@@ -51,6 +51,28 @@ Let $(x_n)$ be a convergent sequence converging to $x$. Let $\epsilon =1.$ Since
 Now consider the set $\{|x_1|, |x_2|, |x_3|,\dots, |x_N|\}.$ All, the elements outside the ball of convergence.  Let $B= \{|x_1|, |x_2|, |x_3|,\dots, |x_N|, |x| + 1\}.$ Thus, $|x_n| \leq B$ for all $n \in \NN$ and $(x_n)$ is bounded.
     
 \end{myproof}
+
+\thm{Bounded and monotone sequences are convergent.}{
+
+}
+
+\begin{myproof}
+Let $\left(a_n\right)$ be monotone and bounded. To prove $\left(a_n\right)$ converges using the definition of convergence, we are going to need a candidate for the limit. Let's assume the sequence is increasing (the decreasing case is handled similarly), and consider the set of points $\left\{a_n: n \in \mathbf{N}\right\}$. By assumption, this set is bounded, so we can let
+$$
+s=\sup \left\{a_n: n \in \mathbf{N}\right\} .
+$$
+It seems reasonable to claim that $\lim a_n=s$.
+2.4. The Monotone Convergence Theorem and Infinite Series
+57
+To prove this, let $\epsilon>0$. Because $s$ is the least upper bound for $\left\{a_n: n \in \mathbf{N}\right\}$, $s-\epsilon$ is not an upper bound, so there exists a point in the sequence $a_N$ such that $s-\epsilon<a_N$. Now, the fact that $\left(a_n\right)$ is increasing implies that if $n \geq N$, then $a_N \leq a_n$. Hence,
+$$
+s-\epsilon<a_N \leq a_n \leq s<s+\epsilon,
+$$
+which implies $\left|a_n-s\right|<\epsilon$, as desired.
+The Monotone Convergence Theorem is extremely useful for the study of infinite series, largely because it asserts the convergence of a sequence without explicit mention of the actual limit. This is a good moment to do some preliminary investigations, so it is time to formalize the relationship between sequences and series.
+\end{myproof}
+
+
 \thm{Algebraic Limit Theorem}{
  Let $\lim a_n=a$, and $\lim b_n=b$ . Then,
 \begin{enumerate}
@@ -60,6 +82,7 @@ Now consider the set $\{|x_1|, |x_2|, |x_3|,\dots, |x_N|\}.$ All, the elements o
  \item $\lim \left(a_n / b_n\right)=a / b$, provided $b \neq 0$.
 \end{enumerate}
 }
+
 \pagebreak
 
 

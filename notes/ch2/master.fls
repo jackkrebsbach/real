@@ -1616,6 +1616,9 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/tex-gyre/ec-qhvb.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/tex-gyre/ec-qhvr.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/newpx/zpl-Italic-tlf-t1.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/newpx/zpl-BoldItalic-tlf-t1.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/newpx/zpl-Bold-tlf-ot1.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/newpx/zpl-Bold-tlf-ot1.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/newpx/zpl-Bold-tlf-ot1.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/vf/public/newpx/zplmi.vf
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/newpx/NewPXMI_gnu.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/newpx/NewPXMI.tfm
@@ -1639,9 +1642,9 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/vf/public/newpx/zplsy.vf
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/newpx/pxsys.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/newtx/txex-bar.tfm
 INPUT master.aux
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/NewPXMI.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/NewPXMI_gnu.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/pxmiaX.pfb
