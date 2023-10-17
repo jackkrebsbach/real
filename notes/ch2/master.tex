@@ -40,6 +40,26 @@ The limit of a sequence, when it exists, must me unique.
   \par Let $N = \max\{N_x, N_y\}.$  Then $x_{N+2} \in \mathcal{B}(x,\epsilon) \cap \mathcal{B}(y,\epsilon)$. This is a contradiction, $x_{N+2} \not\in \mathcal{B}(x,\epsilon) \cap \mathcal{B}(y,\epsilon).$ Thus,  $x=y$ and limits are unique!
 \end{myproof}
 
+
+\thm{Convergent Sequences are Bounded}{
+
+}
+
+\begin{myproof}
+Let $(x_n)$ be a convergent sequence converging to $x$. Let $\epsilon =1.$ Since $(x_n)$ converges there exists $N \in \NN$ such that for all $n> N$, $|x_n - x| <\epsilon.$ By the triangle inequality theorem,$|x_n| - |x| \leq |x_n -x| < 1.$ So $|x_n|< |x| +1$ for all $n >N.$
+\par 
+Now consider the set $\{|x_1|, |x_2|, |x_3|,\dots, |x_N|\}.$ All, the elements outside the ball of convergence.  Let $B= \{|x_1|, |x_2|, |x_3|,\dots, |x_N|, |x| + 1\}.$ Thus, $|x_n| \leq B$ for all $n \in \NN$ and $(x_n)$ is bounded.
+    
+\end{myproof}
+\thm{Algebraic Limit Theorem}{
+ Let $\lim a_n=a$, and $\lim b_n=b$ . Then,
+\begin{enumerate}
+  \item  $\lim \left(c a_n\right)=c a$, for all $c \in \mathbb{R}$;
+ \item $\lim \left(a_n+b_n\right)=a+b$;
+  \item $\lim \left(a_n b_n\right)=a b$;
+ \item $\lim \left(a_n / b_n\right)=a / b$, provided $b \neq 0$.
+\end{enumerate}
+}
 \pagebreak
 
 

@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1697555564 "master.tex" "master.pdf" "master" 1697555565
+["pdflatex"] 1697556324 "master.tex" "master.pdf" "master" 1697556325
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1640468671 2914 8283dfc24eaf1964346f843d7605c2b0 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc" 1422827479 2083 60e36f8eac802fcaf19eabe2633b406e ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc" 1529098226 2457 aaabbccba4df2a7f7371410ee4e075a3 ""
@@ -44,6 +44,7 @@
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/zplr.pfb" 1640468490 235149 595fa8bf6c04f2c8979a1525afa23361 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb" 1257299502 112164 176018dd42fcc60204173fa10e357da5 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/tex-gyre/qhvr.pfb" 1257299502 110045 c159829aa6d7d99f1777bb40c90b8157 ""
+  "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/txfonts/txsya.pfb" 1136849748 18865 ebb26de41fddbc82c044d680eec38cec ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb" 1136849748 24244 ffc0312cbd155e940e16287bb7cbb16c ""
   "/usr/local/texlive/2022/texmf-dist/fonts/vf/public/newpx/zplmi.vf" 1591219423 2556 7db3e3f5fd274b63bfb66a1d0b1e1c0d ""
   "/usr/local/texlive/2022/texmf-dist/fonts/vf/public/newpx/zplmia.vf" 1618176981 1748 43529cca237bd0a988c8893565c9538d ""
@@ -280,8 +281,8 @@
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
   "letterfonts.tex" 1697553671 8702 9c1aece6b2c9bb5533a4aa1e7ecbfc3c ""
   "macros.tex" 1697553671 3390 dd31ac40797350e5c771ba0ff8ef9b4c ""
-  "master.aux" 1697555565 1270 03ad379d0fa66e5c9437e5f55ab01849 "pdflatex"
-  "master.tex" 1697555564 1402 fe17171d7cae600d78da3b7d61c4d110 ""
+  "master.aux" 1697556325 1270 03ad379d0fa66e5c9437e5f55ab01849 "pdflatex"
+  "master.tex" 1697556323 2323 2f258fc1cd41b6fb3f774434fdbfcdce ""
   "preamble.tex" 1697553671 20068 d93a38f73f6e4a77ba68ac5c9a233c0b ""
   (generated)
   "master.aux"

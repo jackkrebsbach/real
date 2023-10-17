@@ -1648,6 +1648,7 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/pxmiaX.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/pxsys.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/tex-gyre/qhvr.pfb
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/txfonts/txsya.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/zplb.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/zplbi.pfb
