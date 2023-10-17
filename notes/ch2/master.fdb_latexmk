@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1697555435 "master.tex" "master.pdf" "master" 1697555436
+["pdflatex"] 1697555564 "master.tex" "master.pdf" "master" 1697555565
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1640468671 2914 8283dfc24eaf1964346f843d7605c2b0 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc" 1422827479 2083 60e36f8eac802fcaf19eabe2633b406e ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc" 1529098226 2457 aaabbccba4df2a7f7371410ee4e075a3 ""
@@ -280,8 +280,8 @@
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
   "letterfonts.tex" 1697553671 8702 9c1aece6b2c9bb5533a4aa1e7ecbfc3c ""
   "macros.tex" 1697553671 3390 dd31ac40797350e5c771ba0ff8ef9b4c ""
-  "master.aux" 1697555435 1270 03ad379d0fa66e5c9437e5f55ab01849 "pdflatex"
-  "master.tex" 1697555433 1361 8c22ad764947b7b3e6fa94d2b3323b2d ""
+  "master.aux" 1697555565 1270 03ad379d0fa66e5c9437e5f55ab01849 "pdflatex"
+  "master.tex" 1697555564 1402 fe17171d7cae600d78da3b7d61c4d110 ""
   "preamble.tex" 1697553671 20068 d93a38f73f6e4a77ba68ac5c9a233c0b ""
   (generated)
   "master.aux"
