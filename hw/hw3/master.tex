@@ -23,12 +23,7 @@ $\rightarrow\!\leftarrow$
 \sol
 \begin{myproof}
     
-Assume, by way of contradiction, that $(\beta - \epsilon, \beta)$ is finite. Then we have that $(\beta - \epsilon,\beta) \sim \NN_{N}$ where $N \in \NN.$ Consider in preparation for a contradiction that  the value $$\frac{\beta - \epsilon}{2N}$$ partitions our set into $2N$ bins.
-
-We can start listing the elements in the collection $\{\beta - \epsilon + \frac{(\beta - \epsilon)N^\star}{2N} \colon  N^\star \in \NN_N\}$ where $ \beta - \epsilon + \frac{(\beta - \epsilon)N^\star}{2N}\in (\beta-\epsilon, \beta)$ until we terminate at $N^\star = N,$ which is $ \beta - \epsilon + \frac{\beta-\epsilon}{2}$.\par However, $$N + 1 \not\in \NN_N$$ but 
-$$ \beta - \epsilon + \frac{(N+1)(\beta - \epsilon)}{2N} \in (\beta - \epsilon, \epsilon).$$
-
-By pigeon hole principle $|(\beta-\epsilon, \beta)| \neq |\NN_{N}|.$ We have counted more than $N$ elements in the set $\{x \in S: x>\beta-\epsilon\}$, so it can not be finite. Thus, the set $\{x \in S: x>\beta-\epsilon\}$ is infinite.
+Assume, by way of contradiction, that $A = \{x \in S: x>\beta-\epsilon\}$ is finite. If $A$ is finite then let $\alpha = \max A$, with $\alpha \in A.$ Since $\alpha$ is an upper bound for $A$ and $\beta$ is supremun of $A$ we know that $\beta \leq \alpha$ and $\alpha \leq \beta.$ Thus, $\beta = \alpha \in A$ \contra. We know $\beta \not\in A.$ Thus, $A$ must be infinite.
 
 \end{myproof}
 \qs{}{
