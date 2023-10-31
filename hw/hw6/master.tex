@@ -38,7 +38,6 @@ Yes, we can apply this because we see that the sequence is bounded above by 3 an
 
 
 \bigskip
-
 \qs{}{
 
 For each natural number $n$, let
@@ -81,38 +80,36 @@ Show that $\left(x_n\right)$ converges.
 \begin{myproof}
     To show that $(x_n)$ converges we will show that it is bounded below and above. 
 
-    Consider $$\frac{2}{2 \sqrt{n}} < \frac{2}{\sqrt{n+1} + \sqrt{n}}.$$
+    Consider $$\frac{2}{2 \sqrt{n}} < \frac{2}{\sqrt{n-1} + \sqrt{n}}.$$
 
 Multiplying the right hand side by the denominators conjugate yields
- $$\frac{2}{2 \sqrt{n}} < \frac{2}{\sqrt{n+1} + \sqrt{n}} \left(\frac{\sqrt{n+1} - \sqrt{n}}{\sqrt{n+1} - \sqrt{n}}  \right) = 2\sqrt{n+1} + 2\sqrt{n}.$$
+ $$\frac{2}{2 \sqrt{n}} < \frac{2}{\sqrt{n-1} + \sqrt{n}} \left(\frac{\sqrt{n-1} - \sqrt{n}}{\sqrt{n-1} - \sqrt{n}}  \right) = 2\sqrt{n} - 2\sqrt{n-1}.$$
 
  Therefore, we can show that $(x_n)$ is bounded above by the following:
- $$\frac{2}{2 \sqrt{n}} < 2\sqrt{n+1} + 2\sqrt{n} $$ implies  that 
+ $$\frac{2}{2 \sqrt{n}} < $$ implies  that 
 
  $$
-\left(\sum_{k=1}^{n} \frac{1}{\sqrt{k}} \right)-2 \sqrt{n} < \left( \sum_{k=1}^{k} 2\sqrt{k+1} + 2\sqrt{k} \right) - 2\sqrt{n}
- .$$
+\left(\sum_{k=1}^{n} \frac{1}{\sqrt{k}} \right)-2 \sqrt{n} < \left( \sum_{k=1}^{k} 2\sqrt{k} - 2\sqrt{k-1}\right) - 2\sqrt{n}.$$
 
- The left hand side is a telescoping series:
+ The right hand side is a telescoping series:
 
  $$
-\left(\sum_{k=1}^{n} \frac{1}{\sqrt{k}} \right)-2 \sqrt{n} < 2 + 2\sqrt{2} - 2 + 2\sqrt{3}- 2\sqrt{2} + \cdots + 2\sqrt{n-1} + 2\sqrt{n} - 2 \sqrt{n-1} - 2\sqrt{n}
+ 2 + 2\sqrt{2} - 2 + 2\sqrt{3}- 2\sqrt{2} + \cdots +2\sqrt{n-1}  - 2\sqrt{n-2} + 2\sqrt{n} - 2 \sqrt{n-1} - 2\sqrt{n}
 $$
 and we find that
+
  $$
 \left(\sum_{k=1}^{n} \frac{1}{\sqrt{k}} \right)-2 \sqrt{n} < 0 $$
 
-We similarly show that $(x_n)$ is bounded from below.
+We similarly show that $(x_n)$ is bounded from below. Instead we show
 
-$$\frac{2}{2 \sqrt{n}} > \frac{2}{\sqrt{n-1} + \sqrt{n}}$$
+$$\frac{2}{2 \sqrt{n}} > \frac{2}{\sqrt{n+1} + \sqrt{n}}$$
 
 and can be simplified to
- $$\frac{2}{2 \sqrt{n}} > 2\sqrt{n-1} - 2\sqrt{n}.$$
+ $$\frac{2}{2 \sqrt{n}} > 2\sqrt{n+1} - 2\sqrt{n}.$$
  
 
  So,
-
-
  $$
 \left(\sum_{k=1}^{n} \frac{1}{\sqrt{k}} \right)-2 \sqrt{n} > \left( \sum_{k=1}^{n} 2\sqrt{k+1} - 2\sqrt{k} \right) - 2\sqrt{n}
  $$
@@ -126,7 +123,7 @@ $$
 
 $$\left(\sum_{k=1}^{n} \frac{1}{\sqrt{k}} \right)-2 \sqrt{n} > -2.$$
 
-Thus showing that $(x_n)$ is bounded from above and from below. By the Monotone Convergence theorem $(x_n)$ must be convergent.
+Thus, showing that $(x_n)$ is bounded from above and from below. By the Monotone Convergence theorem $(x_n)$ must be convergent.
 
 \end{myproof}
 
@@ -136,10 +133,34 @@ Prove that $\left(x_n\right)$ converges where $x_n=\sum_{k=1}^n k^2 2^{-k}$.
 }
 \qs{}{
 
-Consider the sequence $x_n=\sum_{k=1}^n \ln \left(\frac{n+1}{n}\right)$. Does the sequence converge? Explain.
+Consider the sequence $x_n=\sum_{k=1}^n \ln \left(\frac{k+1}{k}\right)$. Does the sequence converge? Explain.
 }
+
+
+\begin{myproof}
+
+  No, the sequence does not converge to a finite number. To show that $(x_n)$ converges to infinity first write the sum as a telescoping series:
+
+$$ x_n = \ln(2) + \ln(3/2) + \ln(4/3) + \cdots + \ln\left( \frac{n}{n-1}\right) + \ln\left(\frac{n +1}{n}\right) $$
+
+$$  = \ln(2) + \ln(3) - \ln(2) + \ln(4) - \ln(3) + \cdots + \ln(n) - \ln(n-1) + \ln(n+1) - \ln(n) $$
+
+$$  =  \ln(n+1).$$
+
+Then
+
+
+$$ \lim_{n \rightarrow   \infty} (x_n)= \lim_{n \rightarrow \infty} \ln(n+1) = \infty.$$
+
+Thus $(x_n)$ converges to infinity.
+
+
+
+\end{myproof}
+
+\bigskip
 \qs{}{
-ChatGPT Challenge: Consider the sequence
+CHATBOT Challenge: Consider the sequence
 $$
 x_n=1+\frac{1}{\sqrt{2}}+\frac{1}{\sqrt{3}}+\cdots+\frac{1}{\sqrt{n}}-2 \sqrt{n} .
 $$
