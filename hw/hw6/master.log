@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.12)  31 OCT 2023 15:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.12)  31 OCT 2023 17:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1269,27 +1269,32 @@ LaTeX Font Info:    Font shape `OT1/zplTLF/m/n' will be
 LaTeX Font Info:    Font shape `T1/zplTLF/b/it' will be
 (Font)              scaled to size 10.0pt on input line 26.
 LaTeX Font Info:    Font shape `T1/zplTLF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 52.
+(Font)              scaled to size 10.0pt on input line 59.
 \g__tikzsymbols_savebox_F_0 g 0 G_10_Laughey_1_none_none_box=\box143
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.69 
-      [1] [2] [3] [4] (./master.aux) ) 
+l.89 }
+       [1] [2]
+LaTeX Font Info:    Font shape `T1/zplTLF/m/n' will be
+(Font)              scaled to size 7.3pt on input line 154.
+LaTeX Font Info:    Font shape `T1/zplTLF/m/n' will be
+(Font)              scaled to size 5.5pt on input line 154.
+ [3] [4] [5] (./master.aux) ) 
 Here is how much of TeX's memory you used:
- 37743 strings out of 478268
- 754200 string characters out of 5846347
- 1127354 words of memory out of 5000000
- 55238 multiletter control sequences out of 15000+600000
- 518202 words of font info for 114 fonts, out of 8000000 for 9000
+ 37749 strings out of 478268
+ 754256 string characters out of 5846347
+ 1125354 words of memory out of 5000000
+ 55240 multiletter control sequences out of 15000+600000
+ 525071 words of font info for 119 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 96i,7n,102p,455b,1373s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/NewPXMI.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/NewPXMI_gnu.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/pxmiaX.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/zplbi.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/zplr.pfb>
-Output written on master.pdf (5 pages, 136784 bytes).
+ 96i,9n,102p,455b,1373s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/NewPXMI.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/NewPXMI_gnu.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/pxmiaX.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/zplbi.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/zplr.pfb>
+Output written on master.pdf (6 pages, 143388 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
- 71 compressed objects within 1 object stream
- 11 named destinations out of 1000 (max. 500000)
+ 129 PDF objects out of 1000 (max. 8388607)
+ 77 compressed objects within 1 object stream
+ 12 named destinations out of 1000 (max. 500000)
  157 words of extra memory for PDF output out of 10000 (max. 10000000)
 

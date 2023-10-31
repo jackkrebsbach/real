@@ -44,7 +44,6 @@ Thus, the sequence is increasing. The sequence is also bounded from above by 3. 
 
 
 \bigskip
-\bigskip
 \qs{}{
 
 For each natural number $n$, let
@@ -66,7 +65,7 @@ $$ = \frac{1}{2n+1} + \frac{1}{2n+2} > 0.$$
 
 
 
-Because the first term is the largest of $n$ terms in the partial sum   the following inequality holds:
+Because the first term in the partial sum is the largest  the following inequality holds:
 $$ \sum_{k =n}^{2n} \frac{1}{k+1} < n\left(\frac{1}{n+1}\right).$$
 
 Then we have
@@ -77,6 +76,7 @@ Thus, $(x_n)$ is increasing monotone and bounded above by 1. By the Monotone Con
 \end{myproof}
 
 
+\pagebreak
 
 \qs{}{
 
@@ -142,59 +142,6 @@ Thus, showing that $(x_n)$ is bounded from above and from below. By the Monotone
 
 Prove that $\left(x_n\right)$ converges where $x_n=\sum_{k=1}^n k^2 2^{-k}$.
 }
-
-\begin{myproof}
-
-  First we see that when $k=16$,  $$\frac{1}{k^2} = \frac{1}{16^2} = \frac{16^2}{16^4} = \frac{16^2}{(2^4)^4} = \frac{16^2}{2^{16}} = \frac{k^2}{2^k}$$
-
-Consider the following two expressions in anticipation of showing that for $k>16$, $$k^22^k > k^4 \implies \frac{1}{k^22^k}  < \frac{1}{k^4} \implies \frac{k^2}{2^k}  < \frac{1}{k^2}.$$
-
-We consider $k=(16+n):$
-$$
-(16+n)^2 2^{(16+n)} \text { and }(16+n)^4
-$$
-
-Taking the natural log of both expressions yields,
-$$
-\left.\ln \left((16+n)+2^{(6+n)}\right) \text { and } \ln (16+n)^4\right)
-$$
-
-Then
-$$
-\begin{aligned}
-& \implies\ln \left((16+n)^2\right)+\ln \left(2^{(16+n)}\right) \text { and } 4 \ln (16+n) \\
-& \implies2 \ln (16+n)+(16+n) \ln (2) \text { and } 4 \ln (16+n)
-\end{aligned}
-$$
-
-Subtracting $2 \ln(16+n)$ from both expressions
-$$
-\begin{aligned}
-&\implies (16+n) \ln (2) \text { and } 2\ln (16+n) \\
-&\implies 16 \ln (2)+n \ln (2) \text { and }  \ln (16+n)
-\end{aligned}
-$$
-
-When $n=1$ we have that
-$$
-11.78... > 11.332...
-$$
-Since the left hand side increases linearly by an amount of $\ln(2) \approx  0.69 $ and the right hand side increases at a maximum of  $\ln(17) - \ln(16) \approx 0.06$ we can conclude that $\frac{1}{k^22^k} < \frac{1}{k^4}$ for all $k>16.$
-
-Then, we can make the following comparison:  
-$$\sum_{k=17}^n \frac{k^2}{2^k} \leq \sum_{k=17}^n \frac{1}{k^2}\leq \sum_{k=17}^n \frac{1}{k(k-1)}  = \sum_{k=17}^n \frac{1}{(k-1)} - \frac{1}{k}= \frac{1}{16} - \frac{1}{17}  + \cdots - \frac{1}{k-1} + \frac{1}{k-1} - \frac{1}{n} \leq \frac{1}{16} - \frac{1}{n} \leq \frac{1}{16}.$$
-
-
-Let $B= \sum_{k=1}^{16} \frac{k^2}{2^k}.$ Then, $(x_n) \leq |B| + \frac{1}{16}.$ Then $(x_n)$ is bounded from above by $|B| + \frac{1}{16}.$
-
-Consider 
-$$x_{n+1} - x_{n}=\sum_{k=1}^{n+1} k^2 2^{-k} - \sum_{k=1}^n k^2 2^{-k} = (n+1)^2 2^{-(n+1)} >0.$$ Thus, $(x_n)$ is increasing and monotone. By the Monotone Convergence Theorem $(x_n)$ is convergent.
-\bigskip
-
-\end{myproof}
-
-\bigskip
-
 \qs{}{
 
 Consider the sequence $x_n=\sum_{k=1}^n \ln \left(\frac{k+1}{k}\right)$. Does the sequence converge? Explain.
@@ -216,7 +163,8 @@ Then
 
 $$ \lim_{n \rightarrow   \infty} (x_n)= \lim_{n \rightarrow \infty} \ln(n+1) = \infty.$$
 
-Thus, $(x_n)$ converges to positive infinity.
+Thus $(x_n)$ converges to infinity.
+
 
 
 \end{myproof}
