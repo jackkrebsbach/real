@@ -34,6 +34,25 @@ $$
 Prove that the sequence $\left(x_n\right)$ converges.
 }
 
+\begin{myproof}
+
+Consider the integration from $n$ to $2n$:
+ 
+$$ \lim_{n \rightarrow \infty} \int_{n}^{2n} \left( \frac{1}{1+x} dx  \right)$$
+$$= \lim_{n \rightarrow \infty} \left(\ln x+1 ]_{n}^{2n} \right)$$
+
+$$= \lim_{n \rightarrow \infty} \left(\ln (2n+1) - \ln (n+1) \right)$$
+$$= \lim_{n \rightarrow \infty} \ln \left(\frac{2n+1}{n+1}\right)$$
+
+$$=  \ln 2.$$
+
+We can graphically show that summing $(x_n)$ with the rectangle method has a smaller area than the integration above. Thus, since the integral converges to a number, $(x_n)$ must as well. 
+
+\end{myproof}
+
+
+\pagebreak
+
 \qs{}{
 
   Consider the sequence
@@ -43,6 +62,41 @@ $$
 
 Show that $\left(x_n\right)$ converges.
 }
+
+\begin{myproof}
+    To show that $(x_n)$ converges we will show that it is bounded below and above. 
+
+    Consider $$\frac{2}{2 \sqrt{n}} < \frac{2}{\sqrt{n+1} + \sqrt{n}}.$$
+
+Multiplying the right landside by the denominators conjugate yields
+ $$\frac{2}{2 \sqrt{n}} < \frac{2}{\sqrt{n+1} + \sqrt{n}} \left(\frac{\sqrt{n+1} - \sqrt{n}}{\sqrt{n+1} - \sqrt{n}}  \right) = 2\sqrt{n+1} + 2\sqrt{n}.$$
+
+ Therefore, we can show that $(x_n)$ is bounded above by the following:
+ $$\frac{2}{2 \sqrt{n}} < 2\sqrt{n+1} + 2\sqrt{n} $$ implies  that 
+
+ $$
+\left(\sum_{k=1}^{n} \frac{1}{\sqrt{k}} \right)-2 \sqrt{n} < \left( \sum_{k=1}^{k} 2\sqrt{k+1} + 2\sqrt{k} \right) - 2\sqrt{n}
+ .$$
+
+ The left hand side is a telescoping series:
+
+ $$
+\left(\sum_{k=1}^{n} \frac{1}{\sqrt{k}} \right)-2 \sqrt{n} < 2 + 2\sqrt{2} - 2 + 2\sqrt{3}- 2\sqrt{2} + \cdots + 2\sqrt{n-1} + 2\sqrt{n} - 2 \sqrt{n-1} - 2\sqrt{n}
+$$
+and we find that
+ $$
+\left(\sum_{k=1}^{n} \frac{1}{\sqrt{k}} \right)-2 \sqrt{n} < 0 $$
+
+We similarly show that $(x_n)$ is bounded from below.
+
+$$\frac{2}{2 \sqrt{n}} > \frac{2}{\sqrt{n-1} + \sqrt{n}}$$
+
+this can be simplified to
+ $$\frac{2}{2 \sqrt{n}} > 2\sqrt{n} - 2\sqrt{n-1}  $$
+\end{myproof}
+
+
+
 \qs{}{
 
 Prove that $\left(x_n\right)$ converges where $x_n=\sum_{k=1}^n k^2 2^{-k}$.
