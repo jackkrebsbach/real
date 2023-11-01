@@ -44,9 +44,9 @@ $$y_{n+1}>y_n $$ $$ \implies -y_{n+1}<-y_{n} $$ $$ \implies-\frac{1}{y_{n+1}}>-\
 
 Thus, the sequence is increasing, monotone.
 We have that $3 > y_2 > y_1,$ then
-$$3 > y_{n+1}>y_n $$ $$ \implies -3 < -y_{n+1}<-y_{n} $$ $$ \implies-\frac{1}{3}> -\frac{1}{y_{n+1}}>-\frac{1}{y_n} $$ $$  \implies 3 - \frac{1}{3} >  3-\frac{1}{y_{n+1}}>3-\frac{1}{y_n} $$ $$ 3 - \frac{1}{3} >\implies y_{n+2}>y_{n+1}$$
+$$3 > y_{n+1}>y_n $$ $$ \implies -3 < -y_{n+1}<-y_{n} $$ $$ \implies-\frac{1}{3}> -\frac{1}{y_{n+1}}>-\frac{1}{y_n} $$ $$  \implies 3 - \frac{1}{3} >  3-\frac{1}{y_{n+1}}>3-\frac{1}{y_n} $$ $$\implies 3>  3 - \frac{1}{3} > y_{n+2}>y_{n+1}$$
 
-Thus, $\frac{8}{3}$ bounds $(y_n)$ from above. By the Monotone Convergence Theorem $(x_n)$ is convergent. Therefore, we can apply the strategy to compute the limit.
+Thus, 3 bounds $(y_n)$ from above. By the Monotone Convergence Theorem $(x_n)$ is convergent. Therefore, we can apply the strategy to compute the limit.
 
 \pagebreak
 
@@ -168,9 +168,7 @@ $$< 2^k + 2^k$$
 $$< 2^{k + 1}$$
 
 
-So, we conclude for $k>16,$ $$(k+1)^4 <  2^{k+1}.$$
-
-$$ \implies \frac{(k+1)^2}{2^{k+1}} < \frac{1}{(k+1)^2}.$$
+So, we conclude for $k>16,$ $$(k+1)^4 <  2^{k+1} \implies \frac{(k+1)^2}{2^{k+1}} < \frac{1}{(k+1)^2}.$$
 
 Then, we can make the following comparison:  
 $$\sum_{k=17}^n \frac{k^2}{2^k} \leq \sum_{k=17}^n \frac{1}{k^2}\leq \sum_{k=17}^n \frac{1}{k(k-1)}  = \sum_{k=17}^n \frac{1}{(k-1)} - \frac{1}{k}= \frac{1}{16} - \frac{1}{17}  + \frac{1}{17} - \frac{1}{18} + \cdots - \frac{1}{k-1} + \frac{1}{k-1} - \frac{1}{n} \leq \frac{1}{16} - \frac{1}{n} \leq \frac{1}{16}.$$
