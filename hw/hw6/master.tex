@@ -7,7 +7,7 @@
 $\rightarrow\!\leftarrow$
 }
 
-\title{Real Analysis HW \#6}
+\title{Real Analysis H \#6}
 \author{Jack Krebsbach }
 
 \date{Nov 1st}
@@ -72,7 +72,7 @@ $$ =  \frac{1}{2n+1} + \frac{1}{2n+2} - \frac{2}{2n+2} > 0.$$
 
 
 Because the first term is the largest of $n$ terms in the partial sum   the following inequality holds:
-$$ \sum_{k =n}^{2n} \frac{1}{k+1} < n\left(\frac{1}{n+1}\right).$$
+$$ \sum_{k =n}^{2n-1} \frac{1}{k+1} < n\left(\frac{1}{n+1}\right).$$
 
 Then we have
 $$ \sum_{k =n}^{2n} \frac{1}{k+1} < n\left(\frac{1}{n+1}\right) = \left(\frac{n}{n+1}\right) =\left(1 - \frac{1}{n + 1}\right) \leq 1.$$
@@ -104,12 +104,12 @@ $$
 \end{aligned}
 $$
 
-So, $\left(x_n\right)$ is decreasing and bounded from above by $x_1 = 1.$
+So, $\left(x_n\right)$ is decreasing, monotone, and is also bounded from above by $x_1 =-1.$
 We now show that $(x_n)$ is bounded from below. Consider,
 
 $$\frac{2}{2 \sqrt{n}} > \frac{2}{\sqrt{n+1} + \sqrt{n}}$$
 
-and can be simplified by multiplying by the conjugate of the denominator of the right hand side,
+which can be simplified by multiplying by the conjugate of the denominator of the right hand side:
  $$\frac{2}{2 \sqrt{n}} > 2\sqrt{n+1} - 2\sqrt{n}.$$
  
 
@@ -177,9 +177,9 @@ $$
 
 When $n=1$ we have that
 $$
-11.78... > 11.332...
+11.783... > 5.666...
 $$
-Since the left hand side increases linearly by an amount of $\ln(2) \approx  0.69 $ and the right hand side increases at a maximum of  $\ln(17) - \ln(16) \approx 0.06$ we can conclude that for all $k>16$, we have $k^22^k > k^4 \implies \frac{k^2}{2^k} < \frac{1}{k^2}$ .
+Since the left hand side increases linearly by an amount of $\ln(2) \approx  0.693 $  for each $n$ and the right hand side increases at a maximum of  $2 \left[\ln(17) - \ln(16)\right] \approx 0.1212$ we can conclude that for all $k>16$, we have $k^22^k > k^4,$ which implies $\frac{k^2}{2^k} < \frac{1}{k^2}$ .
 
 Then, we can make the following comparison:  
 $$\sum_{k=17}^n \frac{k^2}{2^k} \leq \sum_{k=17}^n \frac{1}{k^2}\leq \sum_{k=17}^n \frac{1}{k(k-1)}  = \sum_{k=17}^n \frac{1}{(k-1)} - \frac{1}{k}= \frac{1}{16} - \frac{1}{17}  + \frac{1}{17} - \frac{1}{18} + \cdots - \frac{1}{k-1} + \frac{1}{k-1} - \frac{1}{n} \leq \frac{1}{16} - \frac{1}{n} \leq \frac{1}{16}.$$
