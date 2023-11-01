@@ -63,9 +63,11 @@ Prove that the sequence $\left(x_n\right)$ converges.
 We first see that the sequence is increasing and monotone because 
 
 $$x_{n+1} - x_{n}= 
-\left(\frac{1}{n+1}+\frac{1}{n+2}+\cdots+\frac{1}{2 n} + \frac{1}{2n+1} + \frac{1}{2n+2} \right) - \left(\frac{1}{n+1}+\frac{1}{n+2}+\cdots+\frac{1}{2 n}\right)$$  
+\left(\frac{1}{n+2}+\cdots+\frac{1}{2 n} + \frac{1}{2n+1} + \frac{1}{2n+2} \right) - \left(\frac{1}{n+1}+\frac{1}{n+2}+\cdots+\frac{1}{2 n}\right)$$  
 
-$$ = \frac{1}{2n+1} + \frac{1}{2n+2} > 0.$$
+$$ =  \frac{1}{2n+1} + \frac{1}{2n+2} - \frac{1}{n+1}$$
+
+$$ =  \frac{1}{2n+1} + \frac{1}{2n+2} - \frac{2}{2n+2} > 0.$$
 
 
 
@@ -149,15 +151,15 @@ Consider the following expressions in anticipation of showing that for $k>16$, $
 
 Let $k=(16+n):$
 $$
-(16+n)^2 2^{(16+n)} \text { and }(16+n)^4
+(16+n)^2 2^{(16+n)} \text { and }(16+n)^4.
 $$
 
-Taking the natural log of both expressions yields,
+Taking the natural log of both expressions yields
 $$
-\left.\ln \left((16+n)^22^{(6+n)}\right) \text { and } \ln (16+n)^4\right)
+\ln \left((16+n)^22^{(6+n)}\right) \text { and } \ln (16+n)^4.
 $$
 
-Then
+Then,
 $$
 \begin{aligned}
 & \implies\ln \left((16+n)^2\right)+\ln \left(2^{(16+n)}\right) \text { and } 4 \ln (16+n) \\
@@ -169,7 +171,7 @@ Subtracting $2 \ln(16+n)$ from both expressions
 $$
 \begin{aligned}
 &\implies (16+n) \ln (2) \text { and } 2\ln (16+n) \\
-&\implies 16 \ln (2)+n \ln (2) \text { and }  \ln (16+n)
+&\implies 16 \ln (2)+n \ln (2) \text { and }  2\ln (16+n).
 \end{aligned}
 $$
 
