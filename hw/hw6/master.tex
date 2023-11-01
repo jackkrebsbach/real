@@ -147,39 +147,18 @@ Prove that $\left(x_n\right)$ converges where $x_n=\sum_{k=1}^n k^2 2^{-k}$.
 
   First we see that when $k=16$,  $$\frac{1}{k^2} = \frac{1}{16^2} = \frac{16^2}{16^4} = \frac{16^2}{(2^4)^4} = \frac{16^2}{2^{16}} = \frac{k^2}{2^k}$$
 
-Consider the following expressions in anticipation of showing that for $k>16$, $$k^22^k > k^4 \implies \frac{1}{k^22^k}  < \frac{1}{k^4} \implies \frac{k^2}{2^k}  < \frac{1}{k^2}.$$
 
-Let $k=(16+n):$
-$$
-(16+n)^2 2^{(16+n)} \text { and }(16+n)^4.
-$$
+  When $k>16,$ $$\frac{k^2}{2^k} < \frac{1}{k^2} \implies \frac{1}{2^k} < \frac{1}{k^4} \implies 2^k > k^{4}.$$
 
-Taking the natural log of both expressions yields
-$$
-\ln \left((16+n)^22^{(6+n)}\right) \text { and } \ln (16+n)^4.
-$$
+Next,  $$(k+1)^4 = k^4 + 3k^3 +3k^2 +1 < 2^k + 3k^3 +3k^2 +1$$
 
-Then,
-$$
-\begin{aligned}
-& \implies\ln \left((16+n)^2\right)+\ln \left(2^{(16+n)}\right) \text { and } 4 \ln (16+n) \\
-& \implies2 \ln (16+n)+(16+n) \ln (2) \text { and } 4 \ln (16+n)
-\end{aligned}
-$$
+Since $3<k \implies 3k^3 <k^4$ and then 
 
-Subtracting $2 \ln(16+n)$ from both expressions
-$$
-\begin{aligned}
-&\implies (16+n) \ln (2) \text { and } 2\ln (16+n) \\
-&\implies 16 \ln (2)+n \ln (2) \text { and }  2\ln (16+n).
-\end{aligned}
-$$
+$$3k^3 +3k^2 +1 < 3k^3 + 3k^3 + k$$
 
-When $n=1$ we have that
-$$
-11.783... > 5.666...
-$$
-Since the left hand side increases linearly by an amount of $\ln(2) \approx  0.693 $  for each $n$ and the right hand side increases at a maximum of  $2 \left[\ln(17) - \ln(16)\right] \approx 0.1212$ we can conclude that for all $k>16$, we have $k^22^k > k^4,$ which implies $\frac{k^2}{2^k} < \frac{1}{k^2}$ .
+So, we conclude for $k>16,$ $$(k+1)^4 < 2^k + 2^k = 2^{k+1}.$$
+
+$$ \implies \frac{(k+1)^2}{2^{k+1}} < \frac{1}{(k+1)^2}.$$
 
 Then, we can make the following comparison:  
 $$\sum_{k=17}^n \frac{k^2}{2^k} \leq \sum_{k=17}^n \frac{1}{k^2}\leq \sum_{k=17}^n \frac{1}{k(k-1)}  = \sum_{k=17}^n \frac{1}{(k-1)} - \frac{1}{k}= \frac{1}{16} - \frac{1}{17}  + \frac{1}{17} - \frac{1}{18} + \cdots - \frac{1}{k-1} + \frac{1}{k-1} - \frac{1}{n} \leq \frac{1}{16} - \frac{1}{n} \leq \frac{1}{16}.$$
@@ -223,7 +202,7 @@ Thus, $(x_n)$ converges to positive infinity.
 
 \bigskip
 \qs{}{
-CHATBOT Challenge: Consider the sequence
+CHATGPT Challenge: Consider the sequence
 $$
 x_n=1+\frac{1}{\sqrt{2}}+\frac{1}{\sqrt{3}}+\cdots+\frac{1}{\sqrt{n}}-2 \sqrt{n} .
 $$
