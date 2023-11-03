@@ -1,0 +1,74 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+\newcommand{\contra}{
+$\rightarrow\!\leftarrow$
+}
+
+\title{Real Analysis HW \#7}
+\author{Jack Krebsbach }
+
+\date{Nov 8th}
+
+\begin{document}
+
+\maketitle
+\qs{}{
+
+Let $\left(x_n\right)$ be a sequence and suppose that the sequence $\left(x_{n+1}-x_n\right)$ converges to 0 . Give an example to show that the sequence $\left(x_n\right)$ may not converge. (See ChatGPT Challenge)
+}
+
+\qs{}{
+
+Let $\left(x_k\right)$ and $\left(y_k\right)$ be two sequences and let $\left(r_k\right)$ be a sequence of positive numbers that converges to 0 . Suppose that $0<\left|y_k-x_k\right|<r_k \forall k \in \mathbb{N}$.
+}
+
+\bigskip
+(a) Give an example to show that the sequences $\left(x_k\right)$ and $\left(y_k\right)$ may not converge.
+
+\bigskip
+\bigskip
+\bigskip
+(b) Suppose that $\left(x_k\right)$ converges to $L$. Prove that the sequence $\left(y_k\right)$ converges to $L$.
+
+\bigskip
+\qs{}{
+
+Assume that $\left(x_n\right)$ is a bounded sequence with the property that every convergent subsequence of $\left(x_n\right)$ converges to the same limit $x \in \mathbb{R}$. Show that $\left(x_n\right)$ must converge to $x$.
+}
+\qs{}{
+
+Let $\left(x_n\right)$ be a Cauchy sequence. Show directly that $\left(x_n\right)$ is bounded.
+}
+\qs{}{
+
+Let $\left(x_n\right)$ be a sequence and let $r$ be a real number satisfying $0<r<1$. Suppose that $\left|x_{n+1}-x_n\right|<$ $r\left|x_n-x_{n-1}\right|$ for all $n>2$. Prove that $\left(x_n\right)$ is a Cauchy sequence and hence convergent.
+}
+\qs{}{
+CHAT GPT CHALLENGE:
+Let $\left(x_n\right)$ be a sequence such that $\left(x_{n+1}-x_n\right)$ converges to 0 . We want to show that $\left(x_n\right)$ also converges.
+}
+By the definition of a convergent sequence, we need to show that for any $\epsilon>0$, there exists a positive integer $N$ such that for all $n \geq N,\left|x_n-L\right|<\epsilon$ for some real number $L$.
+Since $\left(x_{n+1}-x_n\right)$ converges to 0 , we can choose $\epsilon>0$ and find a positive integer $M$ such that for all $m \geq M,\left|\left(x_{m+1}-x_m\right)-0\right|<\epsilon$. This implies that for all $m \geq M,\left|x_{m+1}-x_m\right|<\epsilon$.
+Now, let $N=M$. For any $n \geq N$, we have:
+$$
+\begin{aligned}
+\left|x_n-x_N\right| & =\left|\left(x_n-x_{n-1}\right)+\left(x_{n-1}-x_{n-2}\right)+\ldots+\left(x_{N+1}-x_N\right)\right| \\
+& \leq\left|x_n-x_{n-1}\right|+\left|x_{n-1}-x_{n-2}\right|+\ldots+\left|x_{N+1}-x_N\right| \\
+& <\epsilon+\epsilon+\ldots+\epsilon \quad\left(\text { Since }\left|x_{m+1}-x_m\right|<\epsilon \text { for all } m \geq M\right) \\
+& =(n-N) \epsilon .
+\end{aligned}
+$$
+
+Dividing both sides by $(n-N)$, we get:
+$$
+\left|x_n-x_N\right|<\epsilon
+$$
+
+This shows that for any $\epsilon>0$ and $n \geq N$, we have $\left|x_n-x_N\right|<\epsilon$, where $N=M$. Therefore, $\left(x_n\right)$ converges to $x_N$.
+
+Hence, we have shown that if $\left(x_{n+1}-x_n\right)$ converges to 0 , then $\left(x_n\right)$ also converges.
+
+\end{document}
