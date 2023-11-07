@@ -17,15 +17,15 @@ $\rightarrow\!\leftarrow$
 \maketitle
 \qs{}{
 
-Let $\left(x_n\right)$ be a sequence and suppose that the sequence $\left(x_{n+1}-x_n\right)$ converges to 0 . Give an example to show that the sequence $\left(x_n\right)$ may not converge. (See ChatGPT Challenge)
+Let $\left(x_n\right)$ be a sequence and suppose that the sequence $\left(x_{n+1}-x_n\right)$ converges to 0 . Give an example to show that the sequence $\left(x_n\right)$ may not converge. (See CHATBOT Challenge)
 }
 
 \sol
 Let $$x_n= \sum_{k=1}^{n} 1/k.$$
 
-This is the harmonic series which converges to infinity. Let $\epsilon>0.$ By Archimedes Principle there exists $N \in \NN$ such that $1/N < \epsilon.$ Let $n>N.$ Then $$|(x_{n+1} - x_n) -0 | = \left|\frac{1}{n+1} - \frac{1}{n}\right| < \left|\frac{1}{N} \right| < \epsilon.$$
+This is the harmonic series, which converges to infinity. Let $\epsilon>0.$ By Archimedes Principle there exists $N \in \NN$ such that $1/N < \epsilon.$ Let $n>N.$ Then $$|(x_{n+1} - x_n) -0 | = \left|\frac{1}{n+1} - \frac{1}{n}\right| < \left|\frac{1}{N} \right| < \epsilon.$$
 
-Thus, $\left(x_{n+1}-x_n\right)$ converges to 0 but $(x_n)$ converges to infinity.
+Thus, $\left(x_{n+1}-x_n\right)$ converges to 0, but $(x_n)$ converges to infinity.
 
 \bigskip
 \qs{}{
@@ -35,21 +35,68 @@ Let $\left(x_k\right)$ and $\left(y_k\right)$ be two sequences and let $\left(r_
 
 \bigskip
 (a) Give an example to show that the sequences $\left(x_k\right)$ and $\left(y_k\right)$ may not converge.
+\bigskip
+
+\sol
+Let $$y_k = k + \frac{1}{k}$$ and let $$x_k = k +\frac{1}{(k+1)}.$$
 
 \bigskip
 \bigskip
 \bigskip
 (b) Suppose that $\left(x_k\right)$ converges to $L$. Prove that the sequence $\left(y_k\right)$ converges to $L$.
 
+\begin{myproof}
+    Let $\epsilon >0.$ Because $(r_k)$ converges to $0$ then there exists $N_1 \in \NN$ such that for all $k>N_1$, $\left|r_k - 0 \right| < \frac{\epsilon}{2}.$
+
+    Because $(x_k)$ converges to $L$ there exists $N_2 \in \NN$ such that for all $k>N_2,$ $\left| x_k -L\right| < \frac{\epsilon}{2}.$ Let $N = \max\{N_1,N_2\}$ and $k> N.$
+
+    Then, $$0 < \left| y_k - x_k \right| < \left|r_k -0\right| < \frac{\epsilon}{2}.$$
+$$\implies \left| y_k - L + L - x_k \right| < \frac{\epsilon}{2}.$$
+
+$$\implies \left| y_k - L\right|  - \left|L - x_k \right| \leq \left| y_k - L + L - x_k \right|< \frac{\epsilon}{2}.$$
+
+$$\implies \left| y_k - L\right|  - \underbrace{\left|L - x_k \right|}_{< \frac{\epsilon}{2}} < \frac{\epsilon}{2}.$$
+
+And we know that $\left| x_k -L\right| < \frac{\epsilon}{2}$,
+
+$$\implies \left| y_k - L\right| < \epsilon$$
+
+Thus, $y_k$ converges to $L.$
+\end{myproof}
+
+
 \bigskip
 \qs{}{
 
 Assume that $\left(x_n\right)$ is a bounded sequence with the property that every convergent subsequence of $\left(x_n\right)$ converges to the same limit $x \in \mathbb{R}$. Show that $\left(x_n\right)$ must converge to $x$.
 }
+
+\bigskip
+\bigskip
 \qs{}{
 
 Let $\left(x_n\right)$ be a Cauchy sequence. Show directly that $\left(x_n\right)$ is bounded.
 }
+
+Let $\epsilon >0$ and $(x_n)$ be a Cauchy sequence. Then there exists $N \in \NN$ such that for all $n,m \geq N$, $\left| x_n - x_m\right| < 1.$ 
+
+Then, 
+ $$ \left|x_m - x_N\right| < 1.$$
+
+$$ \implies \left| x_m \right| - \left|x_N\right| < \left| x_m - x_N\right| < 1.$$
+
+
+$$ \implies \left| x_m \right| - \left|x_N\right|  < 1.$$
+
+$$ \implies \left| x_m \right| < 1 + \left|x_N\right|.$$
+
+
+Then, we have a bound for all the terms $N$ and beyond. Let $$ B = \max\{|x_1|, |x_2|, |x_3|, \dots, |x_N| + 1\}.$$
+
+Then $|x_n| < B$ for all $n \in \NN$ and therefore $(x_n)$ must be bounded.
+
+\bigskip
+
 \qs{}{
 
 Let $\left(x_n\right)$ be a sequence and let $r$ be a real number satisfying $0<r<1$. Suppose that $\left|x_{n+1}-x_n\right|<$ $r\left|x_n-x_{n-1}\right|$ for all $n>2$. Prove that $\left(x_n\right)$ is a Cauchy sequence and hence convergent.
