@@ -102,13 +102,13 @@ Then $|x_n| < B$ for all $n \in \NN$ and therefore $(x_n)$ must be bounded.
 Let $\left(x_n\right)$ be a sequence and let $r$ be a real number satisfying $0<r<1$. Suppose that $\left|x_{n+1}-x_n\right|<$ $r\left|x_n-x_{n-1}\right|$ for all $n>2$. Prove that $\left(x_n\right)$ is a Cauchy sequence and hence convergent.
 }
 
-Let $\epsilon >0.$ Since $\left|x_{n+1}-x_n\right|<$ $r\left|x_n-x_{n-1}\right|$ there exists $N \in \NN$ such that for all $n> N$ we have $r|x_n - x_n-1| < \frac{1}{r}\epsilon.$
+Let $\epsilon >0.$ Since $\left|x_{n+1}-x_n\right|<$ $r\left|x_n-x_{n-1}\right|$ there exists $N \in \NN$ such that for all $m>n>N$ we have $r|x_n - x_n-1| < \frac{r^N}{(m-n)}\epsilon.$
 
-Then, $$\left|x_{n+1}-x_n\right|< r\left|x_n-x_{n-1}\right| < \frac{1}{r}\epsilon$$
+Then, $$\left|x_{n+1}-x_n\right|< r\left|x_n-x_{n-1}\right| < \frac{r^N}{(m-n)}\epsilon$$
 
-$$\implies \left|x_{n+1}-x_n\right|< \frac{1}{r}\epsilon$$
+$$\implies \left|x_{n+1}-x_n\right|< \frac{r^N}{(m-n)}\epsilon$$
 
-for all $n > N.$ Let $n,m>N$, and without loss of generality let $m >n.$ 
+for all $m > n > N.$ 
 
 Then,
 
@@ -117,7 +117,7 @@ $$|x_m - x_n|= |x_m - x_{m-1} + x_{m-1} - x_{m-2}  + x_{m-2} - x_{m-3}+ \dots+ x
 $$\leq |x_m - x_{m-1}| + |x_{m-1} - x_{m-2}|  + 
 |x_{m-2} -  x_{m-3}| + \dots + | x_{n+1} -  x_{n}| $$
 
-$$< \frac{\epsilon}{r} + \frac{\epsilon}{r} + \frac{\epsilon}{r} + \cdots + \frac{\epsilon}{r} < \epsilon.$$
+$$< r^N(m-n)| x_{n+1} -  x_{n}| <r^{2N} \epsilon < \epsilon.$$
 
 Hence, $(x_n)$ is Cauchy, and thus convergent.
 
@@ -151,7 +151,7 @@ you get
 $$
 \frac{1}{(n-N)}\left|x_n-x_N\right|<\epsilon
 $$
-which does not show that $\left|x_n-x_N\right|<\epsilon$
+which does not show that $\left|x_n-x_N\right|<\epsilon. $
 }
 
 This shows that for any $\epsilon>0$ and $n \geq N$, we have $\left|x_n-x_N\right|<\epsilon$, where $N=M$. Therefore, $\left(x_n\right)$ converges to $x_N$.
