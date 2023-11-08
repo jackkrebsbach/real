@@ -23,7 +23,7 @@ Let $\left(x_n\right)$ be a sequence and suppose that the sequence $\left(x_{n+1
 \sol
 Let $$x_n= \sum_{k=1}^{n} 1/k.$$
 
-This is the harmonic series, which converges to infinity. Let $\epsilon>0.$ By Archimedes Principle there exists $N \in \NN$ such that $1/N < \epsilon.$ Let $n>N.$ Then $$|(x_{n+1} - x_n) -0 | = \left|\frac{1}{n+1} - \frac{1}{n}\right| < \left|\frac{1}{N} \right| < \epsilon.$$
+This is the harmonic series, which converges to infinity. Let $\epsilon>0.$ By Archimedes Principle there exists $N \in \NN$ such that for all $n>N$, $1/n < \epsilon.$ Then $$|(x_{n+1} - x_n) -0 | = \left|\frac{1}{n+1}\right| <\epsilon.$$
 
 Thus, $\left(x_{n+1}-x_n\right)$ converges to 0, but $(x_n)$ converges to infinity.
 
@@ -38,7 +38,7 @@ Let $\left(x_k\right)$ and $\left(y_k\right)$ be two sequences and let $\left(r_
 \bigskip
 
 \sol
-Let $$y_k = k + \frac{1}{k}$$ and let $$x_k = k +\frac{1}{(k+1)}.$$
+Let $$y_k = k + \frac{1}{k}$$ and let $$x_k = k +\frac{1}{k+1}.$$
 
 \bigskip
 \bigskip
@@ -76,11 +76,14 @@ Assume that $\left(x_n\right)$ is a bounded sequence with the property that ever
 
 We must show that if $x_n \not\rightarrow x,$ then either (1) $x_n$ is not bounded or (2) there exists a subsequence $x_{n_k}$ such that $x_{n_k} \rightarrow y$ where $y \not= x.$
 
+
 \begin{enumerate}
-  \item We know that $(x_n)$ is bounded so we must consider case (2).
-  \item Since $x_n$ does not converge to $x$ there exists $\epsilon_0$ such that for all $N \in \NN$ there exists an $n_N > N$ where $|x_{n_N} - x| > \epsilon_0.$  Now consider the set of all the terms $x_n \not\in B(x,\epsilon_0)$, denoted $x_{n^\star}.$ By Bolzano Weierstrass, there exists a subsequence of $x_{n^\star},$ where $x_{n_k} \rightarrow y.$ We know  $y \not=x$ because $x_{n^\star} \not\in  B(x,\epsilon_0).$
+\item We know that $(x_n)$ is bounded so we must consider case (2).
+  \item Since $x_n$ does not converge to $x$ there exists $\epsilon_0$ such that for all $N \in \NN$ there exists an $n_N > N$ where $|x_{n_N} - x| > \epsilon_0.$ Because this works for every $N \in \NN$ there exists a new sequence outside the radius of $\epsilon_0$ around $x.$ Consider the sequence consisting of all the terms $x_n \not\in B(x,\epsilon_0)$, denoted $x_{n^\star}.$ By Bolzano Weierstrass, there exists a subsequence, $x_{n_k},$ where $x_{n_k} \rightarrow y.$ We know  $y \not=x$ because $x_{n^\star} \not\in  B(x,\epsilon_0).$
 
 \end{enumerate}
+
+Thus, if $(x_n)$ is a bounded sequence such that every convergent subsequence converges to the same limit $x$, then $(x_n)$ must also converge to $x$.
 \end{myproof}
 \bigskip
 \bigskip
@@ -146,6 +149,9 @@ $$\implies x_n = B\left[\frac{r^n - r^{m}}{1 - r}\right] $$
 
 $$\leq B\frac{r^n}{1 - r}  < \epsilon.$$
 
+
+Thus, $(x_n)$ is Cauchy and hence convergent.
+
 \end{myproof}
 \pagebreak
 
@@ -178,12 +184,12 @@ you get
 $$
 \frac{1}{(n-N)}\left|x_n-x_N\right|<\epsilon
 $$
-which does not show that $\left|x_n-x_N\right|<\epsilon. $
+which does not show that $\left|x_n-x_N\right|<\epsilon.$ 
 }
 
 This shows that for any $\epsilon>0$ and $n \geq N$, we have $\left|x_n-x_N\right|<\epsilon$, where $N=M$. Therefore, $\left(x_n\right)$ converges to $x_N$.
 
-\textbf{This does not prove what you wanted to show. }
+\textbf{This does not prove what you wanted to show. You are actually trying to prove a false statement. What happens when $(x_n)$ is the harmonic series? }
 
 Hence, we have shown that if $\left(x_{n+1}-x_n\right)$ converges to 0 , then $\left(x_n\right)$ also converges.
 
