@@ -1643,6 +1643,9 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/vf/public/newpx/zplexx.vf
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/newtx/ntxexx.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/vf/public/newtx/ntxexx.vf
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/newtx/txexs.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/vf/public/newpx/zplmia.vf
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/newpx/pxmiaX.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/newtx/txmiaSTbb.tfm
 INPUT master.aux
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc
