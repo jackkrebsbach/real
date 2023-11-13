@@ -29,6 +29,25 @@ where $F_1=1$ and $F_2=2$. Let $a_n=\frac{F_n}{F_{n-1}}$.
 Suppose that $\left\{a_n\right\}$ converges to a limit. What must that limit be? Hint: Divide the above equation by $F_n$ to find an equation relating $a_{n+1}$ to $a_n$.
 
 }
+\sol
+From the recursive formula, dividing by $F_n$ yields:
+
+$$\frac{F_{n+1}}{F_n} = 1 + \frac{F_{n-1}}{F_n} $$
+
+Then, $$a_{n+1} = 1 + \frac{F_{n-1}}{F_n}$$
+$$ \implies a_{n+1} = 1 + \frac{1}{a_n}$$
+
+Let $L = \lim_{n \rightarrow \infty} a_n,$ then  $$ L = 1 + \frac{1}{L}$$
+$$ \implies L^2 = L + 1$$
+
+
+$$\implies L^2 - L -1=0.$$
+
+By the quadratic formula,  $$L = \frac{ 1 \pm \sqrt{5}}{2}.$$ Since this sequence is positive for all $n \in \NN$  we want the positive solution. Thus, $$L  = \frac{ 1 + \sqrt{5}}{2}.$$
+
+
+
+\pagebreak
 
 \qs{}{
 
