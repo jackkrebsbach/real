@@ -69,7 +69,6 @@ $$\implies  \frac{3}{2} \leq a_{n+1} \leq \frac{5}{3} < 2.$$
 Thus, $\frac{3}{2} \leq a_n \leq 2$ for all  $n \geq 2.$ 
 \end{myproof}
 
-\pagebreak
 
 \qs{}{
 
@@ -98,24 +97,27 @@ Prove that for each $m > 2,\left|a_{m+1}-a_m\right| \leq\left(\frac{2}{3}\right)
 }
 
 \sol
-Consider the case when $n=3.$ We have that $a_1 = 1$, $a_2 = 2$, $a_3 = 3/2.$  Then,
-$$\left|\frac{5}{3} - \frac{3}{2} \right| \leq \left(\frac{2}{3} \right)^2 \left|\frac{3}{2} - \frac{4}{2} \right|$$
+\begin{myproof}
+    
+We see $a_1 = 1$, $a_2 = 2$, $a_3 = 3/2,$ and $a_4 = 5/3$.  Thus, when $n=3$
+$$\left|a_4 - a_3 \right| \leq \left(\frac{2}{3} \right)^2 \left|a_3 - a_2 \right|$$
+$$\implies \left|\frac{5}{3} - \frac{3}{2} \right| \leq \left(\frac{2}{3} \right)^2 \left|\frac{3}{2} - \frac{4}{2} \right|$$
 
 $$\implies \left|\frac{1}{6}  \right| \leq \left(\frac{2}{3} \right)^2 \left| - \frac{1}{2} \right|$$
 
 $$\implies \left|\frac{1}{6}  \right| \leq \left|\frac{2}{9} \right|$$
 $$\implies \left|\frac{9}{54}  \right| \leq \left|\frac{12}{54} \right|$$
 
-Thus, we  see that $\left|a_{n+1} - a_n\right| \leq \left(\frac{2}{3}\right)^2 \left|a_3 -a_n\right|$l and $\left|a_{4} - a_3\right| \leq \left(\frac{2}{3}\right)^2 \left|a_3 -a_n\right|.$ Then,
-$$\left|a_{n+1} - a_n\right| \leq \left(\frac{2}{3}\right)^2 \left|a_3 -a_2\right|$$
+Hence, the inequality holds. Since $\left|a_{n+1}-a_n\right| \leq\left(\frac{2}{3}\right)^2\left|a_n-a_{n-1}\right|$ for $n>2$ it follows that
 $$\implies \left|a_{4} - a_3\right| \leq \left(\frac{2}{3}\right)^2 \left|a_3 -a_2\right|$$
 $$\implies \left|a_{5} - a_4\right| \leq \left(\frac{2}{3}\right)^4 \left|a_3 -a_2\right|$$
 
 $$\implies \left|a_{6} - a_5\right| \leq \left(\frac{2}{3}\right)^6 \left|a_3 -a_2\right|$$
-$$\implies \left|a_{7} - a_6\right| \leq \left(\frac{2}{3}\right)^8 \left|a_3 -a_2\right|$$
 
 and generally when $m>2,$
 $$ \left|a_{m+1} - a_m\right| \leq \left(\frac{2}{3}\right)^{2(m-2)} \left|a_3 -a_2\right|.$$
+
+\end{myproof}
 \pagebreak
 \qs{}{
 
@@ -130,7 +132,7 @@ We know that
 $$ \left|a_{m+1} - a_m\right| \leq \left(\frac{2}{3}\right)^{2(m-2)} \left|a_3 -a_2\right|.$$
 
 $$ \implies \left|a_{m+1} - a_m\right| \leq \left(\frac{2}{3}\right)^{2m}B.$$
-Let $\epsilon > 0.$ Choose $N\in\NN$ such that for all $n > N$, $$ B \frac{9}{5}\left(\frac{2}{3}\right)^{2n}< \epsilon.$$
+Let $\epsilon > 0.$ Choose $N\in\NN$ such that for all $n > N$, $$ B \frac{4}{5}\left(\frac{2}{3}\right)^{2n}< \epsilon.$$
 
 Let $m > n > N.$ We have,
 
@@ -139,24 +141,26 @@ $$|a_m - a_n|= |a_m - a_{m-1} + a_{m-1} - a_{m-2}  + a_{m-2} - a_{m-3}+ \dots+ a
 $$\leq |a_m - a_{m-1}| + |a_{m-1} - a_{m-2}|  + 
 |a_{m-2} -  a_{m-3}| + \dots + | a_{n+1} -  a_{n}| $$
 
-$$ \leq \sum_{k={n}}^{m+1} |a_k - a_{k-1}|$$
-$$ \leq \sum_{k={n}}^{m+1} \left(\frac{2}{3}\right)^{2k}B  .$$
+$$ \leq \sum_{k={n+1}}^{m} |a_k - a_{k-1}|$$
+$$ \leq \sum_{k={n+1}}^{m} \left(\frac{2}{3}\right)^{2k}B  .$$
 
 
-Now, if $(x_n)= \sum_{k={n}}^{m+1} \left(\frac{2}{3}\right)^{2k}B , $ then
-$$x_n - \left(\frac{2}{3}\right)^2x_n = B\left[\sum_{k={n}}^{m+1}\left(\frac{2}{3}\right)^{2k} - \sum_{k={n+1}}^{m+2}\left(\frac{2}{3}\right)^{2k}\right]$$
+Now, if $(x_n)= \sum_{k={n+1}}^{m} \left(\frac{2}{3}\right)^{2k}B , $ then
+$$x_n - \left(\frac{2}{3}\right)^2x_n = B\left[\sum_{k={n+1}}^{m}\left(\frac{2}{3}\right)^{2k} - \sum_{k={n+2}}^{m+1}\left(\frac{2}{3}\right)^{2k}\right]$$
 
-$$\implies x_n\left(1 - \frac{4}{9}\right) = B\left[ \left(\frac{2}{3}\right)^{2n}- \left(\frac{2}{3}\right)^{2(m+1)}\right] $$
+$$\implies x_n\left(1 - \frac{4}{9}\right) = B\left[ \left(\frac{2}{3}\right)^{2(n+1)}- \left(\frac{2}{3}\right)^{2(m+1)}\right] $$
 
-$$\implies x_n = B\left[\frac{\left(\frac{2}{3}\right)^{2n}- \left(\frac{2}{3}\right)^{2(m+1)}}{5/9}\right] $$
+$$\implies x_n = B\left[\frac{\left(\frac{2}{3}\right)^{2(n+1)}- \left(\frac{2}{3}\right)^{2(m+1)}}{5/9}\right] $$
 
-$$\leq B \frac{9}{5}\left(\frac{2}{3}\right)^{2n} < \epsilon.$$
+$$\leq B \frac{4}{5}\left(\frac{2}{3}\right)^{2n} < \epsilon.$$
 
 
 Thus, $(x_n)$ is Cauchy and hence convergent.
 
     
 \end{myproof}
+
+\pagebreak
 \qs{}{
 CHAT GPT CHALLENGE:
 To prove that a bounded sequence $\left(x_n\right)$ with the property that every convergent subsequence of $\left(x_n\right)$ converges to the same limit $x \in \mathbb{R}$ must converge to $x$, you can use the following proof:
