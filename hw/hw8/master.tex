@@ -45,7 +45,7 @@ $$\implies L^2 - L -1=0.$$
 
 By the quadratic formula,  $$L = \frac{ 1 \pm \sqrt{5}}{2}.$$ 
 
-Since $a_n=2$, a positive number, and the terms are defined recursively by $a_{n+1} = 1 + \frac{1}{a_n},$ every term is positive. Thus, we want the positive solution and therefore $$L  = \frac{ 1 + \sqrt{5}}{2}.$$
+Since $a_2=2$, a positive number, and the terms are defined recursively by $a_{n+1} = 1 + \frac{1}{a_n},$ every term is positive. Thus, we want the positive solution. Therefore $$L  = \frac{ 1 + \sqrt{5}}{2}.$$
 
 
 
@@ -58,7 +58,7 @@ Since $a_n=2$, a positive number, and the terms are defined recursively by $a_{n
 
 \begin{myproof}
     
-  Let $n\in \NN.$  We have that  $a_2 = 2$, $a_3 = 3/2.$ Thus, our base case holds. We want to show that if this is true for $a_n$ this is also true for $a_{n+1}.$
+  Let $n\in \NN.$  We have that  $a_2 = 2$ and $a_3 = 3/2.$ Thus, our base case holds. We want to show that if this is true for $a_n$ this is also true for $a_{n+1}.$
 
 We assume that $$ \frac{3}{2} \leq a_n \leq 2$$ is true.  Then
 $$ \frac{2}{3} \geq \frac{1}{a_n} \geq \frac{1}{2}$$
@@ -97,7 +97,7 @@ Prove that for each $m > 2,\left|a_{m+1}-a_m\right| \leq\left(\frac{2}{3}\right)
 \sol
 \begin{myproof}
     
-We see  $a_2 = 2$, $a_3 = 3/2,$ and $a_4 = 5/3$.  Thus, when $n=3$
+We see that  $a_2 = 2$, $a_3 = 3/2,$ and $a_4 = 5/3$.  Thus, when $n=3$
 $$\left|\frac{5}{3} - \frac{3}{2} \right| \leq \left(\frac{2}{3} \right)^2 \left|\frac{3}{2} - \frac{4}{2} \right|$$
 
 $$\implies \left|\frac{1}{6}  \right| \leq \left(\frac{2}{3} \right)^2 \left| - \frac{1}{2} \right|$$
@@ -125,7 +125,7 @@ Use the inequality in (4) to show that $\left\{a_n\right\}$ is a Cauchy sequence
 
 \begin{myproof}
 
-Let $m>2$ and $$B =\left(\frac{3}{2}\right)^{4}\left|a_3 -a_2\right|.$$
+  Let $$m>2 \text{ and } B =\left(\frac{3}{2}\right)^{4}\left|a_3 -a_2\right|.$$
 
 We know that  
 $$ \left|a_{m+1} - a_m\right| \leq \left(\frac{2}{3}\right)^{2(m-2)} \left|a_3 -a_2\right|$$
@@ -133,7 +133,7 @@ $$ \left|a_{m+1} - a_m\right| \leq \left(\frac{2}{3}\right)^{2(m-2)} \left|a_3 -
 $$ \implies \left|a_{m+1} - a_m\right| \leq \left(\frac{2}{3}\right)^{2m}B.$$
 Let $\epsilon > 0.$ Choose $N\in\NN$ such that for all $n > N$, $$ B \frac{4}{5}\left(\frac{2}{3}\right)^{2n}< \epsilon.$$
 
-Let $m > n > N.$ We have,
+Let $m > n > N.$ Then
 
 $$|a_m - a_n|= |a_m - a_{m-1} + a_{m-1} - a_{m-2}  + a_{m-2} - a_{m-3}+ \dots+ a_{n+1} -  a_{n}| $$
 
@@ -144,7 +144,7 @@ $$ \leq \sum_{k={n+1}}^{m} |a_k - a_{k-1}|$$
 $$ \leq \sum_{k={n+1}}^{m} \left(\frac{2}{3}\right)^{2k}B  .$$
 
 
-Now, if $(x_n)= \sum_{k={n+1}}^{m} \left(\frac{2}{3}\right)^{2k}B , $ then
+Now, if $(x_n)= \sum_{k={n+1}}^{m} \left(\frac{2}{3}\right)^{2k}B , $ 
 $$x_n - \left(\frac{2}{3}\right)^2x_n = B\left[\sum_{k={n+1}}^{m}\left(\frac{2}{3}\right)^{2k} - \sum_{k={n+2}}^{m+1}\left(\frac{2}{3}\right)^{2k}\right]$$
 
 $$\implies x_n\left(1 - \frac{4}{9}\right) = B\left[ \left(\frac{2}{3}\right)^{2(n+1)}- \left(\frac{2}{3}\right)^{2(m+1)}\right] $$
