@@ -1,0 +1,71 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+\newcommand{\contra}{
+$\rightarrow\!\leftarrow$
+}
+
+\title{Real Analysis HW \#9}
+\author{Jack Krebsbach }
+
+\date{Nov 28th}
+
+\begin{document}
+\maketitle
+
+\qs{}{
+
+Let $g: A \rightarrow \mathbb{R}$ and $f: A \rightarrow \mathbb{R}$. Suppose that $\lim _{x \rightarrow a} f(x)=0$.
+
+\bigskip
+}
+
+(a) Show that $\lim _{x \rightarrow a} f(x) g(x)=0$ for any function $g$ as above IS NOT TRUE.
+
+\bigskip
+
+(b) Assume that $g$ is a bounded function on $A$. Show that $\lim _{x \rightarrow c} g(x) f(x)=0$.
+
+\qs{}{
+
+Let $a$ and $b$ be real numbers with $a \neq 0$. Use the definition of continuity to prove that the function $f$ defined by $f(x)=a x+b$ is continuous at every real number.
+}
+\qs{}{
+ Use the definition of limit to prove that $\lim _{x \rightarrow c} x^2=c^2$ for every real number $c$.
+}
+\qs{}{
+
+Find constants $a$ and $b$ so that the function $f$ defined by
+$$
+f(x)=\left\{\begin{array}{cc}
+3 a x^2+1 & 0 \leq x \leq 1 \\
+a x+b & 1<x<2 \\
+2 b x+a & 2 \leq x \leq 4
+\end{array}\right.
+$$
+has a limit at each point of $[0,4]$. Be sure to show the limit exists.
+}
+\qs{}{
+Let $f:[a, b] \rightarrow \mathbb{R}$ be continuous on $[a, b]$ and suppose that $f(x)=0$ for each irrational number $x$ in $[a, b]$. Prove that $f(x)=0$ for all $x \in[a, b]$.
+
+}
+\qs{}{
+
+CHAT GPT CHALLENGE:
+Let $f:[a, b] \rightarrow \mathbb{R}$ be a continuous function on $[a, b]$, and suppose that $f(x)=0$ for each rational number $x$ in $[a, b]$. We aim to show that $f(x)=0$ for all $x \in[a, b]$.
+}
+
+Assume, for the sake of contradiction, that there exists $c \in[a, b]$ such that $f(c) \neq 0$. Since $f$ is continuous, for any $\epsilon>0$, there exists a $\delta>0$ such that for all $x \in[a, b]$, if $|x-c|<\delta$, then $|f(x)-f(c)|<\epsilon$.
+
+Consider the case when $\epsilon=|f(c)|$. By continuity, there exists $\delta>0$ such that for all $x \in[a, b]$, if $|x-c|<\delta$, then $|f(x)-f(c)|<|f(c)|$. This implies
+$$
+-f(c)<f(x)-f(c)<f(c) .
+$$
+
+Adding $f(c)$ to all parts of the inequality yields $0<f(x)$ for $x$ in the interval $(c-\delta, c) \cap[a, b]$. Similarly, subtracting $f(c)$ from all parts of the inequality yields $f(x)<0$ for $x$ in the interval $(c, c+\delta) \cap[a, b]$. Now, consider the set of rational numbers in $[a, b]$. Since $\mathbb{Q}$ is dense in $\mathbb{R}$, there exist rational numbers in both $(c-\delta, c) \cap[a, b]$ and $(c, c+\delta) \cap[a, b]$. However, we have shown that for any rational $x$ in these intervals, $f(x)$ has opposite signs, which is a contradiction.
+
+Therefore, our assumption that there exists $c$ such that $f(c) \neq 0$ is false, and we conclude that $f(x)=0$ for all $x \in[a, b]$.
+
+\end{document}
