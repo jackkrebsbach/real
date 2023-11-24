@@ -35,6 +35,15 @@ Let $a$ and $b$ be real numbers with $a \neq 0$. Use the definition of continuit
 \qs{}{
  Use the definition of limit to prove that $\lim _{x \rightarrow c} x^2=c^2$ for every real number $c$.
 }
+
+\begin{myproof}
+  Let $\epsilon > 0.$ Choose $\delta = \min\{1, \epsilon/(2c+1)\}$. If we have $0 < |x-c| < \delta$ it follows that, $$|f(x) - L| = |x^2 - c^2| = |x + c||x-c| < (2c+1)\frac{\epsilon}{2c+1} = \epsilon$$.
+
+Thus, $\lim _{x \rightarrow c} x^2=c^2$ for every real number $c$.
+\end{myproof}
+
+\pagebreak
+
 \qs{}{
 
 Find constants $a$ and $b$ so that the function $f$ defined by
