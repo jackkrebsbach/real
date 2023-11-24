@@ -32,6 +32,13 @@ Let $g: A \rightarrow \mathbb{R}$ and $f: A \rightarrow \mathbb{R}$. Suppose tha
 
 Let $a$ and $b$ be real numbers with $a \neq 0$. Use the definition of continuity to prove that the function $f$ defined by $f(x)=a x+b$ is continuous at every real number.
 }
+
+\begin{myproof}
+    Let $\epsilon >0$ and $c \in \RR.$ Choose $\delta = \epsilon/a.$ If we have $ |x-c|< \delta$ it follows $$ |f(x) - f(c)| = |ax +b - (ac+b)| = | ax + b -ac - b | = |ax -ac| = |a(x-c)| < |a \frac{\epsilon}{a} | < \epsilon.$$
+
+Thus, $f(x)=a x+b$ is continuous at every real number.
+\end{myproof}
+
 \qs{}{
  Use the definition of limit to prove that $\lim _{x \rightarrow c} x^2=c^2$ for every real number $c$.
 }
@@ -41,8 +48,6 @@ Let $a$ and $b$ be real numbers with $a \neq 0$. Use the definition of continuit
 
 Thus, $\lim _{x \rightarrow c} x^2=c^2$ for every real number $c$.
 \end{myproof}
-
-\pagebreak
 
 \qs{}{
 
