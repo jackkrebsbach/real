@@ -83,6 +83,20 @@ $$
 Let $f:[a, b] \rightarrow \mathbb{R}$ be continuous on $[a, b]$ and suppose that $f(x)=0$ for each irrational number $x$ in $[a, b]$. Prove that $f(x)=0$ for all $x \in[a, b]$.
 
 }
+\begin{myproof}
+    
+
+If $f:[a, b] \rightarrow \mathbb{R}$ is continuous on $[a, b]$ then it must be continuous on every point $c \in [a,b].$ Assume, for the sake of contradiction, that there exists $x_0 \in [a,b]$ with $x_0 \in \RR \setminus \QQ$ and $f(x_0) \not =0.$
+
+Then $f$ must be continuous at $x_0,$ and there must exist $\delta$ such that $|x-x_0| < \delta$ implies that $|f(x) - f(x_0)| < |f(x_0)|/2.$ 
+
+By the density of rationals in the real numbers there must exist an irrational number, $x_I,$ such that $|x_I - x_0| < \delta.$ 
+
+Since $x_I$ is irrational then $f(x_I) = 0$ and we have $|f(x_I) - f(x_0)| =  |f(x_0)| < \left|f(x_0)\right|/2 \implies 1 < 1/2 \rightarrow\!\leftarrow.$  Thus, we have arrived at a contradiction which means that $f(x)=0$ for all $x \in[a, b].$
+
+\end{myproof}
+
+\pagebreak
 \qs{}{
 
 CHAT GPT CHALLENGE:
