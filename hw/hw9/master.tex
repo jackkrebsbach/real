@@ -24,10 +24,16 @@ Let $g: A \rightarrow \mathbb{R}$ and $f: A \rightarrow \mathbb{R}$. Suppose tha
 (a) Show that $\lim _{x \rightarrow a} f(x) g(x)=0$ for any function $g$ as above IS NOT TRUE.
 
 \begin{myproof}
-     Assume for the sake of contradiction that $\lim _{x \rightarrow a} f(x) g(x)=0$ for  any $g(x).$ Consider the case when $g(x)= 1/x.$ Let $\epsilon >0.$ Then there exists $\delta$ such that whenever $0 < |x - 0| < \delta$ we have $|f(x)g(x) -0|<\epsilon.$
+     Assume for the sake of contradiction that $\lim _{x \rightarrow a} f(x) g(x)=0$ for  any $g(x).$ Consider the case when $g(x)= 1/x^2.$ Let $\epsilon >0.$ Then there exists $\delta$ such that whenever $0 < |x - 0| < \delta$ we have $|f(x)g(x) -0|<\epsilon.$
 
+  By the Archimedes principle there exists $N \in \NN$ such that for all $n > N,$ $0 < |1/n| < \delta.$l Thus, $$ |f(1/n)g(1/n)-0|=|f(1/n)n^2 -0|<\epsilon.$$
+
+  Herein lies the absurdity, if $f$ approaches zero slower then $n^2$ increases, we  choose $n_* > N$ such that $ |f(1/n_*)n_*^2| > \epsilon \rightarrow\!\leftarrow$
+Hence, $\lim _{x \rightarrow a} f(x) g(x)=0$ for any function $g$ is not true.
 \end{myproof}
 
+\bigskip
+\bigskip
 \bigskip
 
 (b) Assume that $g$ is a bounded function on $A$. Show that $\lim _{x \rightarrow a} g(x) f(x)=0$.
