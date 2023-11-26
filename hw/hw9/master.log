@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.12)  25 NOV 2023 20:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.12)  25 NOV 2023 20:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1259,42 +1259,42 @@ File: unpxsyc.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxsyc.
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/zplTLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 23.
+(Font)              scaled to size 10.0pt on input line 22.
 LaTeX Font Info:    Font shape `OT1/zplTLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 23.
+(Font)              scaled to size 10.0pt on input line 22.
 LaTeX Font Info:    Font shape `OT1/zplTLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 23.
+(Font)              scaled to size 7.3pt on input line 22.
 LaTeX Font Info:    Font shape `OT1/zplTLF/m/n' will be
-(Font)              scaled to size 5.5pt on input line 23.
+(Font)              scaled to size 5.5pt on input line 22.
 LaTeX Font Info:    Font shape `T1/zplTLF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 37.
+(Font)              scaled to size 10.0pt on input line 27.
 LaTeX Font Info:    Font shape `T1/zplTLF/b/it' will be
-(Font)              scaled to size 10.0pt on input line 37.
+(Font)              scaled to size 10.0pt on input line 27.
 \g__tikzsymbols_savebox_F_0 g 0 G_10_Laughey_1_none_none_box=\box143
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.53 \qs
+l.42 \qs
         {}{ [1]
 LaTeX Font Info:    Font shape `T1/zplTLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 71.
+(Font)              scaled to size 7.3pt on input line 82.
 LaTeX Font Info:    Font shape `T1/zplTLF/m/n' will be
-(Font)              scaled to size 5.5pt on input line 71.
- [2] [3] [4] (./master.aux) ) 
+(Font)              scaled to size 5.5pt on input line 82.
+ [2] [3] (./master.aux) ) 
 Here is how much of TeX's memory you used:
- 37738 strings out of 478268
- 754093 string characters out of 5846347
- 1118356 words of memory out of 5000000
+ 37737 strings out of 478268
+ 754087 string characters out of 5846347
+ 1124356 words of memory out of 5000000
  55235 multiletter control sequences out of 15000+600000
  523582 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  96i,8n,102p,593b,1373s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/NewPXMI.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/NewPXMI_gnu.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/pxmiaX.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/zplbi.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/zplr.pfb>
-Output written on master.pdf (5 pages, 142940 bytes).
+Output written on master.pdf (4 pages, 144436 bytes).
 PDF statistics:
- 130 PDF objects out of 1000 (max. 8388607)
- 77 compressed objects within 1 object stream
- 11 named destinations out of 1000 (max. 500000)
+ 126 PDF objects out of 1000 (max. 8388607)
+ 74 compressed objects within 1 object stream
+ 10 named destinations out of 1000 (max. 500000)
  157 words of extra memory for PDF output out of 10000 (max. 10000000)
 

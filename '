@@ -24,8 +24,7 @@ Let $g: A \rightarrow \mathbb{R}$ and $f: A \rightarrow \mathbb{R}$. Suppose tha
 (a) Show that $\lim _{x \rightarrow a} f(x) g(x)=0$ for any function $g$ as above IS NOT TRUE.
 
 \begin{myproof}
-     Assume for the sake of contradiction that $\lim _{x \rightarrow a} f(x) g(x)=0$ for  any $g(x).$ Consider the case when $g(x)= 1/x.$ Let $\epsilon >0.$ Then there exists $\delta$ such that whenever $0 < |x - 0| < \delta$ we have $|f(x)g(x) -0|<\epsilon.$
-
+    Consider the case when $g(x)= 1/x.$
 \end{myproof}
 
 \bigskip
