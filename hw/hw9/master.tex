@@ -26,9 +26,15 @@ Let $g: A \rightarrow \mathbb{R}$ and $f: A \rightarrow \mathbb{R}$. Suppose tha
 \begin{myproof}
      Assume for the sake of contradiction that $\lim _{x \rightarrow a} f(x) g(x)=0$ for  any $g(x).$ Consider the case when $g(x)= 1/x^2.$ Let $\epsilon >0.$ Then there exists $\delta$ such that whenever $0 < |x - 0| < \delta$ we have $|f(x)g(x) -0|<\epsilon.$
 
-  By the Archimedes principle there exists $N \in \NN$ such that for all $n > N,$ $0 < |1/n| < \delta.$l Thus, $$ |f(1/n)g(1/n)-0|=|f(1/n)n^2 -0|<\epsilon.$$
+  By the Archimedes principle there exists $N \in \NN$ such that for all $n > N,$ $0 < |1/n| < \delta.$ Thus, $$ |f(1/n)g(1/n)-0|=|f(1/n)n^2 -0|<\epsilon.$$
 
-  Herein lies the absurdity, if $f$ approaches zero slower then $n^2$ increases, we  choose $n_* > N$ such that $ |f(1/n_*)n_*^2| > \epsilon \rightarrow\!\leftarrow$
+  We consider three cases:
+
+  \begin{enumerate}
+    \item If $f$ approaches zero at a faster rate than $n^2$ increases then $\lim _{x \rightarrow a} f(x) g(x)=0$ is true.
+    \item If $f$ approaches zero at the same rate that $n^2$ increases then $\lim _{x \rightarrow a} f(x) g(x)=c$ for $c \in \RR \setminus \{0\}$ and the assumption is false.
+    \item   If $f$ approaches zero slower then $n^2$ increases then we  choose $n_* > N$ such that $ |f(1/n_*)n_*^2| > \epsilon$, yielding a contradiction and thus the assumption is false.
+   \end{enumerate}
 Hence, $\lim _{x \rightarrow a} f(x) g(x)=0$ for any function $g$ is not true.
 \end{myproof}
 
@@ -67,6 +73,8 @@ Thus, $f(x)=a x+b$ is continuous at every real number.
 Thus, $\lim _{x \rightarrow c} x^2=c^2$ for every real number $c$.
 \end{myproof}
 
+
+\pagebreak
 \qs{}{
 
 Find constants $a$ and $b$ so that the function $f$ defined by
@@ -96,7 +104,39 @@ f(x)=\left\{\begin{array}{cc}
 \end{array}\right.
 $$
 
-Now, we show that the limit exists at $2$ and $1.$
+Now, we show that the limit exists at $2$ and $1$ from the left and the right.
+
+\bigskip
+\begin{myproof}
+   $\lim_{x \rightarrow 1^-} = -4/5 $:\par 
+   Let $\epsilon > 0$. Now, we restrict our $\delta$ to be a maximum of $1.$ Choose $\delta = \min\{1, \epsilon\sqrt{5}/6\} $. Then when  $1 - \delta < x < 1$ we have $$|f(x) - L| =|-9/5 x^2+1 - -4/5| = |-9/5 x^2 + 9/5 | = |9/5 x^2 - 9/5 | = |(3/\sqrt{5} x - 3/\sqrt{5})(3/\sqrt{5} x + 3/\sqrt{5})|$$
+
+   $$ \leq 3/\sqrt{5}|x -1||x+1| < \frac{3}{\sqrt{5}} \epsilon \frac{\sqrt{5}}{6}2 = \epsilon $$
+\end{myproof}
+
+\begin{myproof}
+   $\lim_{x \rightarrow 1^+} = -4/5$\par
+
+ Let $\epsilon > 0$ and choose $\delta = \epsilon \frac{5}{3}  $. Then when  $1  < x < 1 + \delta$ we have $$|f(x) - L| = |-3/5 x - 1/5 - -4/5| = |-3/5x + 3/5| = \frac{3}{5}|-x+1|= \frac{3}{5}|x-1| < \frac{3}{5} \epsilon \frac{5}{3}   = \epsilon.$$
+\end{myproof}
+
+\begin{myproof}
+    
+   $\lim_{x \rightarrow 2^-} = -7/5$\par
+
+ Let $\epsilon > 0$ and choose $\delta = \epsilon \frac{5}{3}  $. Then when  $2 - \delta  < x < 2$ we have $$|f(x) - L| = |-3/5 x - 1/5 - -7/5| = |-3/5x + 6/5| = \frac{3}{5}|-x+2|= \frac{3}{5}|x-2| < \frac{3}{5} \epsilon \frac{5}{3}   = \epsilon.$$
+\end{myproof}
+
+
+\begin{myproof}
+    
+   $\lim_{x \rightarrow 2^+} = -7/5$\par
+
+ Let $\epsilon > 0$ and choose $\delta = \epsilon \frac{5}{2}  $. Then when  $2  < x < 2 + \delta$ we have $$|f(x) - L| = |-2/5 x - 3/5 - -7/5| = |-2/5x + 4/5| = \frac{2}{5}|-x+2|= \frac{2}{5}|x-2| < \frac{2}{5} \epsilon \frac{5}{2}   = \epsilon.$$
+\end{myproof}
+
+
+\pagebreak
 \qs{}{
 Let $f:[a, b] \rightarrow \mathbb{R}$ be continuous on $[a, b]$ and suppose that $f(x)=0$ for each irrational number $x$ in $[a, b]$. Prove that $f(x)=0$ for all $x \in[a, b]$.
 
