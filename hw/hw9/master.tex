@@ -170,11 +170,13 @@ Consider the case when $\epsilon=|f(c)|$. By continuity, there exists $\delta>0$
 $$
 -f(c)<f(x)-f(c)<f(c) .
 $$
-
+\textbf{Be careful with your absolute signs, $-f(c)<f(x)-f(c)<f(c)$ is not true. In order for this to hold you must keep the absolute signs $-|f(c)|<f(x)-f(c)<|f(c)|.$ What happens if there are irrational numbers such that $f(c)$ is negative?
+}
+\bigskip\par
 Adding $f(c)$ to all parts of the inequality yields $0<f(x)$ for $x$ in the interval $(c-\delta, c) \cap[a, b]$. Similarly, subtracting $f(c)$ from all parts of the inequality yields $f(x)<0$ for $x$ in the interval $(c, c+\delta) \cap[a, b]$. Now, consider the set of rational numbers in $[a, b]$. Since $\mathbb{Q}$ is dense in $\mathbb{R}$, there exist rational numbers in both $(c-\delta, c) \cap[a, b]$ and $(c, c+\delta) \cap[a, b]$. However, we have shown that for any rational $x$ in these intervals, $f(x)$ has opposite signs, which is a contradiction.
 
 \textbf{
-  The intersection with [a,b] does not aid you in the proof. You should explicitly state that for any rational number, $x \in [a,b],$ $f(x) = 0.$ Then you may continue on in showing your contradiction. 
+  You have some good ideas but you need to be more careful in your reasoning. Try and come up with different values of $\epsilon$ to show a contradiction. Also consider looking at the irrational numbers, those are the numbers that we need to show are mapped to zero by $f.$
 } 
 Therefore, our assumption that there exists $c$ such that $f(c) \neq 0$ is false, and we conclude that $f(x)=0$ for all $x \in[a, b]$.
 
