@@ -10,7 +10,7 @@ $\rightarrow\!\leftarrow$
 \title{Real Analysis HW \#9}
 \author{Jack Krebsbach }
 
-\date{Nov 28th}
+\date{Nov 28Th}
 
 \begin{document}
 \maketitle
@@ -31,11 +31,12 @@ Let $g: A \rightarrow \mathbb{R}$ and $f: A \rightarrow \mathbb{R}$. Suppose tha
   We consider three cases:
 
   \begin{enumerate}
-    \item If $f$ approaches zero at a faster rate than $n^2$ increases then $\lim _{x \rightarrow a} f(x) g(x)=0$ is true.
-    \item If $f$ approaches zero at the same rate that $n^2$ increases then $\lim _{x \rightarrow a} f(x) g(x)=c$ for $c \in \RR \setminus \{0\}$ and the assumption is false.
-    \item   If $f$ approaches zero slower then $n^2$ increases then we  choose $n_* > N$ such that $ |f(1/n_*)n_*^2| > \epsilon$, yielding a contradiction and thus the assumption is false.
+    \item If $f(1/n)$ approaches zero at a faster rate than $n^2$ increases then $\lim _{x \rightarrow a} f(x) g(x)=0$ is true.
+    \item If $f(1/n)$ approaches zero at the same rate that $n^2$ increases then $\lim _{x \rightarrow a} f(x) g(x)=L$ for $L \in \RR \setminus \{0\}$ and the assumption is false.
+    \item   If $f(1/n)$ approaches zero slower then $n^2$ increases then we  choose $n_* > N$ such that $ |f(1/n_*)n_*^2| > \epsilon$, a contradiction. Thus, the assumption is false.
    \end{enumerate}
 Hence, $\lim _{x \rightarrow a} f(x) g(x)=0$ for any function $g$ is not true.
+
 \end{myproof}
 
 \bigskip
@@ -48,6 +49,7 @@ Hence, $\lim _{x \rightarrow a} f(x) g(x)=0$ for any function $g$ is not true.
     Let $\epsilon >0$ and $g$ be bounded by $B \in \RR^+$. So $|g(x)| < B$ for all $x \in \RR.$ Because $\lim _{x \rightarrow a} f(x)=0$ then there exists $\delta$ such that if $c\in \RR$ and $0 < | x -c | <\delta$ we automatically have $|f(x) - 0| <  \epsilon / B$.
 Now, $$ |g(x)f(x) - 0| < |g(x)|\left|\frac{\epsilon}{B}\right| \leq |B|\left|\frac{\epsilon}{B}\right| = \epsilon.  $$
 
+Hence, if $g$ is a bounded function on $A$, $\lim _{x \rightarrow a} g(x) f(x)=0.$
 \end{myproof}
 
 \pagebreak
@@ -58,7 +60,7 @@ Let $a$ and $b$ be real numbers with $a \neq 0$. Use the definition of continuit
 
 
 \begin{myproof}
-    Let $\epsilon >0$ and $c \in \RR.$ Choose $\delta = \epsilon/a.$ If we have $ |x-c|< \delta$ it follows $$ |f(x) - f(c)| = |ax +b - (ac+b)| = | ax + b -ac - b | = |ax -ac| = |a(x-c)| < |a \frac{\epsilon}{a} | < \epsilon.$$
+    Let $\epsilon >0$ and $c \in \RR.$ Choose $\delta = \epsilon/|a|.$ If we have $ |x-c|< \delta$ it follows $$ |f(x) - f(c)| = |ax +b - (ac+b)| = | ax + b -ac - b | = |ax -ac| = |a(x-c)| = |a||x-c|< |a|\frac{\epsilon}{|a|} < \epsilon.$$
 
 Thus, $f(x)=a x+b$ is continuous at every real number.
 \end{myproof}
@@ -103,15 +105,16 @@ f(x)=\left\{\begin{array}{cc}
 -2/5 x - 3/5 & 2 \leq x \leq 4
 \end{array}\right.
 $$
+\pagebreak
 
 Now, we show that the limit exists at $2$ and $1$ from the left and the right.
 
 \bigskip
 \begin{myproof}
    $\lim_{x \rightarrow 1^-} = -4/5 $:\par 
-   Let $\epsilon > 0$. Now, we restrict our $\delta$ to be a maximum of $1.$ Choose $\delta = \min\{1, \epsilon\sqrt{5}/6\} $. Then when  $1 - \delta < x < 1$ we have $$|f(x) - L| =|-9/5 x^2+1 - -4/5| = |-9/5 x^2 + 9/5 | = |9/5 x^2 - 9/5 | = |(3/\sqrt{5} x - 3/\sqrt{5})(3/\sqrt{5} x + 3/\sqrt{5})|$$
+   Let $\epsilon > 0$. Now, we restrict our $\delta$ to be a maximum of $1$ . Choose $\delta = \min\{1, \epsilon \frac{5}{18}\} $. Then when  $1 - \delta < x < 1$ (Note: $\max{\delta} = 1 \implies x+\delta = x+ 1 < 2$) we have $$|f(x) - L| =|-9/5 x^2+1 - -4/5| = |-9/5 x^2 + 9/5 | = |9/5 x^2 - 9/5 | =9/5|x^2 -1|$$
 
-   $$ \leq 3/\sqrt{5}|x -1||x+1| < \frac{3}{\sqrt{5}} \epsilon \frac{\sqrt{5}}{6}2 = \epsilon $$
+   $$ = \frac{9}{5}|x -1||x+1| < \frac{9}{5} \epsilon \frac{5}{18}2 = \epsilon $$
 \end{myproof}
 
 \begin{myproof}
@@ -144,13 +147,13 @@ Let $f:[a, b] \rightarrow \mathbb{R}$ be continuous on $[a, b]$ and suppose that
 \begin{myproof}
     
 
-If $f:[a, b] \rightarrow \mathbb{R}$ is continuous on $[a, b]$ then it must be continuous on every point $c \in [a,b].$ Assume, for the sake of contradiction, that there exists $x_0 \in [a,b]$ with $x_0 \in \RR \setminus \QQ$ and $f(x_0) \not =0.$
+If $f:[a, b] \rightarrow \mathbb{R}$ is continuous on $[a, b]$ then it must be continuous on every point $c \in [a,b].$ Assume, for the sake of contradiction, that there exists a rational number, $x_0$, such that $f(x_0) \not =0 $ and with $x_0 \in [a,b]$.
 
 Then $f$ must be continuous at $x_0,$ and there must exist $\delta$ such that $|x-x_0| < \delta$ implies that $|f(x) - f(x_0)| < |f(x_0)|/2.$ 
 
-By the density of rationals in the real numbers there must exist an irrational number, $x_I,$ such that $|x_I - x_0| < \delta.$ 
+By the density of the rationals in the real numbers there must exist an irrational number, $x_I,$ such that $|x_I - x_0| < \delta.$ 
 
-Since $x_I$ is irrational then $f(x_I) = 0$ and we have $|f(x_I) - f(x_0)| =  |f(x_0)| < \left|f(x_0)\right|/2 \implies 1 < 1/2 \rightarrow\!\leftarrow.$  Thus, we have arrived at a contradiction which means that $f(x)=0$ for all $x \in[a, b].$
+Since $x_I$ is irrational then $f(x_I) = 0$ and we have $|f(x_I) - f(x_0)| =  |f(x_0)| < \left|f(x_0)\right|/2 \implies 1 < 1/2 \rightarrow\!\leftarrow.$  Thus, we have arrived at a contradiction. Hence,$f(x)=0$ for all $x \in[a, b].$
 
 \end{myproof}
 
@@ -158,10 +161,11 @@ Since $x_I$ is irrational then $f(x_I) = 0$ and we have $|f(x_I) - f(x_0)| =  |f
 
 CHAT GPT CHALLENGE:
 Let $f:[a, b] \rightarrow \mathbb{R}$ be a continuous function on $[a, b]$, and suppose that $f(x)=0$ for each rational number $x$ in $[a, b]$. We aim to show that $f(x)=0$ for all $x \in[a, b]$.
-}
-
+} 
 Assume, for the sake of contradiction, that there exists $c \in[a, b]$ such that $f(c) \neq 0$. Since $f$ is continuous, for any $\epsilon>0$, there exists a $\delta>0$ such that for all $x \in[a, b]$, if $|x-c|<\delta$, then $|f(x)-f(c)|<\epsilon$.
 
+
+\textbf{Good job setting the stage for you proof, this is correct.}
 Consider the case when $\epsilon=|f(c)|$. By continuity, there exists $\delta>0$ such that for all $x \in[a, b]$, if $|x-c|<\delta$, then $|f(x)-f(c)|<|f(c)|$. This implies
 $$
 -f(c)<f(x)-f(c)<f(c) .
@@ -170,8 +174,8 @@ $$
 Adding $f(c)$ to all parts of the inequality yields $0<f(x)$ for $x$ in the interval $(c-\delta, c) \cap[a, b]$. Similarly, subtracting $f(c)$ from all parts of the inequality yields $f(x)<0$ for $x$ in the interval $(c, c+\delta) \cap[a, b]$. Now, consider the set of rational numbers in $[a, b]$. Since $\mathbb{Q}$ is dense in $\mathbb{R}$, there exist rational numbers in both $(c-\delta, c) \cap[a, b]$ and $(c, c+\delta) \cap[a, b]$. However, we have shown that for any rational $x$ in these intervals, $f(x)$ has opposite signs, which is a contradiction.
 
 \textbf{
-The intersection with [a,b] is meaningless and the two intervals don’t actually overlap so the density of the rationals has nothing to do with it
-}
+  The intersection with [a,b] does not aid you in the proof. You should explicitly state that for any rational number, $x \in [a,b],$ $f(x) = 0.$ Then you may continue on in showing your contradiction. 
+} 
 Therefore, our assumption that there exists $c$ such that $f(c) \neq 0$ is false, and we conclude that $f(x)=0$ for all $x \in[a, b]$.
 
 \end{document}
