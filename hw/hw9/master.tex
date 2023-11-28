@@ -46,8 +46,8 @@ Hence, $\lim _{x \rightarrow a} f(x) g(x)=0$ for any function $g$ is not true.
 (b) Assume that $g$ is a bounded function on $A$. Show that $\lim _{x \rightarrow a} g(x) f(x)=0$.
 
 \begin{myproof}
-    Let $\epsilon >0$ and $g$ be bounded by $B \in \RR^+$. So $|g(x)| < B$ for all $x \in \RR.$ Because $\lim _{x \rightarrow a} f(x)=0$ then there exists $\delta$ such that if $c\in \RR$ and $0 < | x -c | <\delta$ we automatically have $|f(x) - 0| <  \epsilon / B$.
-Now, $$ |g(x)f(x) - 0| < |g(x)|\left|\frac{\epsilon}{B}\right| \leq |B|\left|\frac{\epsilon}{B}\right| = \epsilon.  $$
+    Let $\epsilon >0$ and $g$ be bounded by $B \in \RR^+$. So $|g(x)| < B$ for all $x \in \RR.$ Because $\lim _{x \rightarrow a} f(x)=0$ then there exists $\delta$ such that if $c\in \RR$ and $0 < | x -c | <\delta$ we automatically have $|f(x) - 0| <  \epsilon / |B|$.
+Now, $$ |g(x)f(x) - 0| < |g(x)|\frac{\epsilon}{\left|B\right|} \leq |B|\frac{\epsilon}{\left|B\right|}  = \epsilon.  $$
 
 Hence, if $g$ is a bounded function on $A$, $\lim _{x \rightarrow a} g(x) f(x)=0.$
 \end{myproof}
@@ -60,7 +60,7 @@ Let $a$ and $b$ be real numbers with $a \neq 0$. Use the definition of continuit
 
 
 \begin{myproof}
-    Let $\epsilon >0$ and $c \in \RR.$ Choose $\delta = \epsilon/|a|.$ If we have $ |x-c|< \delta$ it follows $$ |f(x) - f(c)| = |ax +b - (ac+b)| = | ax + b -ac - b | = |ax -ac| = |a(x-c)| = |a||x-c|< |a|\frac{\epsilon}{|a|} < \epsilon.$$
+    Let $\epsilon >0$ and $c \in \RR.$ Choose $\delta = \epsilon/|a|.$ If we have $ |x-c|< \delta$ it follows $$ |f(x) - f(c)| = |ax +b - (ac+b)| = | ax + b -ac - b | = |ax -ac| = |a(x-c)| = |a||x-c|< |a|\frac{\epsilon}{|a|} = \epsilon.$$
 
 Thus, $f(x)=a x+b$ is continuous at every real number.
 \end{myproof}
@@ -70,7 +70,7 @@ Thus, $f(x)=a x+b$ is continuous at every real number.
 }
 
 \begin{myproof}
-  Let $\epsilon > 0.$ Choose $\delta = \min\{1, \epsilon/(2c+1)\}$. If we have $0 < |x-c| < \delta$ it follows that, $$|f(x) - L| = |x^2 - c^2| = |x + c||x-c| < (2c+1)\frac{\epsilon}{2c+1} = \epsilon$$.
+  Let $\epsilon > 0.$ Choose $\delta = \min\{1, \epsilon/(|2c|+1)\}$. If we have $0 < |x-c| < \delta$ it follows that, $$|f(x) - L| = |x^2 - c^2| = |x + c||x-c| < (|2c|+1)\frac{\epsilon}{|2c|+1} = \epsilon$$.
 
 Thus, $\lim _{x \rightarrow c} x^2=c^2$ for every real number $c$.
 \end{myproof}
