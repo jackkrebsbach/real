@@ -25,6 +25,7 @@ $$
 $$
 for each integer $n>1$. This result is know as Bernoulli's inequality.
 }
+
 \qs{}{
 
 Show that $e$ is irrational by supposing that $e=\frac{m}{n}$ and deriving a contradiction. Use the fact that $e=\sum_{j=0}^{\infty} \frac{1}{j !}$. Let $s_k=\sum_{j=0}^k \frac{1}{j !}$.
@@ -34,11 +35,16 @@ Show that $e$ is irrational by supposing that $e=\frac{m}{n}$ and deriving a con
 $$
 e-s_k<\frac{1}{(k+1) !}\left\{1+\frac{1}{k+1}+\left(\frac{1}{k+1}\right)^2+\cdots\right\} .
 $$
-(b) Prove that $e-s_k<\frac{1}{k(k+)}$ for all $k \in \mathbb{N}$.
+(b) Prove that $e-s_k<\frac{1}{k(k!)}$ for all $k \in \mathbb{N}$.
+
+\bigskip
+
 (c) If $e=\frac{m}{n}$, prove that $n ! e$ and $n ! s_n$ are integers.
-(d) If $e=\frac{m}{n}$, prove that $n !\left(e-s_n\right)$ is an integer between 0 and 1 , which is absurd.
 
+\bigskip
+(d) If $e=\frac{m}{n}$, prove that $n!\left(e-s_n\right)$ is an integer between 0 and 1 , which is absurd.
 
+\bigskip
 
 \qs{}{
 Let $f$ be a function defined on all of $\mathbb{R}$, and assume there is a constant $c$ such that $0<c<1$ and
@@ -49,13 +55,30 @@ for all $x, y \in \mathbb{R}$.
 }
 
 (a) Show that $f$ is continuous.
+
+\par
+
+\bigskip
+\bigskip
 (b) Pick some $y_1 \in \mathbb{R}$ and construct the sequence
 $$
 \left(y_1, f\left(y_1\right), f\left(f\left(y_1\right)\right), \ldots\right) .
 $$
 
 In general, if $y_{n+1}=f\left(y_n\right)$, show that the resulting sequence $\left(y_n\right)$ is a Cauchy sequence. Hence we may let $y=\lim _{n \rightarrow \infty} y_n$.
+
+
+
+\bigskip
+
+\par
+\bigskip
 (c) Prove that $y$ is a fixed point of $f$ (i.e. $f(y)=y$ ) and that it is unique in this regard.
+
+\par
+\par
+\bigskip
+\bigskip
 (d) Finally, prove that if $x$ is any arbitrary point in $\mathbb{R}$, then the sequence $(x, f(x), f(f(x)), \ldots)$ converges to $y$ (as defined in (b)).
 
 
