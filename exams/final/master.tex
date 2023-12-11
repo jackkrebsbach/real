@@ -30,8 +30,10 @@ for each integer $n>1$. This result is know as Bernoulli's inequality.
 \begin{myproof}
 We will show that this inequality holds for $x>-1$ and $x\not= 0$ by induction. First, we see when $n=2$ that $$ (1+x)^2 = 1 +2x + x^2 > 1+2x.$$ Thus, our base case holds. Now we assume that $$ (1+x)^n > 1 +nx$$ is true. We want to show that
 $ (1+x)^{n+1} > 1 +(n+1)x$
-is also true. We have that $$(1+x)(1+x)^n > (1+nx)(1+x)$$
+is also true. First, we multiply both sides by $(1+x)$, then $$(1+x)(1+x)^n > (1+x)(1+nx)$$
 $$ \implies (1+x)^{n+1} > 1 + x + nx + nx^2 \geq 1 + nx + x = 1 + (n+1)x.$$
+
+Hence, $(1+x)^n>1+n x$ for each integer $n>1$.
 
 \end{myproof}
 
@@ -135,17 +137,17 @@ In general, if $y_{n+1}=f\left(y_n\right)$, show that the resulting sequence $\l
 
 \bigskip
 \begin{myproof}
-  Let $\epsilon > 0.$ First we will show that $$|y_{n+1} - y_n| \leq c^{n-1}|y_1 - y_2|=c^{n}\frac{|y_1 - y_2|}{c}$$ is true by induction:
+  Let $\epsilon > 0.$ First we will show that $$|y_{n+1} - y_n| \leq c^{n-1}|y_2 - y_1|=c^{n}\frac{|y_2 - y_1|}{c}$$ is true by induction:
 \bigskip
 \par
 \begin{enumerate}
   \item Base case: From the given, when $n=2$, $$|y_3 - y_2| =|f(y_2) - f(y_1)| \leq c^1|y_2 -y_1|.$$
-  \item Inductive step: Now we want to show that if this holds true for $n$, this also holds true for $n+1$. We assume  $$ |y_{n+1} - y_n| \leq c^{n-1}|y_1 - y_2|$$ is true. We have $$ c|y_{n+1} - y_n| \leq c^{n}|y_1 - y_2|.$$ It follows
-    $$|y_{n+2} - y_{n+1}| =|f(y_{n+1}) - f(y_{n})| \leq c|y_{n+1} - y_n| \leq c^{n}|y_1 - y_2|.$$
+  \item Inductive step: Now we want to show that if this holds true for $n$, this also holds true for $n+1$. We assume  $$ |y_{n+1} - y_n| \leq c^{n-1}|y_2 - y_1|$$ is true. We have $$ c|y_{n+1} - y_n| \leq c^{n}|y_2 - y_1|.$$ It follows
+    $$|y_{n+2} - y_{n+1}| =|f(y_{n+1}) - f(y_{n})| \leq c|y_{n+1} - y_n| \leq c^{n}|y_2 - y_1|.$$
 \end{enumerate}
 
 
-Finally, we conclude that  $$|y_{n+1} - y_n| \leq c^{n-1}|y_2 - y_1|=c^{n}\frac{|y_1 - y_2|}{c}$$
+Finally, we conclude that  $$|y_{n+1} - y_n| \leq c^{n-1}|y_2 - y_1|=c^{n}\frac{|y_2 - y_1|}{c}$$
 for all $n > 1.$
 
 \pagebreak
@@ -160,10 +162,10 @@ $$= \sum_{n}^{m-1}|x_{n+1} - x_n| $$
 
 $$\leq \sum_{n}^{m-1}c^{n}B.$$
 
-If $$y_n =\sum_{n}^{m-1} c^{n}\frac{|y_2 - y_1|}{c},$$ then $$y_n  - c^{n}By_n = \sum_{n}^{m-1} c^{n}B - \sum_{n+1}^{m} c^{n}B$$
+If $$y_n =\sum_{n}^{m-1} c^{n},$$ then $$y_n  - c^{n}By_n = \sum_{n}^{m-1} c^{n}B - \sum_{n+1}^{m} c^{n}B$$
 $$\implies y_n(1  - c^{n}B) = Bc^n - c^mB $$
 
-$$\implies y_n = \frac{Bc^n - c^mB }{(1  - c^{n}B)}= \frac{c^n - c^m }{(1/B  - c^{n})} $$
+$$\implies y_n = \frac{B(c^n - c^m) }{(1  - c^{n}B)}= \frac{c^n - c^m }{(1/B  - c^{n})} $$
 $$< \frac{c^n}{(1/B  - c^{n})} < \epsilon.$$
 Hence, $(y_n)$ is Cauchy and we may let $y=\lim _{n \rightarrow \infty} y_n$
 \end{myproof}
@@ -201,11 +203,11 @@ Let $\left\{r_n\right\}$ be a listing of all the rational numbers. Define a func
 
 \begin{myproof}
 
-  Let $\epsilon > 0.$ We consider if $c$ is irrational (1) and if $c$ is rational (2). Note that $f(x) \geq0 $ for all $x \in \RR.$
+  Let $\epsilon > 0.$ We consider if $f$ is continuous at $c$, an irrational number (1) and if is continuous at $c$, a rational number (2). Note that $f(x) \geq0 $ for all $x \in \RR.$
 
   \begin{enumerate}
     \item 
-  By the Archimedes Principle there exists $N \in \NN$ such that for all $n>N,$ $1/n < \epsilon.$ Consider all the mappings of rational numbers where $n<N$. Choose $\delta = \min\{|r_n - c|\}/2$ where $1\leq n \leq N.$ Thus, when $x\in \RR$ we have chosen $\delta$ such that when $|x-c|< \delta$, we automatically have that $|f(x) - f(c)|= |f(x) - 0| = |f(x)| = f(x)<\epsilon.$ When $x$ is rational we have chosen $N\in\NN$ such that this holds true and when $x$ is irrational this is also true as $f(x)$ is  0. Hence, $f$ is continuous on the irrationals.
+  By the Archimedes Principle there exists $N \in \NN$ such that for all $n>N,$ $1/n < \epsilon.$ Consider all the mappings of rational numbers where $n\leq N$, and choose $\delta = \min\{|r_n - c|\}/2$.  Note that we have chosen $N\in\NN$ such that for all rational numbers where $n>N$, $f(r_n)< \epsilon$ and also for all $x \in \RR \setminus \QQ$, $f(x)=0< \epsilon.$ Thus, when $x\in \RR$ we have chosen $\delta$ such that when $|x-c|< \delta$, we automatically have that $|f(x) - f(c)|= |f(x) - 0| = |f(x)| = f(x)<\epsilon.$ Hence, $f$ is continuous on the irrationals.
 \item Consider, by way of contradiction, that $f$ is continuous on the rational numbers. Then there exists $\delta$ such that when $x\in \RR$ and $|x-y| <\delta$ we automatically have $|f(x) - f(c)| < f(c)/2.$ By the density of the irrational numbers in $\RR$ there exists an irrational number $,x_I,$ such that $|x_I - y| < \delta.$ It follows $|f(x_I) - f(c)|= |0 - f(c)| = f(c) < f(c)/2 \implies 1 < 1/2,$ a contradiction. Thus, $f$ can not be continuous on the rationals.
       
   \end{enumerate}
