@@ -47,10 +47,14 @@ $$
 e-s_k<\frac{1}{(k+1) !}\left\{1+\frac{1}{k+1}+\left(\frac{1}{k+1}\right)^2+\cdots\right\} .
 $$
 
+\begin{myproof}
+    
+We have that
 $$ e-s_k = \sum_{j=0}^{\infty} \frac{1}{j !} - \sum_{j=0}^k \frac{1}{j !} = \sum_{j=k+1}^{\infty} \frac{1}{j !} = \frac{1}{(k+1)!} +\frac{1}{(k+2)!}+ \frac{1}{(k+3)!} + \cdots$$ $$= \frac{1}{(k+1)!}\left[1 + \frac{1}{(k+2)}  + \frac{1}{(k+2)(k+3)} + \cdots \right]$$
-$$< \frac{1}{(k+1)!}\left[1 + \frac{1}{(k+1)}  + \frac{1}{(k+1)^2} + \cdots \right]$$
+$$< \frac{1}{(k+1)!}\left[1 + \frac{1}{(k+1)}  + \frac{1}{(k+1)(k+1)} + \cdots \right]$$
+$$= \frac{1}{(k+1)!}\left[1 + \frac{1}{(k+1)}  + \frac{1}{(k+1)^2} + \cdots \right]$$
 \bigskip
-
+\end{myproof}
 \bigskip
 (b) Prove that $e-s_k<\frac{1}{k(k!)}$ for all $k \in \mathbb{N}$.
 
@@ -76,7 +80,7 @@ Now, $$ e - s_k  < \frac{1}{(k+1)!}\left[1 + \frac{1}{(k+1)}  + \frac{1}{(k+1)^2
 
 \begin{myproof}
 
-We have $$ n!e = n!\frac{m}{n} = (n-1)!m.$$ Since the integers are closed under multiplication then $n!e$ must be an integer. 
+We have $$ n!e = n!\frac{m}{n} = (n-1)!m.$$ Since the integers are closed then $n!e$ must be an integer. 
     
 \end{myproof}
 
@@ -202,7 +206,7 @@ Let $\left\{r_n\right\}$ be a listing of all the rational numbers. Define a func
   \begin{enumerate}
     \item 
   By the Archimedes Principle there exists $N \in \NN$ such that for all $n>N,$ $1/n < \epsilon.$ Consider all the mappings of rational numbers where $n<N$. Choose $\delta = \min\{|r_n - c|\}/2$ where $1\leq n \leq N.$ Thus, when $x\in \RR$ we have chosen $\delta$ such that when $|x-c|< \delta$, we automatically have that $|f(x) - f(c)|= |f(x) - 0| = |f(x)| = f(x)<\epsilon.$ When $x$ is rational we have chosen $N\in\NN$ such that this holds true and when $x$ is irrational this is also true as $f(x)$ is  0. Hence, $f$ is continuous on the irrationals.
-\item Consider, by way of contradiction, that $f$ is continuous on the rational numbers. Then there exists $\delta$ such that when $x\in \RR$ and $|x-y| <\delta$ we automatically have $|f(x) - f(c)| < f(c)/2.$ By the density of the irrational numbers in $\RR$ there exists $x_I$ such that $|x_I - y| < \delta.$ It follows $|f(x_I) - f(c)|= |0 - f(c)| = f(c) < f(c)/2$ a contradiction. Thus, $f$ can not be continuous on the rationals.
+\item Consider, by way of contradiction, that $f$ is continuous on the rational numbers. Then there exists $\delta$ such that when $x\in \RR$ and $|x-y| <\delta$ we automatically have $|f(x) - f(c)| < f(c)/2.$ By the density of the irrational numbers in $\RR$ there exists an irrational number $,x_I,$ such that $|x_I - y| < \delta.$ It follows $|f(x_I) - f(c)|= |0 - f(c)| = f(c) < f(c)/2 \implies 1 < 1/2,$ a contradiction. Thus, $f$ can not be continuous on the rationals.
       
   \end{enumerate}
 
