@@ -19,6 +19,7 @@ $\rightarrow\!\leftarrow$
 
 \qs{}{
 
+
 Suppose that $x>-1$ and that $x \neq 0$. Prove that
 $$
 (1+x)^n>1+n x
@@ -26,24 +27,77 @@ $$
 for each integer $n>1$. This result is know as Bernoulli's inequality.
 }
 
+\begin{myproof}
+We will show that this inequality holds for $x>-1$ and $x\not= 0$ by induction. First, we see when $n=2$ that $$ (1+x)^2 = 1 +2x + x^2 > 1+2x.$$ Thus, our base case holds. Now we assume that $$ (1+x)^n > 1 +nx$$ is true. We want to show that
+$ (1+x)^{n+1} > 1 +(n+1)x$
+is also true. We have that $$(1+x)(1+x)^n > (1+nx)(1+x)$$
+$$ \implies (1+x)^{n+1} > 1 + x + nx + nx^2 \geq 1 + nx + x = 1 + (n+1)x.$$
+
+\end{myproof}
+
+\pagebreak
 \qs{}{
 
 Show that $e$ is irrational by supposing that $e=\frac{m}{n}$ and deriving a contradiction. Use the fact that $e=\sum_{j=0}^{\infty} \frac{1}{j !}$. Let $s_k=\sum_{j=0}^k \frac{1}{j !}$.
 }
 
 (a) Prove that
+
 $$
 e-s_k<\frac{1}{(k+1) !}\left\{1+\frac{1}{k+1}+\left(\frac{1}{k+1}\right)^2+\cdots\right\} .
 $$
+
+$$ e-s_k = \sum_{j=0}^{\infty} \frac{1}{j !} - \sum_{j=0}^k \frac{1}{j !} = \sum_{j=k+1}^{\infty} \frac{1}{j !} = \frac{1}{(k+1)!} +\frac{1}{(k+2)!}+ \frac{1}{(k+3)!} + \cdots$$ $$= \frac{1}{(k+1)!}\left[1 + \frac{1}{(k+2)}  + \frac{1}{(k+2)(k+3)} + \cdots \right]$$
+$$< \frac{1}{(k+1)!}\left[1 + \frac{1}{(k+1)}  + \frac{1}{(k+1)^2} + \cdots \right]$$
+\bigskip
+
+\bigskip
 (b) Prove that $e-s_k<\frac{1}{k(k!)}$ for all $k \in \mathbb{N}$.
+
+\begin{myproof}
+  Let $$ y_n = \sum_{n=0}^{m} \frac{1}{(k+1)^n} $$. Then $$y_n - \frac{1}{(k+1)^n} y_n = \sum_{n=0}^{m} \frac{1}{(k+1)^n} - \sum_{n=1}^{m+1} \frac{1}{(k+1)^n} $$ 
+  $$\implies y_n\left(1 - \frac{1}{k+1}\right) = \frac{1}{k+1} - \frac{1}{(k+1)^{m+1}} $$   
+  $$\implies y_n\left(1 - \frac{1}{k+1}\right) = \frac{1}{k+1} - \frac{1}{(k+1)^{m+1}} $$
+
+$$\implies y_n = \frac{\frac{1}{k+1} - \frac{1}{(k+1)^{m+1}}}{\left(1 - \frac{1}{k+1}\right)}.$$
+
+
+Now let $$ \lim_{m \rightarrow \infty} y_n = \lim_{m \rightarrow \infty}\frac{\frac{1}{k+1} - \frac{1}{(k+1)^{m+1}}}{\left(1 - \frac{1}{k+1}\right)}$$
+$$ \implies \lim_{m \rightarrow \infty} y_n = \frac{1}{k+1}\frac{1}{\left(1 - \frac{1}{k+1}\right)}$$
+$$  = \frac{1}{k+1}\frac{k+1}{k+1-1}$$
+$$  = \frac{1}{k+1}\frac{k+1}{k} = 1.$$
+
+\end{myproof}
 
 \bigskip
 
 (c) If $e=\frac{m}{n}$, prove that $n ! e$ and $n ! s_n$ are integers.
 
+\begin{myproof}
+
+We have $$ n!e = n!\frac{m}{n} = (n-1)!m.$$ Since the integers are closed under multiplication then $n!e$ must be an integer. 
+    
+\end{myproof}
+
+\begin{myproof}
+
+$$ n!s_n = n!s_k=\sum_{j=0}^k \frac{1}{j !}(n-1)! = n!\left(1 + \frac{1}{2!} + \frac{1}{3!}+ \cdots +\frac{1}{n!}\right) .$$
+$$ = n! + \frac{n!}{2!} + \frac{n!}{3!}+ \cdots + 1 .$$
+
+This is just a sum of integers, so it must be that $n!s_n$ is also an integer.
+\end{myproof}
+
 \bigskip
 (d) If $e=\frac{m}{n}$, prove that $n!\left(e-s_n\right)$ is an integer between 0 and 1 , which is absurd.
 
+\bigskip
+\begin{myproof}
+
+Consider that $$n!\left(e-s_n\right) < n!\frac{1}{n!n}= 1/n$$
+
+Since $n\in\NN$ and $e-s_n$ is an integer we have encountered a contradiction, $1/n < 1.$ Thus, $e$ can not be a rational number.
+    
+\end{myproof}
 \bigskip
 
 \qs{}{
