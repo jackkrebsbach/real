@@ -63,10 +63,12 @@ $$\implies y_n = \frac{\frac{1}{k+1} - \frac{1}{(k+1)^{m+1}}}{\left(1 - \frac{1}
 
 
 Now let $$ \lim_{m \rightarrow \infty} y_n = \lim_{m \rightarrow \infty}\frac{\frac{1}{k+1} - \frac{1}{(k+1)^{m+1}}}{\left(1 - \frac{1}{k+1}\right)}$$
-$$ \implies \lim_{m \rightarrow \infty} y_n = \frac{1}{k+1}\frac{1}{\left(1 - \frac{1}{k+1}\right)}$$
+$$ \implies y_n = \frac{1}{k+1}\frac{1}{\left(1 - \frac{1}{k+1}\right)}$$
 $$  = \frac{1}{k+1}\frac{k+1}{k+1-1}$$
-$$  = \frac{1}{k+1}\frac{k+1}{k} = 1.$$
+$$  = \frac{1}{k+1}\frac{k+1}{k} = \frac{1}{k}.$$
 
+
+Now, $$ e - s_k  < \frac{1}{(k+1)!}\left[1 + \frac{1}{(k+1)}  + \frac{1}{(k+1)^2} + \cdots \right] = \frac{1}{(k+1)!}\{y_n\} = \frac{1}{(k+1)!} \frac{1}{k} < \frac{1}{k(k!)}$$
 \end{myproof}
 
 \bigskip
@@ -99,7 +101,7 @@ Since $n\in\NN$ and $e-s_n$ is an integer we have encountered a contradiction, $
     
 \end{myproof}
 \bigskip
-
+\pagebreak
 \qs{}{
 Let $f$ be a function defined on all of $\mathbb{R}$, and assume there is a constant $c$ such that $0<c<1$ and
 $$
@@ -109,8 +111,13 @@ for all $x, y \in \mathbb{R}$.
 }
 
 (a) Show that $f$ is continuous.
-
 \par
+\bigskip
+\begin{myproof}
+    
+Let $\epsilon > 0$ and choose $\delta= \epsilon/c$. Now if we have $$|x-y| < \delta$$ and $$|f(x) - f(y)| \leq c|x-y| < c \frac{\epsilon}{c} = \epsilon.$$
+Thus, $f$ must be continuous.
+\end{myproof}
 
 \bigskip
 \bigskip
@@ -121,25 +128,71 @@ $$
 
 In general, if $y_{n+1}=f\left(y_n\right)$, show that the resulting sequence $\left(y_n\right)$ is a Cauchy sequence. Hence we may let $y=\lim _{n \rightarrow \infty} y_n$.
 
-
-
 \bigskip
+\begin{myproof}
+  Let $\epsilon > 0.$ First we will show that $$|y_{n+1} - y_n| \leq c^{n}\frac{|y_1 - y_2|}{c}$$ is true.
+
+  Let $$B = \frac{|y_2 - y_1|}{c}.$$
+  Now, choose $N \in \NN$ such that for all $n>N$, it follows that $$\frac{c^n}{(1/B  - c^{n})}< \epsilon.$$ Let  $m > n > N.$  We have that  
+  $$ |x_m - x_n|= |x_m - x_{m-1} + x_{m-1} - x_{m-2} + x_{m-2} + \dots + x_{n+1}- x_n| $$
+$$\leq |x_m - x_{m-1}| + |x_{m-1} - x_{m-2}| +  \dots + |x_{n+1}- x_n| $$
+
+$$= \sum_{n}^{m-1}|x_{n+1} - x_n| $$
+
+$$\leq \sum_{n}^{m-1}c^{n}B.$$
+
+If $$y_n =\sum_{n}^{m-1} c^{n}\frac{|y_2 - y_1|}{c},$$ then $$y_n  - c^{n}By_n = \sum_{n}^{m-1} c^{n}B - \sum_{n+1}^{m} c^{n}B$$
+$$\implies y_n(1  - c^{n}B) = Bc^n - c^mB $$
+
+$$\implies y_n = \frac{Bc^n - c^mB }{(1  - c^{n}B)}= \frac{c^n - c^m }{(1/B  - c^{n})} $$
+$$< \frac{c^n}{(1/B  - c^{n})} < \epsilon.$$
+Hence, $(y_n)$ is Cauchy and we may let $y=\lim _{n \rightarrow \infty} y_n$
+\end{myproof}
 
 \par
 \bigskip
 (c) Prove that $y$ is a fixed point of $f$ (i.e. $f(y)=y$ ) and that it is unique in this regard.
 
 \par
-\par
+
+\begin{myproof}
+    
 \bigskip
+Consider that $y_{n+1} = f(y_n).$ Then, $$ \lim_{n \rightarrow \infty} y_{n+1} = \lim_{n \rightarrow \infty}f(y_n)$$
+$$\implies y=  f\left(\lim_{n \rightarrow \infty}y_n\right)$$
+
+$$\implies  y = f(y).$$
+
+Thus, $y$ is a fixed point. Consider, by way of contradiction, that $y$ is not the only fixed point and there exists another fixed point $x$ where $y\not=x.$
+
+Then, $$|f(y) - f(x)| = |x-y| < c|x-y|$$ which is a contradiction since $0 < c < 1$. Thus, it must be that $y$ is a unique fixed point.
+
+\end{myproof}
 \bigskip
 (d) Finally, prove that if $x$ is any arbitrary point in $\mathbb{R}$, then the sequence $(x, f(x), f(f(x)), \ldots)$ converges to $y$ (as defined in (b)).
 
+\begin{myproof}
+Because we proved previously that for any arbitrary $x \in \RR$ the sequence $(y_n) \rightarrow y$ and $y$ is a unique fixed point it must be the sequence $(x, f(x), f(f(x)), \ldots)$ converges to $y$ (as defined in (b)).
+\end{myproof}
 
+\pagebreak
 \qs{}{
 Let $\left\{r_n\right\}$ be a listing of all the rational numbers. Define a function $f$ by $f(x)=0$ if $x$ is irrational and $f\left(r_n\right)=1 / n$ for all $n$. Show that $f$ is continuous everywhere except for the set of rational numbers.
 }
 
+\begin{myproof}
+
+  Let $\epsilon > 0.$ We consider if $c$ is irrational (1) and if $c$ is rational (2). Note that $f(x) \geq0 $ for all $x \in \RR.$
+
+  \begin{enumerate}
+    \item 
+  By the Archimedes Principle there exists $N \in \NN$ such that for all $n>N,$ $1/n < \epsilon.$ Consider all the mappings of rational numbers. Choose $\delta = \min\{|r_n - c|\}/2$ where $1\leq n \leq N.$ Thus, when $x\in \RR$ we have chosen $N \in \NN$ such that when $|x-c|< \delta$, we automatically have that $|f(x) - f(c)|= |f(x) - 0| = |f(x)| = f(x)<\epsilon.$ Hence, $f$ is continuous on the irrationals.
+\item Consider, by way of contradiction, that $f$ is continuous on the rational numbers. Then there exists $\delta$ such that when $x\in \RR$ and $|x-y| <\delta$ we automatically have $|f(x) - f(c)| < f(c)/2.$ By the density of the irrational numbers in $\RR$ there exists $x_I$ such that $|x_I - y| < \delta.$ It follows $|f(x_I) - f(c)|= |0 - f(c)| = f(c) < f(c)/2$ a contradiction. Thus, $f$ can not be continuous on the rationals.
+      
+  \end{enumerate}
+
+    
+\end{myproof}
 \qs{}{
 
 Using the $\delta-\epsilon$ definition of a limit, show
@@ -148,8 +201,18 @@ $$
 $$
 }
 
+\begin{myproof}
+  Consider,
+  $$ \lim _{x \rightarrow 1} \frac{x^3-1}{x-1}= \lim _{x \rightarrow 1}\left[ (x-1)\frac{x^2+x+1}{x-1}\right]= x^2+x+1 = 3.$$ Let $\epsilon >0$ and choose $\delta = \min\{1,\epsilon/4\}$. If we have $0<|x-1| < \delta$ and $$|f(x) - L|= |x^2 +x +1 - 3| = |x^2 +x- 2|= |(x+2)(x-1)| = |x+2||x-1|.$$
 
+Note, if restrict $\delta$ to be a maximum of $1$ then $|x+2| \leq |x| + 2 | \leq |2| + 2 = 4.$
 
+It follows $$|f(x) - L| = |x+2||x-1|<4  \frac{\epsilon}{4}= \epsilon.$$
+
+Hence, 
+$\lim _{x \rightarrow 1} \frac{x^3-1}{x-1}=3.$
+
+\end{myproof}
 
 
 \end{document}
