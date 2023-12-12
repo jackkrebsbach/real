@@ -205,7 +205,7 @@ Let $\left\{r_n\right\}$ be a listing of all the rational numbers. Define a func
 
   \begin{enumerate}
     \item 
-  By the Archimedes Principle there exists $N \in \NN$ such that for all $n>N,$ $1/n < \epsilon.$ Consider all the mappings of rational numbers where $n\leq N$, and choose $\delta = \min\{|r_n - c|\}/2$.  Note that we have chosen $N\in\NN$ such that for all rational numbers where $n>N$, $f(r_n)< \epsilon$ and also for all $x \in \RR \setminus \QQ$, $f(x)=0< \epsilon.$ Thus, when $x\in \RR$ we have chosen $\delta$ such that when $|x-c|< \delta$, we automatically have that $|f(x) - f(c)|= |f(x) - 0| = |f(x)| = f(x)<\epsilon.$ Hence, $f$ is continuous on the irrationals.
+  By the Archimedes Principle there exists $N \in \NN$ such that for all $n>N,$ $1/n < \epsilon.$ Consider all the rational numbers where $n\leq N$, and choose $\delta = \min\{|r_n - c|\}/2$.  Note that we have chosen $N\in\NN$ such that for all rational numbers where $n>N$, $f(r_n)< \epsilon$ and also for all $x \in \RR \setminus \QQ$, $f(x)=0< \epsilon.$ Thus, when $x\in \RR$ we have chosen $\delta$ such that when $|x-c|< \delta$, we automatically have that $|f(x) - f(c)|= |f(x) - 0| = |f(x)| = f(x)<\epsilon.$ Hence, $f$ is continuous on the irrationals.
 \item Consider, by way of contradiction, that $f$ is continuous on the rational numbers. Then there exists $\delta$ such that when $x\in \RR$ and $|x-y| <\delta$ we automatically have $|f(x) - f(c)| < f(c)/2.$ By the density of the irrational numbers in $\RR$ there exists an irrational number $,x_I,$ such that $|x_I - y| < \delta.$ It follows $|f(x_I) - f(c)|= |0 - f(c)| = f(c) < f(c)/2 \implies 1 < 1/2,$ a contradiction. Thus, $f$ can not be continuous on the rational.
       
   \end{enumerate}
