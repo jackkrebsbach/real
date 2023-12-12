@@ -126,16 +126,18 @@ also converges to the same limit.
 \bigskip
 \begin{myproof}
     
-  Let $(x_n)$ converge to $x$. If $(x_n)$ is convergent then for every $\epsilon >0$ there exists $N \in \NN$ such that for all $n > N$, $| x_{n} - x| < \epsilon.$
+ Let $\epsilon >0 $ and $(x_n) \rightarrow x$.  There exists $N_1 \in \NN$ such that for all $n > N_1$, $| x_{n} - x| < \epsilon/2.$
 
-  Then $$ \left| \frac{x_1 + x_1 +\cdots + x_{n} }{n}  - x\right|= $$$$ \left| \frac{x_1 + x_1 + \cdots + x_{N}+ \cdots + x_{n} }{n}  - x\right|= $$
-$$ \left| \frac{x_1 + x_1 + \cdots + x_{N}}{n} + \frac{ x_{N+1}+ \cdots + x_{n} }{n} - x\right| \leq \underbrace{\left| \frac{x_1 + x_1 + \cdots + x_{N}}{n} \right|}_{K}+ \underbrace{ \left|\frac{ x_{N + 1}+ \cdots + x_{n} }{n} - x\right|}_{Z}$$
+  Then $$|y_n -x| = \left| \frac{x_1 + x_1 +\cdots + x_{n} }{n}  \right|= $$$$ \left| \frac{x_1 + x_1 + \cdots + x_{N_1}+ \cdots + x_{n} }{n}  - \frac{nx}{n}\right|= $$
+  $$ \left| \frac{x_1 - x + x_1 - x+ \cdots + x_{N_1} - x}{n} + \frac{ x_{N_1+1} -x + \cdots + x_{n} -x }{n}  \right|  $$
+  $$ \leq \underbrace{\left| \frac{x_1 -x + x_1  -x+ \cdots + x_{N_1} -x }{n} \right|}_{K}+ \underbrace{ \left|\frac{ x_{N_1 + 1} -x + \cdots + x_{n} -x  }{n}\right|}_{Z}$$
 
-The last step is a result of the Triangle Inequality Theorem. We know that for all the terms where $n>N$, $| x_{n} - x| < \epsilon.$ Then the average of of all $x_n$ where $n>N$, $ \bar{x}_n =\frac{ x_{N + 1}+ \cdots + x_{n} }{n-N},$ will also be have the property $|\bar{x}_n - x| < \epsilon$.  As $n$ tends to infinity the expression $\frac{ x_{N + 1} + \cdots + x_{n} }{n}$  will tend towards $ \bar{x}_n =\frac{ x_{N + 1}+ \cdots + x_{n} }{n-N}.$ Then $n \rightarrow \infty \implies Z < \epsilon,$ and since the numerator of $K$ is fixed, $K \rightarrow 0.$
+Since for all $n>N_1$, $| x_{n} - x| < \epsilon/2,$ it follows $$Z< \frac{(n - N_1)}{n} \frac{\epsilon}{2} \leq \frac{\epsilon}{2}.$$
 
-Hence, as $n \rightarrow \infty$ , $K + Z <\epsilon$
-$  \implies\left| \frac{x_1 + x_1 +\cdots + x_{n} }{n}  - x\right|< \epsilon.$
-Thus, we can conclude that $(y_n) \rightarrow x$ in addition to $(x_n) \rightarrow x.$
+
+Because the numerator of $K$ is a fixed number, by the Archimedes Principle there exists $N_2$ such that for all $n>N_2,$ $K < \epsilon/2.$ Let $N = \max\{N_1,N_2\}.$ Then for all $n > N,$ we have $$|y_n -x| < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon.$$
+
+Thus, we  conclude  $(y_n) \rightarrow x$ and also $(x_n) \rightarrow x.$
 \bigskip
 \end{myproof}
 
