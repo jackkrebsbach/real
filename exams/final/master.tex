@@ -159,11 +159,11 @@ Choose $N \in \NN$ such that for all $n>N$,$$B\frac{c^n}{1  - c}< \epsilon.$$ Le
   $$ |x_m - x_n|= |x_m - x_{m-1} + x_{m-1} - x_{m-2} + x_{m-2} + \dots + x_{n+1}- x_n| $$
 $$\leq |x_m - x_{m-1}| + |x_{m-1} - x_{m-2}| +  \dots + |x_{n+1}- x_n| = \sum_{n}^{m-1}|x_{n+1} - x_n| \leq \sum_{n}^{m-1}Bc^{n}.$$
 
-If $$y_n =\sum_{n}^{m-1}B c^{n},$$ then $$y_n  - cy_n = \sum_{n}^{m-1}B c^{n} - \sum_{n+1}^{m}Bc^{n}$$
-$$\implies y_n(1  - c) = Bc^n - Bc^m $$
+If $$z_n =\sum_{n}^{m-1}B c^{n},$$ then $$z_n  - cz_n = \sum_{n}^{m-1}B c^{n} - \sum_{n+1}^{m}Bc^{n}$$
+$$\implies z_n(1  - c) = Bc^n - Bc^m $$
 
-$$\implies y_n = \frac{B(c^n - c^m) }{1  - c}= B\frac{c^n - c^m }{1  - c} $$
-$$< B\frac{c^n}{1  - c} < \epsilon.$$
+$$\implies z_n = \frac{B(c^n - c^m) }{1  - c}= B\frac{c^n - c^m }{1  - c} $$
+$$\leq B\frac{c^n}{1  - c} < \epsilon.$$
 Hence, $ |x_m - x_n| < \epsilon$ and $(y_n)$ is thus Cauchy. We may let $y=\lim _{n \rightarrow \infty} y_n.$
 
 \end{myproof}
