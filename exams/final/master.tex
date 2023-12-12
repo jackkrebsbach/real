@@ -10,7 +10,7 @@ $\rightarrow\!\leftarrow$
 \title{Ultimate Problem Set}
 \author{Jack Krebsbach }
 
-\date{Dec 11th}
+\date{Dec 11Th}
 
 \begin{document}
 \maketitle
@@ -54,26 +54,26 @@ $$
 We have that
 $$ e-s_k = \sum_{j=0}^{\infty} \frac{1}{j !} - \sum_{j=0}^k \frac{1}{j !} = \sum_{j=k+1}^{\infty} \frac{1}{j !} = \frac{1}{(k+1)!} +\frac{1}{(k+2)!}+ \frac{1}{(k+3)!} + \cdots$$ $$= \frac{1}{(k+1)!}\left[1 + \frac{1}{(k+2)}  + \frac{1}{(k+2)(k+3)} + \cdots \right]$$
 $$< \frac{1}{(k+1)!}\left[1 + \frac{1}{(k+1)}  + \frac{1}{(k+1)(k+1)} + \cdots \right]$$
-$$= \frac{1}{(k+1)!}\left[1 + \frac{1}{(k+1)}  + \frac{1}{(k+1)^2} + \cdots \right]$$
+$$= \frac{1}{(k+1)!}\left[1 + \frac{1}{(k+1)}  + \left(\frac{1}{k+1}\right)^2 + \cdots \right]$$
 \bigskip
 \end{myproof}
 \bigskip
 (b) Prove that $e-s_k<\frac{1}{k(k!)}$ for all $k \in \mathbb{N}$.
 
 \begin{myproof}
-  Let $$ y_n = \sum_{n=0}^{m} \frac{1}{(k+1)^n} .$$ Then $$y_n - \frac{1}{(k+1)^n} y_n = \sum_{n=0}^{m} \frac{1}{(k+1)^n} - \sum_{n=1}^{m+1} \frac{1}{(k+1)^n} $$ 
+  Let $$ y_n = \sum_{n=0}^{m} \frac{1}{(k+1)^n} .$$ Then $$y_n - \frac{1}{k+1} y_n = \sum_{n=0}^{m} \frac{1}{(k+1)^n} - \sum_{n=1}^{m+1} \frac{1}{(k+1)^n} $$ 
   $$\implies y_n\left(1 - \frac{1}{k+1}\right) = \frac{1}{k+1} - \frac{1}{(k+1)^{m+1}} $$   
 
 $$\implies y_n = \frac{\frac{1}{k+1} - \frac{1}{(k+1)^{m+1}}}{\left(1 - \frac{1}{k+1}\right)}.$$
 
 
 Now let $$ \lim_{m \rightarrow \infty} y_n = \lim_{m \rightarrow \infty}\frac{\frac{1}{k+1} - \frac{1}{(k+1)^{m+1}}}{\left(1 - \frac{1}{k+1}\right)}$$
-$$ \implies y_n = \frac{1}{k+1}\frac{1}{\left(1 - \frac{1}{k+1}\right)}$$
+$$ \implies (y_n) \rightarrow \frac{1}{k+1}\frac{1}{\left(1 - \frac{1}{k+1}\right)}$$
 $$  = \frac{1}{k+1}\frac{k+1}{k+1-1}$$
 $$  = \frac{1}{k+1}\frac{k+1}{k} = \frac{1}{k}.$$
 
 
-Now, $$ e - s_k  < \frac{1}{(k+1)!}\left[1 + \frac{1}{(k+1)}  + \frac{1}{(k+1)^2} + \cdots \right] = \frac{1}{(k+1)!}\{y_k\} \leq \frac{1}{(k+1)!} \frac{1}{k} < \frac{1}{k(k!)}$$
+Finally, $$ e - s_k  < \frac{1}{(k+1)!}\left[1 + \frac{1}{(k+1)}  + \frac{1}{(k+1)^2} + \cdots \right] = \frac{1}{(k+1)!}\{y_k\} \leq \frac{1}{(k+1)!} \frac{1}{k} < \frac{1}{k(k!)}$$
 \end{myproof}
 
 \bigskip
@@ -88,12 +88,13 @@ We have $$ n!e = n!\frac{m}{n} = (n-1)!m.$$ Since the integers are closed then $
 
 \begin{myproof}
 
-$$ n!s_n = n!s_k=\sum_{j=0}^k \frac{1}{j !}(n-1)! = n!\left(1 + \frac{1}{2!} + \frac{1}{3!}+ \cdots +\frac{1}{n!}\right) .$$
-$$ = n! + \frac{n!}{2!} + \frac{n!}{3!}+ \cdots + 1 .$$
+$$ n!s_n = n!s_n= n!\sum_{j=0}^n \frac{1}{j!} = n!\left(1 + \frac{1}{2!} + \frac{1}{3!}+ \cdots +\frac{1}{n!}\right) .$$
+$$ = n! + \frac{n!}{2!} + \frac{n!}{3!}+ \cdots + 1$$
 
 $$ = n! + n(n-1)(n-2)\cdots(4)(3) + n(n-1)(n-2)\cdots(5)(4)+ \cdots + 1 .$$
 
 Again, because the integers are closed  it must be that $n!s_n$ is also an integer.
+
 \end{myproof}
 
 \bigskip
@@ -104,7 +105,7 @@ Again, because the integers are closed  it must be that $n!s_n$ is also an integ
 
 Consider that $$n!\left(e-s_n\right) < n!\frac{1}{n!n}= 1/n,$$
 
-which means that $0< n!\left(e-s_n\right) <1.$  Because  $n!(e-s_n)$ is an integer we have encountered a contradiction, this is impossible. Thus, $e$ can not be a rational number.
+which means that $0< n!\left(e-s_n\right) <1.$  Because  $n!(e-s_n)$ must be an integer we have encountered a contradiction, this is impossible. Thus, $e$ can not be a rational number.
     
 \end{myproof}
 \bigskip
@@ -122,8 +123,8 @@ for all $x, y \in \mathbb{R}$.
 \bigskip
 \begin{myproof}
     
-Let $\epsilon > 0$ and choose $\delta= \epsilon/c$. Now if we have $$|x-y| < \delta$$ then $$|f(x) - f(y)| \leq c|x-y| < c \frac{\epsilon}{c} = \epsilon.$$
-Thus, $f$ must be continuous.
+Let $\epsilon > 0$ and $x,y \in \RR$. Choose $\delta= \epsilon/c$. Now if we have $$|x-y| < \delta$$ then $$|f(x) - f(y)| \leq c|x-y| < c \frac{\epsilon}{c} = \epsilon.$$
+Hence, $f$ must be continuous.
 \end{myproof}
 
 \bigskip
@@ -154,20 +155,17 @@ for all $n > 1.$
 \bigskip
 \par
 Now we may continue in the proof showing that $(y_n)$ is Cauchy. Let $$B = \frac{|y_2 - y_1|}{c}.$$
-  Now, choose $N \in \NN$ such that for all $n>N$,$$\frac{c^n}{(1/B  - c^{n})}< \epsilon.$$ Let  $m > n > N.$  We have that  
+Choose $N \in \NN$ such that for all $n>N$,$$B\frac{c^n}{1  - c}< \epsilon.$$ Let  $m > n > N.$  We have that  
   $$ |x_m - x_n|= |x_m - x_{m-1} + x_{m-1} - x_{m-2} + x_{m-2} + \dots + x_{n+1}- x_n| $$
-$$\leq |x_m - x_{m-1}| + |x_{m-1} - x_{m-2}| +  \dots + |x_{n+1}- x_n| $$
+$$\leq |x_m - x_{m-1}| + |x_{m-1} - x_{m-2}| +  \dots + |x_{n+1}- x_n| = \sum_{n}^{m-1}|x_{n+1} - x_n| \leq \sum_{n}^{m-1}Bc^{n}.$$
 
-$$= \sum_{n}^{m-1}|x_{n+1} - x_n| $$
+If $$y_n =\sum_{n}^{m-1}B c^{n},$$ then $$y_n  - cy_n = \sum_{n}^{m-1}B c^{n} - \sum_{n+1}^{m}Bc^{n}$$
+$$\implies y_n(1  - c) = Bc^n - Bc^m $$
 
-$$\leq \sum_{n}^{m-1}c^{n}B.$$
+$$\implies y_n = \frac{B(c^n - c^m) }{1  - c}= B\frac{c^n - c^m }{1  - c} $$
+$$< B\frac{c^n}{1  - c} < \epsilon.$$
+Hence, $ |x_m - x_n| < \epsilon$ and $(y_n)$ is thus Cauchy. We may let $y=\lim _{n \rightarrow \infty} y_n.$
 
-If $$y_n =\sum_{n}^{m-1} c^{n},$$ then $$y_n  - c^{n}By_n = \sum_{n}^{m-1} c^{n}B - \sum_{n+1}^{m} c^{n}B$$
-$$\implies y_n(1  - c^{n}B) = Bc^n - c^mB $$
-
-$$\implies y_n = \frac{B(c^n - c^m) }{(1  - c^{n}B)}= \frac{c^n - c^m }{(1/B  - c^{n})} $$
-$$< \frac{c^n}{(1/B  - c^{n})} < \epsilon.$$
-Hence, $(y_n)$ is Cauchy and we may let $y=\lim _{n \rightarrow \infty} y_n$
 \end{myproof}
 
 \par
@@ -203,12 +201,12 @@ Let $\left\{r_n\right\}$ be a listing of all the rational numbers. Define a func
 
 \begin{myproof}
 
-  Let $\epsilon > 0.$ We consider if $f$ is continuous at $c$, an irrational number (1) and if is continuous at $c$, a rational number (2). Note that $f(x) \geq0 $ for all $x \in \RR.$
+  Let $\epsilon > 0.$ We consider (1) if $f$ is continuous at $c$, an irrational number and (2) if is continuous at $c$, a rational number (2). Note that $f(x) \geq0 $ for all $x \in \RR.$
 
   \begin{enumerate}
     \item 
   By the Archimedes Principle there exists $N \in \NN$ such that for all $n>N,$ $1/n < \epsilon.$ Consider all the mappings of rational numbers where $n\leq N$, and choose $\delta = \min\{|r_n - c|\}/2$.  Note that we have chosen $N\in\NN$ such that for all rational numbers where $n>N$, $f(r_n)< \epsilon$ and also for all $x \in \RR \setminus \QQ$, $f(x)=0< \epsilon.$ Thus, when $x\in \RR$ we have chosen $\delta$ such that when $|x-c|< \delta$, we automatically have that $|f(x) - f(c)|= |f(x) - 0| = |f(x)| = f(x)<\epsilon.$ Hence, $f$ is continuous on the irrationals.
-\item Consider, by way of contradiction, that $f$ is continuous on the rational numbers. Then there exists $\delta$ such that when $x\in \RR$ and $|x-y| <\delta$ we automatically have $|f(x) - f(c)| < f(c)/2.$ By the density of the irrational numbers in $\RR$ there exists an irrational number $,x_I,$ such that $|x_I - y| < \delta.$ It follows $|f(x_I) - f(c)|= |0 - f(c)| = f(c) < f(c)/2 \implies 1 < 1/2,$ a contradiction. Thus, $f$ can not be continuous on the rationals.
+\item Consider, by way of contradiction, that $f$ is continuous on the rational numbers. Then there exists $\delta$ such that when $x\in \RR$ and $|x-y| <\delta$ we automatically have $|f(x) - f(c)| < f(c)/2.$ By the density of the irrational numbers in $\RR$ there exists an irrational number $,x_I,$ such that $|x_I - y| < \delta.$ It follows $|f(x_I) - f(c)|= |0 - f(c)| = f(c) < f(c)/2 \implies 1 < 1/2,$ a contradiction. Thus, $f$ can not be continuous on the rational.
       
   \end{enumerate}
 
