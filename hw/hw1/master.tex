@@ -4,7 +4,7 @@
 \input{macros}
 \input{letterfonts}
 
-\title{Real Analysis H\#1}
+\title{Real Analysis HW\#1}
 \author{Jack Krebsbach }
 
 \date{Sep 6th}
@@ -133,6 +133,7 @@ $$
 $$
 \left|\sum_{k=1}^{n} a_{k}\right| \leq \sum_{k=1}^{n}\left|a_{k}\right| \qed$$
 
+\pagebreak
 \bigskip
 \qs{}{
 Exercise 1.2.8
@@ -140,8 +141,15 @@ Exercise 1.2.8
 (a) $f: \mathbb{N} \rightarrow \mathbb{N}$ where $f$ is 1-1 but not onto. 
 \sol  $f(x) = 2x$
 \par
-(b) $f: \mathbb{N} \rightarrow \mathbb{N}$ where $f$ is not 1-1 but onto. 
-\sol If $f$ is onto then for every $y \in \mathbb{N}$ there exists $x \in \mathbb{N}$ where $f(x) = y$. If we assume $f$  is \textit{not} 1-1 then we know that there exists $x_1 \neq x_2$ such that $f(x_1) = f(x_2)$. As $f$ is a function, we can not map $x \in \mathbb{N}$ to more than one $y \in \mathbb{N}$, then it must be that we are missing at least one $y \in \mathbb{N}$. Therefore, $f$ can not be onto, which means this is impossible.
+
+(b) 
+\sol $$
+ f(n) = 
+  \begin{cases} 
+  1 &   n = 1\\
+  n-1 & n > 1 
+   \end{cases}
+   $$
 
 (c) $f: \mathbb{N} \rightarrow \mathbb{Z}$ where $f$ is 1-1 and onto. 
 
@@ -149,8 +157,8 @@ Exercise 1.2.8
 \[ 
  f(n) = 
   \begin{cases} 
-  odd & \frac{n+1}{2} (-1)^{n+1} \\
-  even & \frac{n}{2} (-1)^{n+1}
+   \frac{n-1}{2} (-1)^{n} & odd\\
+  \frac{n}{2} (-1)^{n} &  even
    \end{cases}
 \]
 \bigskip
