@@ -62,18 +62,18 @@ $$= \frac{1}{(k+1)!}\left[1 + \frac{1}{(k+1)}  + \left(\frac{1}{k+1}\right)^2 + 
 
 \begin{myproof}
   Let $$ y_n = \sum_{n=0}^{m} \frac{1}{(k+1)^n} .$$ Then $$y_n - \frac{1}{k+1} y_n = \sum_{n=0}^{m} \frac{1}{(k+1)^n} - \sum_{n=1}^{m+1} \frac{1}{(k+1)^n} $$ 
-  $$\implies y_n\left(1 - \frac{1}{k+1}\right) = \frac{1}{k+1} - \frac{1}{(k+1)^{m+1}} $$   
+  $$\implies y_n\left(1 - \frac{1}{k+1}\right) = 1 - \frac{1}{(k+1)^{m+1}} $$   
 
-$$\implies y_n = \frac{\frac{1}{k+1} - \frac{1}{(k+1)^{m+1}}}{\left(1 - \frac{1}{k+1}\right)}.$$
-
-
-Now let $$ \lim_{m \rightarrow \infty} y_n = \lim_{m \rightarrow \infty}\frac{\frac{1}{k+1} - \frac{1}{(k+1)^{m+1}}}{\left(1 - \frac{1}{k+1}\right)}$$
-$$ \implies (y_n) \rightarrow \frac{1}{k+1}\frac{1}{\left(1 - \frac{1}{k+1}\right)}$$
-$$  = \frac{1}{k+1}\frac{k+1}{k+1-1}$$
-$$  = \frac{1}{k+1}\frac{k+1}{k} = \frac{1}{k}.$$
+$$\implies y_n = \frac{1 - \frac{1}{(k+1)^{m+1}}}{\left(1 - \frac{1}{k+1}\right)}.$$
 
 
-Finally, $$ e - s_k  < \frac{1}{(k+1)!}\left[1 + \frac{1}{(k+1)}  + \frac{1}{(k+1)^2} + \cdots \right] = \frac{1}{(k+1)!}\{y_k\} \leq \frac{1}{(k+1)!} \frac{1}{k} < \frac{1}{k(k!)}$$
+Now let $$ \lim_{m \rightarrow \infty} y_n = \lim_{m \rightarrow \infty}\frac{1 - \frac{1}{(k+1)^{m+1}}}{\left(1 - \frac{1}{k+1}\right)}$$
+$$ \implies (y_n) \rightarrow \frac{1}{\left(1 - \frac{1}{k+1}\right)}$$
+$$  = \frac{k+1}{k}$$
+
+\pagebreak
+
+Finally, $$ e - s_k  < \frac{1}{(k+1)!}\left[1 + \frac{1}{(k+1)}  + \frac{1}{(k+1)^2} + \cdots \right] = \frac{1}{(k+1)!}\{y_k\} \leq \frac{1}{(k+1)!} \frac{k+1}{k!} = \frac{1}{k(k!)}$$
 \end{myproof}
 
 \bigskip
